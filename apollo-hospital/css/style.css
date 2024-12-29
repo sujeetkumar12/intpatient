@@ -11,6 +11,9 @@ h2 {
   font-size: 25px;
 }
 
+.live-chat {
+  display: none !important;
+}
 .img-container {
   position: relative;
   text-align: center;
@@ -73,7 +76,7 @@ h2 {
   border: 5px solid #574831;
   border-radius: 50%;
   max-height: 200px;
-  min-width: 60%;
+  /* min-width: 75%; */
 }
 
 .thumbnail {
