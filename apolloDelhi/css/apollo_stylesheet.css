@@ -1,0 +1,1823 @@
+body {
+  overflow-x: hidden;
+}
+
+#openBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #4949be;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 0.83px;
+  font-weight: 600;
+  z-index: 10;
+  border-radius: 2px;
+}
+
+#drawer {
+  position: fixed;
+  bottom: -100%;
+  right: 0;
+  height: 75%;
+  width: 35%;
+  background: linear-gradient(#237d9e, #8fbfd1);
+  color: #fff;
+  /* Text color for contrast */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+  transition: bottom 0.3s ease-in-out;
+  z-index: 15;
+  border-top-left-radius: 50px;
+  /* Rounded top-left corner */
+  border-top-right-radius: 50px;
+}
+
+.drawer-content {
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.drawer-items {
+  margin-top: 20px;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  gap: 5px;
+}
+
+.drawer-items button {
+  background: #FFF;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 2.5rem;
+  border-radius: 2px;
+  color: #25D366;
+}
+
+.drawer-items button:active {
+  transform: scale(0.99);
+}
+
+.drawer-banner {
+  margin-top: 100px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 15px 2px 2px;
+  color: #000;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.drawer-banner h2 {
+  letter-spacing: 0.83px;
+}
+
+#closeBtn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 2px 5px 7px;
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+#imasCircle {
+  display: none;
+}
+
+.drawer-items {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  #openBtn {
+    bottom: 10px;
+    left: 10px;
+    font-size: 14px;
+  }
+
+  #closeBtn {
+    font-size: 14px;
+    background-color: red;
+    color: white;
+    top: 50px;
+    right: 45px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 23px;
+    padding: 7px 10px 10px 10px;
+  }
+
+  #drawer {
+    height: 45%;
+    width: 100%;
+    border-top-left-radius: 160px;
+    /* Rounded top-left corner */
+    border-top-right-radius: 160px;
+    border: 5px solid #8fbfd1;
+  }
+
+  #imasCircle {
+    display: block;
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    border-radius: 38px;
+    top: -35px;
+    left: 41%;
+    background-color: #0f0f0f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #fff;
+    text-align: center;
+    padding: 21px 14px;
+    border: 2px solid #e924cb;
+  }
+
+  .drawer-items {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .drawer-items h2 {
+    font-size: 18px;
+  }
+
+  .drawer-banner {
+    margin-top: 80px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 15px 2px 2px;
+    color: #000;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .drawer-banner h2 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .drawer-banner p {
+    font-size: 14px;
+  }
+}
+
+.xmx {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+}
+
+#sidebar {
+  width: 0;
+  position: fixed;
+  height: 100%;
+  background-color: #047c9e;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  color: white;
+  right: 0px;
+  top: 0px;
+  z-index: 99;
+  box-shadow: 0px 0px 0px 2px #fff;
+}
+
+#sidebar a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+  position: relative;
+  z-index: 8 !important;
+}
+
+.topbar-text {
+  font-size: 17px;
+  /* padding: 3px; */
+}
+
+#sidebar a:hover {
+  color: #f1f1f1;
+}
+
+#main-content {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
+
+.topbar {
+  z-index: 99;
+  background-color: #237d9e;
+  color: white;
+  font-size: 16px;
+  position: fixed;
+  height: 63px;
+}
+
+.main {
+  display: inline;
+}
+
+.fa {
+  font-size: 29px !important;
+  margin-block: 5px;
+}
+
+.fa-btn {
+  font-size: 20px !important;
+  margin-block: 5px;
+}
+
+.vl {
+  border-right: 2px solid rgb(239 239 239);
+}
+
+.tb_text {
+  font-size: 15px;
+  color: white;
+  margin-left: 9px;
+  position: absolute;
+  top: 4px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  font-size: 14px;
+  color: #4e4949;
+  font-weight: 600;
+}
+
+.navbar {
+  padding-inline: 126px;
+  margin-top: 29px;
+}
+
+.slider {
+  background-image: url(../img/delhi.webp);
+  height: 438px;
+  background-size: 100% 100%;
+}
+
+/* cardio dr */
+.card-img-top1 {
+  background-image: url(../assets/Cardiology/Dr.\ Anoop\ K\ Ganjoo.png);
+  height: 207.53px;
+  background-size: cover;
+  border-radius: 13px;
+  margin-inline: 11px;
+  margin-top: 11px;
+  border-radius: 6px 6px 0px 0px;
+}
+
+.card-img-top2 {
+  background-image: url(../assets/Cardiology/Dr.\ Amit\ Mittal.png);
+  height: 207.53px;
+  background-size: cover;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top3 {
+  background-image: url(../assets/Cardiology/Dr.\ K\ K\ Kapur.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top4 {
+  background-image: url(../assets/Cardiology/Dr.\ Col\ V\ Hariharan.png);
+  height: 207.53px;
+  background-size: cover;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top5 {
+  background-image: url(../assets/Cardiology/Dr.\ Bhaba\ Nanda\ Das.png);
+  height: 207.53px;
+  background-size: cover;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top6 {
+  background-image: url(../assets/Cardiology/Dr.\ Mukesh\ Goel.png);
+  height: 207.53px;
+  background-size: cover;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top7 {
+  background-image: url(../assets/Cardiology/Dr.\ Prashanta\ Kumar\ Ghosh.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+/* end cardio dr */
+/*neuro*/
+.card-img-top8 {
+  background-image: url(../assets/Neurology/Dr.\ Anoop\ Kohli.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top9 {
+  background-image: url(../assets/Neurology/Dr.\ Charu\ Gauba.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top10 {
+  background-image: url(../assets/Neurology/dr\ chander\ malhothra.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top11 {
+  background-image: url(../assets/Neurology/dr\ mukul\ varma.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top12 {
+  background-image: url(../assets/Neurology/dr\ pushpendra\ nath.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+/*neuro*/
+/*Orthopedic*/
+.card-img-top13 {
+  background-image: url(../assets/ORTHOPAEDIC/Dr.\ Chander\ Shekar.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top14 {
+  background-image: url(../assets/ORTHOPAEDIC/Dr.\ Harsh\ Bhargava.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top15 {
+  background-image: url(../assets/ORTHOPAEDIC/Dr.\ Havind\ Tandon.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top16 {
+  background-image: url(../assets/ORTHOPAEDIC/Dr.\ M\ N\ Sehar.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top17 {
+  background-image: url(../assets/ORTHOPAEDIC/Dr.\ Prof\ Amit\ Kumar\ Agarwal.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top18 {
+  background-image: url(../assets/ORTHOPAEDIC/Dr.\ Raju\ Vaishya.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top19 {
+  background-image: url(../assets/ORTHOPAEDIC/Dr.\ Ramani\ Narasimhan.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top20 {
+  background-image: url(../assets/ORTHOPAEDIC/Dr.\ Vibhu\ Bahl.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top21 {
+  background-image: url(../assets/ORTHOPAEDIC/Dr.\ Vinod\ Sukhija.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top22 {
+  background-image: url(../assets/ORTHOPAEDIC/Dr.\ Yash\ Gulati.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+/*end ortho */
+.card-img-top23 {
+  background-image: url(../assets/ONCOLOGY/Dr.\ Amita\ Mahajan.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top24 {
+  background-image: url(../assets/ONCOLOGY/Dr.\ Dipanjan\ Panda.png);
+  height: 207.53px;
+  background-size: 100% 139%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top25 {
+  background-image: url(../assets/ONCOLOGY/Dr.\ Ganesh\ Jadhav.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top26 {
+  background-image: url(../assets/ONCOLOGY/Dr.\ Harsh\ Dua.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top27 {
+  background-image: url(../assets/ONCOLOGY/Dr.\ Muthu\ Jothi.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top28 {
+  background-image: url(../assets/ONCOLOGY/Dr.\ P\ K\ Das.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top29 {
+  background-image: url(../assets/ONCOLOGY/Dr.\ Praveen\ Kumar\ Garg.png);
+  height: 207.53px;
+  background-size: 125% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top30 {
+  background-image: url(../assets/ONCOLOGY/Dr.\ Ramesh\ Sarin.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top31 {
+  background-image: url(../assets/ONCOLOGY/Dr.\ Robin\ Khosa.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top32 {
+  background-image: url(../assets/ONCOLOGY/Dr.\ Ruquaya\ Ahmad\ Mir.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top33 {
+  background-image: url(../assets/ONCOLOGY/Dr.\ Sameer\ Kaul.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top34 {
+  background-image: url(../assets/ONCOLOGY/Dr.\ Sarika\ Gupta.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top35 {
+  background-image: url(../assets/ONCOLOGY/Dr.\ Shishir\ Seth.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top36 {
+  background-image: url(../assets/ONCOLOGY/Dr\ Rajinder\ Kaur\ Saggu.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top37 {
+  background-image: url(../assets/ONCOLOGY/Dr\ Sapna\ Manocha\ Verma.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top38 {
+  background-image: url(../assets/ONCOLOGY/Dr\ Vikram\ Pratap\ Singh.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top39 {
+  background-image: url(../assets/Kidney/Dr.\ S\ N\ Mehta.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top40 {
+  background-image: url(../assets/Kidney/Dr.\ Sandeep\ Guleria.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top41 {
+  background-image: url(../assets/Kidney/Dr\ Vijaya\ Raja\ Kumari.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-top42 {
+  background-image: url(../assets/Kidney/Dr.\ Neerav\ Goyal.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 6px 6px 0px 0px;
+  margin-inline: 11px;
+  margin-top: 11px;
+}
+
+.card-img-topn1 {
+  background-image: url(../assets/logo/news1.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 13px;
+}
+
+.card-img-topn2 {
+  background-image: url(../assets/logo/news2.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 13px;
+}
+
+.card-img-topn3 {
+  background-image: url(../assets/logo/news3.png);
+  height: 207.53px;
+  background-size: 100% 131%;
+  border-radius: 13px;
+}
+
+.card-img-topn4 {
+  background-image: url(../assets/logo/t1.png);
+  height: 207.53px;
+  background-size: 114% 120%;
+  border-radius: 13px;
+}
+
+.card-img-topn5 {
+  background-image: url(../assets/logo/t2.png);
+  height: 207.53px;
+  background-size: 101% 107%;
+  border-radius: 13px;
+}
+
+.card-img-topn6 {
+  background-image: url(../assets/logo/t3.png);
+  height: 207.53px;
+  background-size: 100% 100%;
+  border-radius: 13px;
+}
+
+.hotel-img {
+  background-image: url(../assets/Hotels/h1.jpg);
+  height: 207.53px;
+  background-size: 100% 100%;
+}
+
+.hotel-img2 {
+  background-image: url(../assets/Hotels/h2.jpg);
+  height: 207.53px;
+  background-size: 100% 100%;
+}
+
+.hotel-img3 {
+  background-image: url(../assets/Hotels/h3.jpg);
+  height: 207.53px;
+  background-size: 100% 100%;
+}
+
+.hotel-img4 {
+  background-image: url(../assets/Hotels/h4.jpg);
+  height: 207.53px;
+  background-size: 100% 100%;
+}
+
+.hotel-img5 {
+  background-image: url(../assets/Hotels/h5.jpg);
+  height: 207.53px;
+  background-size: 100% 100%;
+}
+
+.hotel_tc {
+  font-size: 9px;
+  margin-top: 35px;
+  margin-left: 13px;
+}
+
+.hotel-row {
+  border: 1px solid #b8b5b5;
+  height: 198px;
+  overflow: hidden;
+  box-shadow: 0px 0px 3px 1px #d3d3d3ba inset;
+  border-radius: 9px;
+  margin-inline: 30px;
+}
+
+.text-bnnr {
+  color: white;
+  padding-top: 170px;
+}
+
+.text-bnnr-dis {
+  color: white;
+  position: relative;
+  top: -23px;
+  font-size: 21px;
+}
+
+.bg-slider {
+  background: black;
+}
+
+.scrol-gif {
+  background-image: url(../img/Animation\ -\ 1704273953226.gif);
+  background-size: 100% 100%;
+  height: 114px;
+  width: 94px;
+  position: relative;
+}
+
+.dr_btn {
+  height: 43px;
+  border-radius: 10px;
+  background: #237d9e;
+  border: none;
+  color: white;
+  padding: 8px 26px 8px 26px;
+  margin-top: 4px;
+  width: 100%;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.banner-bn {
+  background: #2582a1;
+  /* height: 163px; */
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+  border: none;
+}
+
+.btn-bnnr {
+  border-radius: 8px;
+  /* background: #fdb931; */
+  background: #fff;
+  color: #25D366;
+  padding: 10px 22px 10px 22px;
+  cursor: pointer;
+  border: none;
+  font-weight: 500;
+  display: inline-flex;
+  gap: 8px;
+}
+
+.dr_btn2 {
+  cursor: pointer;
+  height: 43px;
+  border-radius: 10px;
+  background: #0c6434;
+  border: none;
+  color: white;
+  padding: 8px 26px 8px 26px;
+  margin-top: 4px;
+  width: 100%;
+  font-size: 13px;
+  margin-bottom: -11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.card-title {
+  margin-bottom: 0.75rem;
+  font-size: 16px;
+  color: #1d1d1d;
+  font-weight: 600 !important;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+  font-weight: 400 !important;
+}
+
+.card-text {
+  color: #224855;
+  font-weight: 400 !important;
+  margin-top: -7px;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.card {
+  border: 1px solid rgb(137 136 136 / 26%);
+  padding: 5px 5px 15px;
+  margin-bottom: 10px;
+  /* box-shadow: 0px 0px 6px 1px #bfbfbf82; */
+  box-shadow: 6px 6px 70px #1028511c;
+  z-index: 0;
+  margin: 24px;
+  border-radius: 15px;
+}
+
+ul {
+  list-style-type: none;
+  text-align: left;
+}
+
+.btn-primary2 {
+  color: #161616;
+  font-weight: 600;
+  background-color: #FFF !important;
+  border-color: #6994c3 !important;
+  box-shadow: 6px 6px 70px rgb(16 40 81 / 23%);
+  font-size: 14px;
+  height: 55px;
+  margin-bottom: 10px;
+  padding: 0px 61px 0px 61px;
+  border-radius: 7px;
+}
+
+.btn-primary2:hover {
+  color: #FFF;
+  background-color: #007C9d;
+  cursor: pointer;
+  border-color: #01C9C9 !important;
+  background: transparent linear-gradient(281deg, #007C9D 0%, #01C9C9 100%) 0% 0% no-repeat;
+
+}
+
+.btn-primary {
+  color: #fff !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  font-size: 9px;
+  letter-spacing: 0.93px;
+  height: 51px;
+  margin-bottom: 10px;
+  width: 10rem;
+  margin: 1px;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 0px;
+}
+
+/* tabs */
+
+
+.tab {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transition: background-color 0.3s;
+  color: #017D9C !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  font-size: 14px;
+  letter-spacing: 0.93px;
+  height: 51px;
+  margin-bottom: 10px;
+  margin: 0px 1px;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 0px;
+  cursor: pointer;
+  gap: 8px;
+}
+
+.tab>span {
+  flex: none;
+}
+
+.tabIcons {
+  background: #FFF !important;
+}
+
+.tab:hover {
+  border-bottom: 4px solid #017D9C !important;
+}
+
+.tab.active {
+  color: #017D9C;
+  background-color: transparent;
+  border-bottom: 4px solid #017D9C !important;
+  text-decoration: none;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+.tab-area-active {
+  border-bottom: 3px solid #fff !important;
+  transform: scale(0.98);
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: transparent;
+  border-bottom: 3px solid #fff !important;
+  text-decoration: none;
+}
+
+.btn-info {
+  color: #fff;
+  background-color: #195e76;
+  left: 0px;
+  position: relative;
+  height: 89px;
+  top: 408px;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  font-size: 8px;
+  width: 26px;
+  border-radius: 0px;
+  border: 1px solid white;
+  padding-left: 4px;
+  font-weight: 700;
+}
+
+.Patient_Services {
+  font-size: 27px;
+  color: rgb(77, 77, 77);
+  margin-bottom: 2px;
+  margin-top: 27px;
+}
+
+.Patient_Services2 {
+  font-size: 27px;
+  color: rgb(77, 77, 77);
+  margin-bottom: -7px;
+  margin-top: 11px;
+}
+
+#myBtn {
+  position: fixed;
+  bottom: 0px;
+  left: 30px;
+  z-index: 99;
+  font-size: 19px;
+  border: none;
+  outline: none;
+  background-color: #237d9e;
+  color: white;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  text-align: left;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+.heading {
+  font-size: 32px;
+  color: #047c9e;
+  text-align: center;
+  padding-bottom: 18px;
+  font-weight: 500;
+  margin-top: 0px;
+}
+
+.heading-top {
+  color: #4f4f4f;
+  font-size: 17px;
+  padding-top: 7px;
+}
+
+.footer_links {
+  text-align: left !important;
+}
+
+.footer_logo {
+  margin-top: -15px;
+  width: 150px;
+  height: 65px;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  background-color: #000000;
+  padding: 50px 0px 41px;
+  margin-top: 0px;
+  color: white;
+}
+
+.checked {
+  color: orange;
+  font-size: 17px !important;
+}
+
+.all_star {
+  color: rgb(23, 22, 22);
+  font-size: 11px !important;
+}
+
+.footer-column {
+  text-align: center;
+}
+
+.hotel-name {
+  font-size: 22px;
+  color: #3e3e3e;
+}
+
+.hotel-star {
+  font-size: 13px;
+  color: #615900;
+  font-weight: 700;
+}
+
+.hotel-add {
+  font-size: 12px;
+  color: #3f3a3a;
+  font-weight: 400;
+}
+
+table {
+  color: #727171;
+}
+
+.add-bar {
+  border-right: 1px solid #e2e2e2;
+}
+
+.no-padding-container {
+  padding-left: 0px;
+  padding-right: 0px;
+  cursor: pointer;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+.km-dis {
+  position: relative;
+  top: 113px;
+  font-size: 17px;
+  left: -41px;
+  font-weight: 500;
+}
+
+.map {
+  border-right: 1px solid #e2e2e2;
+}
+
+.btn-hotel {
+  position: relative;
+  top: 28px;
+  left: 10px;
+  height: 34px;
+  width: 90%;
+  font-size: 9px;
+  border-radius: 4px;
+  border: none;
+  background: #237d9e;
+  color: white;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.eqlbox {
+  height: 345px;
+}
+
+.eqlbox2 {
+  height: 168px;
+}
+
+.price {
+  position: relative;
+  top: 40px;
+  left: 31px;
+  color: #237d9e;
+  font-size: 31px;
+}
+
+.center-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-style {
+  font-size: 60px !important;
+  color: orange;
+  margin-top: 51px;
+  margin-left: 33px;
+}
+
+.sticky-element {
+  position: sticky;
+  top: 61px;
+  background-color: #ECFBFE;
+  padding: 0px;
+  border-radius: 7px !important;
+  width: 93%;
+  text-align: center;
+  z-index: 1;
+  max-width: 66rem;
+}
+
+.about-us-cont {
+  font-size: 16px;
+  margin-top: 15px;
+  text-align: justify;
+  padding-inline: 44px;
+}
+
+.sidebar-top {
+  background-color: #047c9e;
+  padding: 8px;
+  position: relative;
+  top: -60px;
+  height: 200px;
+}
+
+.sidebar-middle {
+  margin-top: -26px;
+  background-color: #fff;
+  padding: 23px;
+}
+
+.sidebar_end_span {
+  color: #047c9e;
+}
+
+.footer-width {
+  width: 1098px !important;
+}
+
+.new_mr {
+  margin-left: 15px;
+  margin-right: 30px;
+  flex-wrap: nowrap;
+}
+
+.sidebar-h1 {
+  font-size: 52px;
+  margin-top: 16px;
+  color: #047c9e;
+}
+
+.footer-links2 {
+  line-height: 30px;
+}
+
+.footer-ph {
+  margin-top: -8px;
+}
+
+.table-con {
+  padding-inline: 44px;
+}
+
+.table-responsive {
+  border-left: 1px solid #d4d1d1;
+  border-bottom: 1px solid #d4d1d1;
+  border-right: 1px solid #d4d1d1;
+}
+
+.sidebar-button {
+  border-radius: 50px;
+  background: #fdb931;
+  width: 72%;
+  height: 64px;
+  margin-top: 19px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+  color: #237d9e;
+}
+
+.footer-links {
+  line-height: 30px;
+}
+
+.sidebar-span {
+  font-size: 23px;
+  font-weight: 600;
+  color: #047c9e;
+}
+
+#lst_lg_box {
+  display: flex;
+  margin-block: -3px;
+  background: #248caa1f;
+  overflow: none;
+  padding-block: 27px;
+}
+
+.cardnew {
+  transition: 0.3s;
+  width: 30%;
+  margin: 19px;
+  text-align: center;
+}
+
+.service-bottom {}
+
+.background-div {
+  background-image: url(../img/sidebar_logo.png);
+  background-position: center center;
+  height: 151px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  margin-top: -25px;
+}
+
+.style_box {
+  margin-top: 17px;
+}
+
+.font-lst-box-s {
+  font-size: 13px;
+  text-align: justify;
+}
+
+.font-lst-box {
+  font-size: 21px;
+}
+
+.cardnew2 {
+  text-align: center;
+
+  transition: 0.3s;
+  width: 30%;
+  margin: 19px;
+}
+
+.bnnr-row {
+  margin-inline: 12px;
+  align-items: center;
+}
+
+.marz {
+  margin-inline: -15px;
+}
+
+.cardnew3 {
+  text-align: center;
+  transition: 0.3s;
+  width: 30%;
+  margin: 19px;
+}
+
+.card-titlex {
+  margin-top: -28px;
+  font-size: 16px;
+}
+
+.card-whatsapp {
+  position: relative;
+  top: -9px;
+}
+
+.card-body {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 10px;
+  overflow-y: scroll;
+}
+
+.card-body::-webkit-scrollbar {
+  display: none;
+}
+
+@-moz-document url-prefix() {
+
+  .card-body {
+    scrollbar-width: none;
+  }
+
+}
+
+.card-title-new {
+  color: #047c9e;
+  margin-block: 20px;
+  font-size: 23px;
+}
+
+.text-muted {
+  color: #0f6d9f !important;
+}
+
+.card-blog {
+  width: 30%;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #237d9e;
+}
+
+@media screen and (max-width: 800px) {
+  .footer_col2_font {
+    display: none;
+  }
+
+  .tab {
+    margin: 0px 16px;
+  }
+
+  .new_mr {
+    margin-left: 0px;
+    margin-right: 0px;
+    flex-wrap: nowrap;
+  }
+
+  .bnnr-mobi {
+    font-size: 20px;
+    padding: 0px !important;
+    position: relative;
+    text-align: center;
+    display: contents;
+  }
+
+  .about-us-cont {
+    font-size: 16px;
+    margin-top: -11px;
+    text-align: justify;
+    padding-inline: 41px !important;
+    font-weight: 400;
+    margin-bottom: -21px;
+  }
+
+  .bnnr-row {
+    margin-inline: 0px !important;
+  }
+
+  .eqlboxmobi {
+    height: 375px !important;
+  }
+
+  .btn-bnnr {
+    display: flex;
+    align-items: center;
+    padding: 12px 7px 12px 21px !important;
+    border: none;
+    font-weight: 500;
+    font-size: 14px;
+    height: 48px;
+    width: 198px;
+    margin-left: 40%;
+    margin-top: 0px;
+  }
+
+  .chat_col {
+    text-align: center !important;
+    position: relative;
+  }
+
+  .topbar {
+    height: 70px !important;
+  }
+
+  .slider {
+    background-image: url(../img/Group_x.webp);
+    height: 389px;
+    background-size: 100% 100%;
+  }
+
+  .slider {
+    z-index: 0;
+  }
+
+  .cardnew {
+    width: 100%;
+    margin: 0px !important;
+  }
+
+  .cardnew2 {
+    width: 100%;
+    margin: 0px !important;
+  }
+
+  #sidebar {
+    box-shadow: 0px 0px 0px 2px #ffffff57 !important;
+  }
+
+  .cardnew3 {
+    width: 100%;
+    margin: 0px !important;
+  }
+
+  #lst_lg_box {
+    display: block;
+  }
+
+  .font-lst-box {
+    font-size: 14px;
+  }
+
+  .table-con {
+    padding-inline: 26px !important;
+  }
+
+  .sidebar-button {
+    border-radius: 7px;
+    width: 100%;
+    height: 36px;
+    margin-top: 19px;
+    font-size: 9px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    color: white;
+    border: none;
+  }
+
+  .sidebar-middle {
+    line-height: 9px;
+  }
+
+  .sidebar_end_span {
+    font-size: 7px;
+  }
+
+  .no-padding-container {
+    cursor: pointer;
+    height: 185px;
+    width: 100% !important;
+  }
+
+  .sidebar-h1 {
+    font-size: 32px;
+    margin-top: 16px;
+  }
+
+  .sidebar-span {
+    font-size: 10px;
+    font-weight: 600;
+  }
+
+  .sidebar_top_font {
+    font-size: 10px;
+    margin-top: -28px;
+  }
+
+  .mobi-head2 {
+    text-align: center !important;
+    margin-left: 0px !important;
+    margin-block: 18px;
+  }
+
+  .bar {
+    display: none;
+  }
+
+  .footer-links2 {
+    margin-left: 163px;
+    margin-top: -136px;
+    font-size: 16px;
+  }
+
+  .footer-links {
+    text-align: left !important;
+    font-size: 16px;
+    margin-left: 0px;
+  }
+
+  .footer-width {
+    width: 100% !important;
+  }
+
+  .navbar-toggler-icon {
+    display: inline-block;
+    width: 16px;
+    height: 20px;
+    vertical-align: middle;
+    content: '';
+    background: no-repeat center center;
+    background-size: 100% 100%;
+  }
+
+  #sidebar {
+    box-shadow: 0px 0px 0px 2px #ffffff57;
+  }
+
+  .background-div {
+    height: 108px;
+    margin-top: 7px;
+    margin-bottom: 46px;
+  }
+
+  .navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    position: relative;
+    top: -12px;
+  }
+
+  .logo-x {
+    height: 61px;
+    position: relative;
+    top: -13px;
+    width: 64px;
+  }
+
+  .sidebar-logo {
+    margin-top: -36px;
+    text-align: center;
+    margin-bottom: -18px;
+    margin-left: -33px;
+  }
+
+  .btn-primary2 {
+    color: #fff !important;
+    background-color: #237d9e !important;
+    border-color: #6994c3 !important;
+    font-size: 16px;
+    height: 48px !important;
+    margin-bottom: 10px;
+    padding: 1px 26px 1px 41px !important;
+  }
+
+  .btn-primary {
+    color: #fff !important;
+    background-color: #237d9e !important;
+    border-color: #6994c3 !important;
+    font-size: 9px;
+    height: 34px;
+    margin-bottom: 10px;
+    width: 92px;
+    margin: 2px;
+    font-weight: 600;
+  }
+
+  .text-bnnr {
+    color: white;
+    /* padding-top: 0px; */
+    font-size: 31px;
+  }
+
+  .btn-info {
+    height: 102px;
+    width: 34px;
+    left: -16px;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-size: 9px;
+    font-weight: 600;
+    top: 12px;
+    z-index: 999;
+  }
+
+  .btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+
+  .liv {
+    display: none;
+  }
+
+  .Patient_Services2 {
+    margin-top: 11px !important;
+    font-weight: 400;
+  }
+
+  .btn-block {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .Patient_Services {
+    font-size: 22px !important;
+    margin-inline: 9px;
+    padding-block: 10px;
+  }
+
+  .fa {
+    font-size: 16px !important;
+    margin-block: 5px;
+  }
+
+  .center-container {
+    display: block !important;
+  }
+
+  .xmx {
+    position: fixed;
+    right: -15px;
+    top: 192px;
+    z-index: 9;
+  }
+
+  .sticky-element {
+    padding: 0px;
+    padding-top: 0px !important;
+    padding-bottom: 6px;
+    top: 70px;
+    overflow-x: scroll;
+  }
+
+  .fa-style {
+    font-size: 60px !important;
+    margin-top: 8px !important;
+    margin-left: 62px !important;
+    margin-bottom: 64px !important;
+  }
+
+  .price {
+    top: 17px;
+    font-size: 34px;
+    left: 108px;
+  }
+
+  .km-dis {
+    position: relative;
+    top: 68px;
+    font-size: 18px;
+  }
+
+  .btn-hotel {
+    top: 7px;
+    left: 36px;
+    height: 50px;
+    width: 76%;
+    font-size: 13px;
+    border-radius: 13px;
+    text-align: center;
+    z-index: -0;
+  }
+
+  .map {
+    border-bottom: 1px solid #a4a4a4;
+  }
+
+  .add-bar {
+    border-bottom: 1px solid #a4a4a4;
+  }
+
+  .hotel-row {
+    border: 1px solid #b0afaf;
+    height: 726px;
+    margin: -7px;
+    margin-block: 12px;
+    position: relative;
+  }
+
+  .card-title {
+    margin-bottom: 0.75rem;
+    font-size: 19px;
+    color: #666666;
+  }
+
+  .heading {
+    font-size: 24px;
+    padding-bottom: 6px !important;
+  }
+
+  .mobi_icon {
+    margin-left: -59px;
+    margin-top: -1px;
+  }
+
+  .commn_id {
+    height: 261px !important;
+  }
+
+  .mob-footercol1 {
+    text-align: center;
+  }
+
+  .card {
+    margin-top: 20px;
+    padding: 11px;
+    width: 94%;
+    margin-inline: 32px;
+    box-shadow: 0px 0px 2px 1px #d9d1d1bd;
+    margin-left: 13px;
+  }
+
+  .card-img-top1 {
+    background-size: 100% 130% !important;
+  }
+
+  .topbar-text {
+    margin-left: 35px;
+    text-align: center;
+    margin-top: 5px !important;
+  }
+
+  .vl {
+    display: none;
+  }
+
+  .w-100 {
+   width: fit-content !important;
+  }
+
+  .topbar-icons {
+    /* margin-left: 5px; */
+    height: 1rem !important;
+  }
+
+  .tb_text {
+    font-size: 13px;
+    color: white;
+    top: 4px;
+    display: none;
+  }
+
+  .slider {
+    height: 389px;
+    background-size: 100% 117% !important;
+    margin-top: 42px;
+  }
+
+  .navbar {
+    padding-inline: 27px !important;
+    height: 49px;
+    top: 19px !important;
+  }
+
+  .navbar-nav {
+    position: relative;
+    left: 3px;
+  }
+
+  .navbar-light .navbar-nav .active>.nav-link,
+  .navbar-light .navbar-nav .nav-link.active,
+  .navbar-light .navbar-nav .nav-link.show,
+  .navbar-light .navbar-nav .show>.nav-link {
+    color: rgb(255 255 255 / 90%);
+    background: #21b2e7;
+    width: 100% !important;
+  }
+
+  .scrol-gif {
+    top: 9px !important;
+  }
+
+  .collapse.show {
+    display: block;
+    background: #f3f3f3;
+    position: absolute;
+    width: 99%;
+    left: 0px;
+    top: 67px;
+    z-index: 9;
+  }
+
+  #myBtn {
+    padding: 7px !important;
+    border-radius: 4px;
+    bottom: 21px;
+  }
+}

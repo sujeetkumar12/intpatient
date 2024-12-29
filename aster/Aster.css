@@ -1,0 +1,715 @@
+@font-face {
+    font-family: Montserrat;
+    font-display: swap;
+}
+
+body {
+    touch-action: manipulation;
+}
+
+/* CSS for the navbar container */
+.transprint-navbar {
+    background-color: rgba(255, 255, 255, 0) !important;
+    /* Adjust the alpha value to set transparency */
+}
+
+.slider-all {
+    background-image: url(download.webp);
+    background-size: cover;
+    height: 700px;
+    top: -121px;
+    position: relative;
+}
+
+.navbar {
+    z-index: 999;
+    top: 17px;
+}
+.navbar-brand {
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: -11rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: #05aba5 !important;
+
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    font-size: 20px;
+}
+
+.inner-element {
+    position: relative;
+    top: 300px;
+    color: white;
+    text-align: center;
+    visibility: hidden;
+}
+
+.navbar-nav {
+    background: #080808c2;
+    border-radius: 27px;
+    margin-left: 17px;
+}
+.btn-block {
+    background-color: #004185 !important;
+    color: white;
+    display: flex;
+    width: 599px;
+    padding: 11.5px 8px;
+    justify-content: center;
+    align-items: center;
+    margin-left: -180px;
+    margin-top: 15px;
+    font-size: 21px;
+}
+
+
+
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 20px 62px;
+        transition: 0.3s;
+    font-size: 17px;
+    border-radius: 50px;
+    color: #606060;
+    border: 1px solid #919191;
+    font-weight: 500;
+    margin-bottom: 47px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    color: #006F6C;
+    font-weight: 600;
+    border: 1px solid #006F6C;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #C5F4F3;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+.circular-img {
+    border-radius: 50% !important;
+    height: 240px;
+    padding-top: 6px;
+    width: 254px;
+    position: relative;
+    top: -116px;
+}
+.col-md-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 31.333333%;
+}
+
+
+
+.box-card {
+    box-shadow: 0px 0px 3.4885714054107666px 0px rgba(0, 0, 0, 0.25);
+    /* padding: 15px 1px 29px 46px; */
+    margin: 59px 1px 26px 11px;
+}
+
+.btn-1 {
+    width: 99%;
+    background-color: #C5F4F3;
+    padding: 16.28px 34.533px 17.72px 6.467px;
+    color: #006F6C;
+    font-weight: 600;
+}
+
+.btn-2 {
+    width: 99%;
+    background-color: #C5F4F3;
+    padding: 16.28px 34.533px 17.72px 35.467px;
+    color: #006F6C;
+    font-weight: 600;
+
+
+}
+.h1, h1 {
+    font-size: 1.5rem;
+}
+.text-dr {
+    font-size: 19px;
+    padding-block: 36px;
+    color: #004185;
+    margin-top: -114px;
+}
+
+.slider-all {
+    overflow: hidden;
+}
+.inner-dadta-slider {
+    background: #0000009e;
+    color: white;
+    position: relative;
+    text-align: center;
+    top: 466px;
+    padding: 40px 0px 40px 0px;
+    font-size: 17px;
+    margin-left: -16px;
+    width: 103%;
+}
+.helth-check {
+    border: 3px dotted #d5d5d5;
+        margin-block: 65px;
+    padding: 35px;
+    text-align: center;
+}
+.style-helth {
+    padding: 35px;
+    box-shadow: 0px 0px 2px 0px #d1d1d1;
+    border-radius: 7px;
+    background: #c5f4f3;
+    color: #006f6c;
+    font-weight: 500;
+    margin-bottom: 32px;
+}
+.font_set{
+ 
+        font-size: 22px;
+        position: relative;
+        top: 14px;
+    
+}
+.style-helth:hover {
+    border: 1px solid #c5f4f3;
+    background: none;
+    box-shadow: 0px 0px 6px 1px #c5f4f3b8;
+}
+.box-all{
+
+}
+@media screen and (max-width: 800px) {
+    .footer-all {
+        background-color: black !important;
+        padding-inline: 0px !important;    } 
+        .helth-check {
+            margin-block: 65px;
+            text-align: center;
+            padding: 0px !important;
+            border: none !important;
+            width: 85%;
+        }
+        .style-helth {
+            padding: 35px;
+            box-shadow: 0px 0px 2px 0px #d1d1d1;
+            border-radius: 7px;
+            background: #c5f4f3;
+            color: #006f6c;
+            font-weight: 500;
+            margin-bottom: 14px;
+            position: relative;
+            left: -23px;
+        }
+    .arrow-down {
+        left: 170px;
+    }
+    .tab button {
+        padding: 13px 11px;
+        font-size: 17px;
+        border-radius: 50px;
+        font-weight: 500;
+        margin-bottom: 13px;
+    }
+    .inner-dadta-slider {
+        text-align: left;
+        top: 359px;
+        font-size: 18px;
+        margin-left: -15px;
+        width: 109%;
+    }
+    .p-d {
+        padding-inline: 38px;
+        padding-block: 7px;
+        font-size: 18px;
+        border-bottom: 1px solid #ffffff12;
+    }
+    .box-patients {
+        margin-inline: 0px !important;
+    }
+
+    .card-testi {
+        width: 100% !important;
+        padding-block: 10px;
+        margin-inline: 50px;
+        margin-bottom: 12px;
+    }
+    .price-box {
+        max-width: 100% !important;
+        margin-inline: 15px !important;
+        margin-bottom: 12px;
+        padding-block: 12px;
+    }
+    .h1, h1 {
+    font-size: 1.5rem;
+}
+.price-box-text-right {
+    margin-top: -29px !important;
+    margin-right: 33px !important;
+}
+.service-al {
+    width: 90% !important;
+    margin-inline: 15px;
+}
+    .btn-1 {
+
+        border-bottom: 1px solid #067370;
+    }
+    .btn-block {
+        width: 100% !important;
+        margin-top: 15px;
+        margin-inline: 0px;
+    }
+    .price-box {
+        max-width: 88.333333% !important;
+    }
+    .f-m-32{
+        font-size: 32px !important;
+    }
+    .slider-all {
+   
+        top: -1px !important;
+    }
+    .navbar-light .navbar-toggler-icon {
+        background-image: url('menu.png');
+    }
+    .navbar-light .navbar-toggler {
+        color: rgb(255 255 255 / 50%);
+        border: none;
+    }
+    .navbar {
+        z-index: 999;
+        position: absolute;
+        width: 100%;
+    }
+    .Patient_Services {
+        font-size: 19px;
+        color: #4D4D4D;
+    }
+    .check-up {
+        border-radius: 13px !important;
+        border: px solid #d9d9d9 !important;
+        background: #FFF;
+        overflow: hidden;
+        margin-block: 97px;
+        width: 92%;
+    }
+    .navbar-nav {
+        padding-left: 0px;
+        margin-bottom: 0;
+        list-style: none;
+        background: #00bdd6;
+        width: 99%;
+        margin-left: 0px;
+        padding-block: 65px;
+        border-radius: 7px;
+        box-shadow: 0px 0px 24px 1px #7772728c;
+    }
+    .box-card {
+        box-shadow: 0px 0px 3.4885714054107666px 0px rgba(0, 0, 0, 0.25);
+        margin: 136px 0px 26px 0px !important;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link {
+
+        font-size: 19px;
+        border-bottom: 1px solid #ffffff66;
+        height: 56px;
+    }
+    .col-md-4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333333%;
+        flex: 1 0 100.333333% !important;
+        max-width: 100% !important;
+    }
+    .hotel-row {
+        border: 0.8px solid #9b9a9a !important;
+        margin-inline: -7px;
+    }
+    .boxt-f-color{
+        margin-top: -90px;
+        margin-bottom: 30px;
+    }
+    .logo_mob {
+        width: 49%;
+    }
+    .hotel-img {
+        width: 333px !important;
+        height: 242px !important;
+        margin-left: -3px !important;
+        margin-top: 9px !important;
+        border-radius: 11px;
+    }
+    .slider-all {
+        background-size: 149% 107%;
+        top: -10px !important;
+    }
+    .border-b {
+        margin-top: 62px;
+        width: 110%;
+        margin-left: -16px;
+        border: 1px solid #9b9a9a;
+        padding: 33px;
+        padding-bottom: 84px;
+    }
+    .hotel-row {
+        border: 0.8px solid #9b9a9a !important;
+        margin-inline: -7px;
+    }
+    .hotel-btn {
+
+        padding: 15px 57px 15px 57px;
+    }
+    .head-1 {
+        padding-inline: 33px !important;
+        position: relative;
+        top: 35px;
+    }
+    
+    .head-2 {
+        padding-inline: 33px !important;
+        font-size: 14px !important;
+        margin-top: 34px;
+    }
+    
+  
+    
+}
+
+.head-1 {
+    padding-inline: 90px;color: #338090;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    }
+
+    .head-2 {
+        color: #064451;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 196.9%; 
+        padding-inline: 90px;
+        text-align: justify;
+        }
+
+.btn-service{
+    background: none;
+    border: none;
+    text-decoration: underline;
+
+
+
+}
+.btn-service:hover{
+ position: relative;
+ top: -2px;
+
+
+
+}
+.h-font {
+    margin-bottom: -16px;
+    margin-top: 32px;
+    font-size: 22px;
+}
+
+.box-service-x {
+    border-radius: 8px;
+    border: 1px solid #000;
+    background: #FFF;
+    box-shadow: 0px 0px 9px 0px #97CAFF;
+    margin: 7px 8px 11px 6px;
+    overflow: hidden;
+    padding: 26px;
+}
+.hotel-btn {
+    border-radius: 31px;
+    background: #007C99;
+    color: white;
+    padding: 8px 17px 8px 16px;
+    border: none;
+    margin-top: 50px;
+}
+.hotel-row {
+
+    overflow: hidden;
+    border-radius: 15.727px;
+    border: 0.8px solid #D8D8D8;
+    background: #FFF;
+}
+.hotel-img {
+
+    width: 333px !important;
+    height: 242px !important;
+    margin-left: -14px !important;
+}
+.image-column {
+    overflow: hidden;
+}
+.hotel-row {
+
+    overflow: hidden;
+    border-radius: 15.727px;
+    border: 0.8px solid #D8D8D8;
+    background: #FFF;
+}
+.price-box {
+    max-width: 100% ;
+}
+
+.inter-adv {
+    width: 200% !important;
+}
+
+.card-body {
+    width: 200%;
+}
+
+
+
+
+
+
+.box1 {
+    border-radius: 13px;
+    border: 1px solid #000;
+    background: #FFF;
+}
+
+.card-testi {
+    border-radius: 13px;
+    border: 1px solid #00bdd6b0;
+    background: #FFF;
+    padding-block: 10px;
+    width: 47%;
+}
+
+.w-50 {
+    width: 47% !important;
+}
+
+.price-box {
+    border-radius: 14px;
+    border: 2px solid #303;
+    background: #FFF;
+    margin-inline: -14px;
+}
+
+.text-price {
+    color: #303;
+    font-family: Inter;
+    font-size: 15.87px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 33px;
+}
+
+.price-list {
+    width: 50%;
+    text-align: center;
+    margin-block: 36px;
+    color: #303;
+    font-size: 24px;
+
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+.semi-text {
+    color: #303;
+    font-size: 14.725px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: -15px;
+}
+
+.box-patients {
+    margin-inline: 169px;
+}
+
+@media screen and (max-width: 1526px) {
+    .circular-img-testi {
+        height: 145px !important;
+        width: 50%;
+    }
+    .text_dec {
+        font-size: 22px;
+        font-weight: 600
+      }
+  
+      .text_dec:after {
+
+        width: 143px !important;
+        height: 2px;
+        right: -19px !important;
+
+    }
+  
+      .text_dec:before {
+     
+        width: 143px !important;
+        height: 2px;
+        left: -19px !important;
+      }
+      .i-con-box {
+        margin-inline: 12px;
+        width: 93% !important;
+    }
+
+}
+
+.check-up {
+    border-radius: 40px;
+    border: 3px solid #d9d9d9;
+    background: #FFF;
+    overflow: hidden;
+    margin-block: 97px;
+}
+
+.price-box-text {
+    color: #3d3c3c;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 49px;
+    margin-left: 18px;
+}
+
+.price-box-text-right {
+    color: #0ca854;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: -60px;
+    margin-right: 88px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    padding-block: 6px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #454545;
+    padding-inline: 11px;
+    text-align: left;
+}
+
+.card {
+    border: none;
+}
+
+.custom-list {
+    list-style-image: url('Green.svg') !important;
+    padding-left: 0;
+    padding-inline: 34px;
+}
+
+.footer {
+    background-color: black !important;
+    color: white;
+    padding: 59px;
+    text-align: justify;
+}
+
+.footer-all {
+    background-color: black !important;
+    padding-inline: 383px;
+}
+
+.none-circle {
+    list-style: none;
+    color: white;
+    list-style-image: url('double\ arrow.svg') !important;
+}
+.Patient_Services {
+    font-size: 27px;
+    color: #4D4D4D
+  }
+
+  .text_dec {
+    margin: auto;
+    text-align: center;
+    color: #1b1b1b;
+    font-size: 27px;
+    max-width: 292px;
+    position: relative
+  }
+
+  .text_dec:before {
+    content: "";
+    display: block;
+    width: 193px;
+    height: 2px;
+    background: #0B6531;
+    left: -63px;
+    top: 50%;
+    position: absolute
+  }
+  .img-mobi{
+    margin-left: -11px;
+
+  }
+
+
+  .text_dec:after {
+    content: "";
+    display: block;
+    width: 193px;
+    height: 2px;
+    background: #0B6531;
+    right: -63px;
+    top: 50%;
+
+    position: absolute
+  }
+  .i-con-box {
+    background-image: url(../img/IMAGE.webp);
+    background-size: cover;
+    height: auto;
+    padding-block: 12px;
+    margin-bottom: 3px;
+    margin-top: 6px;
+    color: #047C9E;
+    width: 100%;
+}

@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>BLK Hospital India</title>
+  <meta name="description"
+    content="BLK hospitals in India is a leader in healthcare delivery. We specialize in tertiary care surgeries.">
+  <meta name="keyword"
+    content="BLK hospitals, Delhi, India, Cardiology, Transplant, Oncology, Orthopaedic, Gastroentrology, IVF, Cosmetic, Bariatric, Neruology, Spine.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" type="text/css" href="css/normalise.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="img/favicon.ico" type="image/ico" sizes="16x16">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
+  <style>
+    #main,
+    .err {
+      display: none;
+    }
+
+    .err i {
+      font-style: normal;
+      font-size: 200px;
+    }
+
+    #loader {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      width: 100vw;
+      height: 100vh;
+      background-image: url("img/logo.jpg");
+      background-color: #fff;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .midcontainer {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -250px 0 0 -250px;
+      height: 500px;
+      text-align: center;
+      width: 500px;
+    }
+  </style>
+
+
+  <script>
+    function ipLookUp() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          var response = JSON.parse(xhttp.response);
+          console.log("location responce ", response, response.country);
+          window.ttLocation = response.country;
+          if (response.country === 'IN') {
+            // console.log("please redirect my page is https://devtest.intpatient.com/ip.html");
+            //window.location.href = "https://www.treatmenttraveller.com/";
+            document.title = "Page not found";
+            setVisible('.err', true);
+            setVisible('#loader', false);
+          }
+          else {
+            setVisible('#main', true);
+            setVisible('#loader', false);
+            initChat();
+          }
+        }
+      };
+      xhttp.open("GET", "https://asia-east2-handy-amplifier-259811.cloudfunctions.net/geolocation", true);
+      xhttp.send();
+    }
+    ipLookUp();
+    function onReady(callback) {
+      var intervalId = window.setInterval(function () {
+        if (document.getElementsByTagName('body')[0] !== undefined) {
+          window.clearInterval(intervalId);
+          callback.call(this);
+        }
+      }, 1000);
+    }
+
+    function setVisible(selector, visible) {
+      document.querySelector(selector).style.display = visible ? 'block' : 'none';
+    }
+
+    function initChat() {
+      if (window.ttLocation !== "IN") {
+        console.log("starting the chat ", window.ttLocation);
+        window.__lc = window.__lc || {}; window.__lc.license = 7595311; (function () { var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true; lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s); })();
+      }
+      window.addEventListener('load', function () {
+        console.log("Page loaded ", window.ttLocation);
+        if (window.ttLocation !== "IN") {
+          LC_API.on_chat_started = function () {
+            gtag('event', 'conversion', { 'send_to': 'AW-922729084/D0RuCNTO4IoBEPz0_rcD' });
+          };
+        }
+      });
+    }
+  </script>
+
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PV25C27');</script>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body>
+  <div id="loader"></div>
+  <div class="err">
+    <div class="midcontainer">
+      <h1>Not found <span>:(</span></h1>
+      <p>Sorry, but the page you were trying to view does not exist.</p>
+
+      <i>404</i>
+    </div>
+  </div>
+  <div id="main">
+    <section id="header">
+      <header>
+        <div class="container">
+          <div class="row">
+            <div class="col-3">
+              <div class="logo">
+                <img src="img/logo.jpg" alt="BLK Hospitals">
+              </div>
+            </div>
+            <div class="col-8 col-md-6 offset-md-3 offset-1">
+              <div class="call-section">
+                <span class="d-none d-md-block">Get Doctor's Opinion & Cost Estimate</span>&nbsp;&nbsp;
+                <a href="tel:917042839926"><i class="fa fa-phone"></i></a>&nbsp;&nbsp;
+                <a href="https://api.whatsapp.com/send?phone=917042839926&text=&source=&data=" target="_blank"><i
+                    class="fab fa-whatsapp"></i></a>&nbsp;&nbsp;
+                <span class="number">+91-7042839926</span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <div class=" navmenumain w-100">
+            <div class="container">
+              <button class="navbar-toggler d-md-none d-block mx-auto" type="button" data-toggle="collapse"
+                data-target="#navbarmain">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="navbar-collapse collapse" id="navbarmain">
+                <ul class="navbar-nav nav-fill w-100">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#speciality">Specialities</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#pilltab">Doctors</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#patients">Patient Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about">About BLK Hospital</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </section>
+    <section id=banner>
+      <div class="img-container">
+        <div class="imgwrapper">
+          <img src="img/blk.jpg" class="d-block w-100 img-fluid" alt="...">
+        </div>
+        <div class="centered">
+          <h2>BLK Super Speciality Hospital</h2>
+        </div>
+      </div>
+    </section>
+    <section id=speciality>
+      <div class="container px-100">
+        <div class="row">
+          <div class="col-12 pt-3">
+            <h2 class="text-center pb-1">Speciality</h2>
+            <!-- <nav class="navbar navbar-expand-lg navbar-dark">
+        <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbarSecond">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarSecond"> -->
+            <ul class="nav nav-tabs nav-fill w-100" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" href="#cardio" role="tab" data-toggle="tab"
+                  id="1">Cardiology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#ortho" role="tab" data-toggle="tab" id="2">Orthopaedics&nbsp;&nbsp;&nbsp;</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#neuro" role="tab" data-toggle="tab" id="3">Neuro & Spine&nbsp;</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#oncology" role="tab" data-toggle="tab"
+                  id="4">Oncology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#organ" role="tab" data-toggle="tab" id="5">Transplant&nbsp;&nbsp;&nbsp;</a>
+              </li>
+            </ul>
+            <!--   </div>
+    </nav> -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane fade in active show" id="cardio">
+                <div class="cat-section px-100">
+                  <h1 class="text-center">
+                    <img src="img/iconcardio.png">
+                  </h1>
+                  <h2 class="text-center">Cardiology</h2>
+                  <p class="text-justify">One of the Centres of Excellence of BLK Super Speciality Hospital, the BLK
+                    Heart Centre was conceived to provide a state of art fully equipped cardiac care centre to provide
+                    comprehensive services to our patients. The entire gamut of services from diagnostic non-invasive
+                    services, nuclear scans, and CT imaging is available under one roof, as are top class Interventional
+                    cardiology, Interventional radiology and Neuro interventional services. A full range of Cardiac
+                    surgery and Vascular surgery services complete the therapeutic armamentarium for providing patients
+                    with the best in class treatment that is their right.</p>
+                </div>
+
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="ortho">
+                <div class="cat-section px-100">
+                  <h1 class="text-center">
+                    <img src="img/iconortho.png">
+                  </h1>
+                  <h2 class="text-center">Orthopaedics & Joint Replacement</h2><br>
+                  <p class="text-justify"> BLK Centre for Orthopaedics & Joint Replacement specializes in the treatment
+                    of musculo-skeletal system disorders. It is at par with international standards and offers Minimally
+                    Invasive Surgery (MIS) for Joint Reconstruction. The Centre is manned by experienced and highly
+                    skilled Orthopedic doctors that offer MIS solutions for Total Knee Replacement, Hip Resurfacing, Hip
+                    replacement,Unicondylar ( Partial) Knee Replacement Surgery as well as Replacement of Shoulder and
+                    Elbow joints. The centre carries out all kinds of limb salvage surgeries and Bone Tumour surgeries,
+                    as well as correctional procedures for deformities.
+
+                </div>
+
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="neuro">
+                <div class="cat-section px-100">
+                  <h1 class="text-center">
+                    <img src="img/iconneuro.png">
+                  </h1>
+                  <h2 class="text-center">Neurosurgery & Spine Surgery</h2><br>
+                  <p class="text-justify">BLK centre of Neurosciences is one of the few comprehensive neurosciences
+                    centres in the country where Neurologist, Neurosurgeons, Neuro-oncologists, Neuro-anaesthetist and
+                    Neuro-critical specialists work as a cohesive group. This has led to this centre being recognized as
+                    a leading referral tertiary centre for this part of the country.</p>
+
+                </div>
+
+
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="oncology">
+                <div class="cat-section px-100">
+                  <h1 class="text-center">
+                    <img src="img/icononco.png">
+                  </h1>
+                  <h2 class="text-center">Oncology</h2><br>
+                  <p class="text-justify">BLKCC, with state of the art equipment, facilities and experienced, faculty &
+                    staff, is wholly committed to highly personalized and comprehensive cancer care. Patient centric
+                    focus, multidisciplinary approach, personalized, cost effective solutions with utmost care to all
+                    medical needs of the patient coupled with administrative needs are meticulously looked into by a
+                    team of experienced medical and administrative teams. Patients are the focus of everything we do at
+                    BLKCC informing them of all progress.<br></p>
+                </div>
+
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="organ">
+                <div class="cat-section px-100">
+                  <h1 class="text-center">
+                    <img src="img/icontransplant.png">
+                  </h1>
+                  <h2 class="text-center">Transplant</h2><br>
+                  <p class="text-justify">BLK Super specialty Hospital is among the top hospitals in India for
+                    transplants. it is ranked sixth and ninth by The Times and The Week respectively. The liver
+                    transplant department has been involved in over 700 liver transplant procedures and has established
+                    a successful transplant program which caters to both adult and pediatric patients with End Stage
+                    Liver Disease.
+                  </p>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="doc-container docx" id="pilltab">
+          <div class="container-fluid">
+            <h1 class="text-center">Our Doctors</h1>
+            <div class="row">
+              <div class="col-md-12 mb-3 navvdox">
+                <ul class="nav nav-pills nav-justified" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a href="#cardio-pill" class="nav-link active text-center" id="cardio-tabx" data-toggle="pill"
+                      aria-controls="cardio-pill" aria-selected="true">Cardiologists</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#ortho-pill" class="nav-link text-center" id="ortho-tabx" data-toggle="pill"
+                      aria-controls="ortho-pill" aria-selected="false">Orthopaedic Surgeons</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#neuro-pill" class="nav-link text-center" id="neuro-tab" data-toggle="pill"
+                      aria-controls="neuro-pill" aria-selected="false">Neurosurgeons</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#onco-pill" class="nav-link text-center" id="onco-tab" data-toggle="pill"
+                      aria-controls="onco-pill" aria-selected="false">Oncologists</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#transplant-pill" class="nav-link text-center" id="transplant-tab" data-toggle="pill"
+                      aria-controls="transplant-pill" aria-selected="false">Transplant Surgeons</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- /.col-md-4 -->
+              <div class="col-md-12 nopad">
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="cardio-pill" role="tabpanel" aria-labelledby="cardio-tabx">
+
+
+                    <div id="portfolio1" class="container-fluid text-center text-white">
+                      <h2 class="text-center">Team of Cardiologist</h2><br>
+                      <div class="row text-center slideanim">
+
+                        <div class="col-md-6">
+                          <div class="thumbnail">
+                            <img src="img/subhash.jpg" alt="Dr. Subhash Chandra Cardiologist in Delhi"
+                              class="img-fluid doc-icon" />
+                          </div>
+                          <div class="docinfo">
+                            <h4 class="text-center">Dr. Subhash Chandra</h4>
+                            <h5>34 Years of experience</h5>
+                            <strong>MBBS, MD - General Medicine, DNB - Cardiology, DM - Cardiology</strong>
+                            <a href="#" data-toggle="modal" data-target="#exampleModalCenter"><span
+                                class="opinion d-inline-block btn btn-info d-block button-w mx-auto">Get doctor
+                                opinion</span> </a>
+                            <a onclick=" LC_API.open_chat_window(); return false;" href="#Live Chat" class=chat><span
+                                class="opinion d-inline-block btn btn-success d-block button-w mx-auto">Live
+                                Chat</span></a>
+
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="thumbnail">
+                            <img src="img/neeraj.jpg" alt="Dr. Neeraj Bhalla Cardiologist, BLK Hospital Delhi"
+                              class="img-fluid doc-icon" />
+                          </div>
+                          <div class="docinfo">
+                            <h4 class="text-center">Dr. Neeraj Bhalla</h4>
+                            <h6>33 Years of experience</h6>
+                            <strong>MBBS, MD - Medicine, DM - Cardiology, FACC</strong>
+                            <a href="#" data-toggle="modal" data-target="#exampleModalCenter"><span
+                                class="opinion d-inline-block btn btn-info d-block button-w mx-auto">Get doctor
+                                opinion</span> </a>
+                            <a onclick=" LC_API.open_chat_window(); return false;" href="#Live Chat" class=chat><span
+                                class="opinion d-inline-block btn btn-success d-block button-w mx-auto">Live
+                                Chat</span></a>
+
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+
+
+                  </div>
+                  <div class="tab-pane fade" id="ortho-pill" role="tabpanel" aria-labelledby="ortho-tabx">
+
+                    <div id="portfolio2" class="container-fluid text-center text-white">
+                      <h2 class="text-center">Team of Orthopaedic Surgeons</h2><br>
+                      <div class="row text-center slideanim">
+                        <div class="col-md-6">
+                          <div class="thumbnail">
+                            <img src="img/deepak.jpg" alt="Dr. Deepak Chaudhary Orthopedic Surgeon"
+                              class="img-fluid doc-icon">
+                          </div>
+                          <div class="docinfo">
+                            <h4 class="text-center">Dr. Deepak Chaudhary</h4>
+                            <h6>31 Years of experience</h6>
+                            <strong>MBBS, MS (Orthopaedics)</strong>
+
+                            <a href="#" data-toggle="modal" data-target="#exampleModalCenter"><span
+                                class="opinion d-inline-block btn btn-info d-block button-w mx-auto">Get doctor
+                                opinion</span> </a>
+                            <a onclick=" LC_API.open_chat_window(); return false;" href="#Live Chat" class=chat><span
+                                class="opinion d-inline-block btn btn-success d-block button-w mx-auto">Live
+                                Chat</span></a>
+
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="thumbnail">
+                            <img src="img/puneet.jpg" alt="Dr. Puneet Girdhar Orthopedic Surgeon Delhi"
+                              class="img-fluid doc-icon">
+                          </div>
+                          <div class="docinfo">
+                            <h4 class="text-center">Dr. Puneet Girdhar</h4>
+                            <h6>14 Years of experience</h6>
+                            <strong>MBBS, MS, M.Ch (Ortho.)</strong>
+
+                            <a href="#" data-toggle="modal" data-target="#exampleModalCenter"><span
+                                class="opinion d-inline-block btn btn-info d-block button-w mx-auto">Get doctor
+                                opinion</span> </a>
+                            <a onclick=" LC_API.open_chat_window(); return false;" href="#Live Chat" class=chat><span
+                                class="opinion d-inline-block btn btn-success d-block button-w mx-auto">Live
+                                Chat</span></a>
+
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+
+
+                  </div>
+
+                  <div class="tab-pane fade" id="neuro-pill" role="tabpanel" aria-labelledby="neuro-tab">
+                    <div id="portfolio3" class="container-fluid text-center text-white">
+                      <h2 class="text-center">Team of Neurosurgeons</h2><br>
+                      <div class="row text-center slideanim">
+                        <div class="col-md-6">
+                          <div class="thumbnail">
+                            <img src="img/rajiv.jpg" alt="Dr. Rajiv Anand Neuro Surgeons in Delhi"
+                              class="img-fluid doc-icon">
+                          </div>
+                          <div class="docinfo">
+                            <h4 class="text-center">Dr. Rajiv Anand</h4>
+                            <h6>40 Years of experience</h6>
+                            <strong>MBBS, MD (Internal Medicine), DM (Neurology)</strong>
+
+                            <a href="#" data-toggle="modal" data-target="#exampleModalCenter"><span
+                                class="opinion d-inline-block btn btn-info d-block button-w mx-auto">Get doctor
+                                opinion</span> </a>
+                            <a onclick=" LC_API.open_chat_window(); return false;" href="#Live Chat" class=chat><span
+                                class="opinion d-inline-block btn btn-success d-block button-w mx-auto">Live
+                                Chat</span></a>
+
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="thumbnail">
+                            <img src="img/atul.jpg" alt="Dr. Atul Prasad Neuro Surgeons, BLK Hospital Delhi"
+                              class="img-fluid doc-icon">
+                          </div>
+                          <div class="docinfo">
+                            <h4 class="text-center">Dr. Atul Prasad</h4>
+                            <h6>27 Years of experience</h6>
+                            <strong>MBBS, MS, M.Ch (Ortho.)</strong>
+
+                            <a href="#" data-toggle="modal" data-target="#exampleModalCenter"><span
+                                class="opinion d-inline-block btn btn-info d-block button-w mx-auto">Get doctor
+                                opinion</span> </a>
+                            <a onclick=" LC_API.open_chat_window(); return false;" href="#Live Chat" class=chat><span
+                                class="opinion d-inline-block btn btn-success d-block button-w mx-auto">Live
+                                Chat</span></a>
+
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+
+
+                  </div>
+                  <div class="tab-pane fade" id="onco-pill" role="tabpanel" aria-labelledby="onco-tab">
+                    <div id="portfolio4" class="container-fluid text-center text-white">
+                      <h2 class="text-center">Team of Oncologist</h2><br>
+                      <div class="row text-center slideanim">
+                        <div class="col-md-6">
+                          <div class="thumbnail">
+                            <img src="img/hukku.jpg" alt="Dr. S Hukku Oncologist, BLK Hospital Delhi"
+                              class="img-fluid doc-icon">
+                          </div>
+                          <div class="docinfo">
+                            <h4 class="text-center">Dr. S Hukku</h4>
+                            <h6>39 Years of experience</h6>
+                            <strong>MBBS, MD - Radiotherapy</strong>
+
+                            <a href="#" data-toggle="modal" data-target="#exampleModalCenter"><span
+                                class="opinion d-inline-block btn btn-info d-block button-w mx-auto">Get doctor
+                                opinion</span> </a>
+                            <a onclick=" LC_API.open_chat_window(); return false;" href="#Live Chat" class=chat><span
+                                class="opinion d-inline-block btn btn-success d-block button-w mx-auto">Live
+                                Chat</span></a>
+
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="thumbnail">
+                            <img src="img/surender.jpg" alt="Dr. Surender Kumar Dabas Oncologist Delhi, BLk Hospital"
+                              class="img-fluid doc-icon">
+                          </div>
+                          <div class="docinfo">
+                            <h4 class="text-center">Dr. Surender Kumar Dabas</h4>
+                            <h6>14 Years of experience</h6>
+                            <strong>MBBS, MS - General Surgery, DNB - Surgical Oncology</strong>
+
+                            <a href="#" data-toggle="modal" data-target="#exampleModalCenter"><span
+                                class="opinion d-inline-block btn btn-info d-block button-w mx-auto">Get doctor
+                                opinion</span> </a>
+                            <a onclick=" LC_API.open_chat_window(); return false;" href="#Live Chat" class=chat><span
+                                class="opinion d-inline-block btn btn-success d-block button-w mx-auto">Live
+                                Chat</span></a>
+
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+
+
+                  </div>
+
+                  <div class="tab-pane fade" id="transplant-pill" role="tabpanel" aria-labelledby="transplant-tab">
+                    <div id="portfolio5" class="container-fluid text-center text-white">
+                      <h2 class="text-center">Team of Transplant Surgeons</h2><br>
+                      <div class="row text-center slideanim">
+                        <div class="col-md-6">
+                          <div class="thumbnail">
+                            <img src="img/sunil.jpg" alt="Dr. Sunil Prakash Transplant Specialist"
+                              class="img-fluid doc-icon">
+                          </div>
+                          <div class="docinfo">
+                            <h4 class="text-center">Dr. Sunil Prakash</h4>
+                            <h6>35 Years of experience</h6>
+                            <strong>MBBS, MD - Internal Medicine, DM - Nephrology</strong>
+
+                            <a href="#" data-toggle="modal" data-target="#exampleModalCenter"><span
+                                class="opinion d-inline-block btn btn-info d-block button-w mx-auto">Get doctor
+                                opinion</span> </a>
+                            <a onclick=" LC_API.open_chat_window(); return false;" href="#Live Chat" class=chat><span
+                                class="opinion d-inline-block btn btn-success d-block button-w mx-auto">Live
+                                Chat</span></a>
+
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="thumbnail">
+                            <img src="img/bhatyal.jpg" alt="Dr. H. S. Bhatyal Transplant Specialist"
+                              class="img-fluid doc-icon">
+                          </div>
+                          <div class="docinfo">
+                            <h4 class="text-center">Dr. H. S. Bhatyal</h4>
+                            <h6>39 Years of experience</h6>
+                            <strong>MBBS, MD - Radiotherapy</strong>
+
+                            <a href="#" data-toggle="modal" data-target="#exampleModalCenter"><span
+                                class="opinion d-inline-block btn btn-info d-block button-w mx-auto">Get doctor
+                                opinion</span> </a>
+                            <a onclick=" LC_API.open_chat_window(); return false;" href="#Live Chat" class=chat><span
+                                class="opinion d-inline-block btn btn-success d-block button-w mx-auto">Live
+                                Chat</span></a>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                  </div>
+                </div>
+              </div>
+              <!-- /.col-md-8 -->
+            </div>
+
+          </div>
+        </section>
+      </div>
+    </section>
+    <section class="patient-service" id="patients">
+
+      <div class="container py-5">
+        <div class="why" id="whyus">
+          <div class="row">
+            <div class="col-sm-12">
+              <h1 class="section-title text-center">Why Treatment Traveller?</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <ul class="justifiedlist">
+                <li>5000+ satisfied patients</li>
+                <li>Highest Success rate</li>
+                <li>Eminent specialists on panel</li>
+                <li>NABH & ISO Certification</li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <ul class="justifiedlist">
+                <li>Video/Photo call with specialists</li>
+                <li>Customised treatment plan</li>
+                <li>A dedicated patient care manager (a doctor) handles all details </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="patient-service-detail ">
+      <div class="container pb-5">
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <h1 class="section-title" style="font-weight: 200;">Patient Services at BLK Hospital</h1>
+            <h3>by</h3>
+            <h6 class="text-center"><img src="img/ttlogoblack.png" alt="" class="img-fluid" /></h6>
+          </div>
+        </div>
+        <div class="row pt-row">
+          <div class=col-md-4>
+            <h5 class="text-center"><img src="img/assistant-icon.jpg" alt="" /></h5>
+            <h4 class="text-center">Personalised Assistance</h4>
+            <p class="text-justify">Our teams comprise of travel professionals & doctors. Each provides a personalized
+              care to our patients. This ensures the highest quality of care is given at a pace the patient is
+              comfortable with & improves overall healthcare experience.</p>
+          </div>
+          <div class=col-md-4>
+            <h5 class="text-center"><img src="img/save-time-icon.jpg" alt="" /></h5>
+            <h4 class="text-center">Save Time & Money</h4>
+            <p class="text-justify">We understand the criticality of time in healthcare. Our protocols & teams are well
+              designed to handle emergencies & planned treatments. We save our patient�s precious time & money at all
+              steps of travel & treatment.</p>
+          </div>
+          <div class=col-md-4>
+            <h5 class="text-center"><img src="img/comprehensive-care-icon.jpg" alt="" /></h5>
+            <h4 class="text-center">Comprehensive Care</h4>
+            <p class="text-justify">End-to-End care from initial Opinion & Cost Estimates form best 5 hospitals,
+              visa-related, flights, airport pick-up, guest house, food, kitchen, local transport, SIM card, wi-fi,
+              doctors meetings, hospital admission, discharge, follow up, drop back to airport.</p>
+          </div>
+          <!--  <div class="col-md-3 col-6 pt-4">
+             <a href="#location"> <h5 class="text-center"><i class="fa fa-hospital" aria-hidden="true" style="font-size: 3rem; color: #33414e;"></i>
+</h5>
+              <h4 class="text-center">Hospitals</h4></a>
+            </div> -->
+          <div class="col-md-4 col-6 pt-4">
+            <a href="#speciality">
+              <h5 class="text-center"><i class="fa fa-medkit" aria-hidden="true"
+                  style="font-size: 3rem; color: #33414e;"></i>
+              </h5>
+              <h4 class="text-center">Speciality</h4>
+            </a>
+          </div>
+          <div class="col-md-4 col-6 pt-4">
+            <a onclick=" LC_API.open_chat_window(); return false;" href="#Live Chat" class=chat>
+              <h5 class="text-center"><i class="fa fa-comments" aria-hidden="true"
+                  style="font-size: 3rem; color: #33414e;"></i>
+
+              </h5>
+              <h4 class="text-center">Online Consultation</h4>
+            </a>
+          </div>
+          <div class="col-md-4 col-12 pt-4">
+            <a href="#" data-toggle="modal" data-target="#exampleModalCenter">
+              <h5 class="text-center"><i class="fa fa-book" aria-hidden="true"
+                  style="font-size: 3rem; color: #33414e;"></i>
+
+              </h5>
+              <h4 class="text-center">Visa Facilitation</h4>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 about-apollo px-100 text-center">
+            <h2>About BLK Super Speciality Hospital</h2>
+            <p class="text-justify">
+              BLK Super Speciality Hospital is the largest stand-alone private sector hospital in Delhi. The Hospital
+              has a capacity of 650 beds with dedicated 125 critical care beds with over 150 specialists across various
+              super specialties making it one of the best hospitals in India. BLK comprehensive Cancer Care with organ
+              specific specialist teams makes it best Cancer Hospital in India.
+            </p>
+            <p class="text-justify"><strong>Vision:</strong> <br>
+              To create a patient-centric, tertiary healthcare organization focused on non-intrusive quality care
+              utilizing leading edge technology with a human touch.</p>
+
+            <p class="text-justify"><strong>Mission:</strong><br>
+            <ul class="text-left">
+              <li>Achieve Professional Excellence in delivering Quality care.
+              </li>
+              <li>Ensure care with Integrity and Ethics.
+              </li>
+              <li>Push frontiers of care through Research and Education.
+              </li>
+              <li>Adhere to National and Global Standards in Healthcare.
+              </li>
+              <li>Provide Quality healthcare to all Sections of Society.
+              </li>
+            </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- form starts -->
+    <div class="contact-form d-none d-sm-none d-md-block fixed-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10">
+            <div class="row">
+              <div class="col-md-12">
+                <form method="post" enctype="multipart/form-data" action="https://web.mxradon.com/t/FormTracker.aspx">
+                  <h3 class="text-white text-center">Get free opinion and treatment plan from Top Transplant Hosptials
+                    in India</h3>
+                  <ul>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <li class="form-group"><input type='text' class="form-control" id='FirstName' name='FirstName'
+                            maxlength='100' onfocusout=" return validateName(this)" autocomplete="off"
+                            required="required" placeholder="Your Name" /></li>
+                      </div>
+                      <div class="col-md-4">
+                        <li class="form-group"><input type='text' class="form-control" id='EmailAddress'
+                            name='EmailAddress' maxlength='100' onblur=" return validateEmail(this)" autocomplete="off"
+                            required="required" placeholder="Email ID" /></li>
+                      </div>
+                      <div class="col-md-4">
+                        <li class="form-group"><label for="exclude_FileUpload_1" class="d-block w-100">Attach Your
+                            Report<small class="d-block">(Upload Files)</small> </label><input type='file'
+                            class="form-control" id='exclude_FileUpload_1' name='exclude_FileUpload_1'
+                            autocomplete='off' /></li>
+                      </div>
+                      <div class="col-md-4">
+                        <li class="form-group"><input class="form-control" type='hidden' id='exclude_FileUpload_1_label'
+                            name='exclude_FileUpload_1_label' value='Attach Reports' /></li>
+                        <!-- </ul>
+                  <ul style="line-height: 1.4;"> -->
+
+
+                        <li><input class="form-control" align="left" style="float: left;" class="contactno" type='text'
+                            id='Phone' name='Phone' maxlength='20' onkeypress="return fncInputNumericValuesOnly();"
+                            onfocusout=" return validatePhoneLen(this)" autocomplete="off" required="required"
+                            placeholder="Contact Number" /></li>
+                      </div>
+                      <div class="col-md-4">
+                        <li><textarea id='Notes' name='Notes' class="form-control" autocomplete="off"
+                            required="required"
+                            placeholder="Please describe your medical condition to the Doctor"></textarea></li>
+                      </div>
+                      <div class="col-md-4">
+                        <li><button id="form-submit-button" class="form-control" type="submit">Submit</button>
+                        </li>
+                      </div>
+                    </div>
+                  </ul>
+
+                  <ul class="d-none">
+                    <input type="hidden" id="Source" name="Source" value="Hospitals in India">
+                    <input type="hidden" id="mx_Hospital_List" name="mx_Hospital_List" value="Medanta Hospital">
+                    <input type="hidden" id="mx_Speciality" name="mx_Speciality" value="Transplant">
+                  </ul>
+                  <input type="hidden" name="MXHOrgCode" value="9986">
+                  <input type="hidden" name="MXHLandingPageId" value="f997c042-1dca-11e6-b61b-22000aa8e760">
+                  <input type="hidden" name="MXHFormBehaviour" value="1">
+                  <input type="hidden" name="MXHFormDataTransfer" value="2">
+                  <input type="hidden" name="MXHRedirectUrl" value="http://hospitalsindia.intpatient.com/thankyou.html">
+                  <input type="hidden" name="MXHAsc" value="5">
+                  <input type="hidden" name="MXHPageTitle" value="Hospitals in India">
+                  <input type="hidden" name="MXHOutputMessagePosition" value="0">
+                  <input type="hidden" name="MXHIsExternallyUsed" value="1">
+                </form>
+                <script type="text/javascript"> var MXLandingPageId = 'f997c042-1dca-11e6-b61b-22000aa8e760'; </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- form ends -->
+    <!-- popup form starts -->
+    <div id="myButton"></div>
+    <div class="contact-form">
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 720px;" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Get free opinion and treatment plan from Top Oncology Hosptials in India</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form method="post" enctype="multipart/form-data" action="https://web.mxradon.com/t/FormTracker.aspx">
+                <ul>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <li class="form-group"><input type='text' class="form-control" id='FirstName' name='FirstName'
+                          maxlength='100' onfocusout=" return validateName(this)" autocomplete="off" required="required"
+                          placeholder="Your Name" /></li>
+                    </div>
+                    <div class="col-md-4">
+                      <li class="form-group"><input type='text' class="form-control" id='EmailAddress'
+                          name='EmailAddress' maxlength='100' onblur=" return validateEmail(this)" autocomplete="off"
+                          required="required" placeholder="Email ID" /></li>
+                    </div>
+                    <div class="col-md-4">
+                      <li class="form-group"><label for="exclude_FileUpload_1">Attach Your Report (Upload
+                          Files)</label><input type='file' class="form-control" id='exclude_FileUpload_1'
+                          name='exclude_FileUpload_1' autocomplete='off' /></li>
+                    </div>
+                    <div class="col-md-4">
+                      <li class="form-group"><input class="form-control" type='hidden' id='exclude_FileUpload_1_label'
+                          name='exclude_FileUpload_1_label' value='Attach Reports' /></li>
+                      <!-- </ul>
+                  <ul style="line-height: 1.4;"> -->
+
+
+                      <li><input class="form-control" align="left" style="float: left;" class="contactno" type='text'
+                          id='Phone' name='Phone' maxlength='20' onkeypress="return fncInputNumericValuesOnly();"
+                          onfocusout=" return validatePhoneLen(this)" autocomplete="off" required="required"
+                          placeholder="Contact Number" /></li>
+                    </div>
+                    <div class="col-md-4">
+                      <li><textarea id='Notes' name='Notes' class="form-control" autocomplete="off" required="required"
+                          placeholder="Please describe your medical condition to the Doctor"></textarea></li>
+                    </div>
+                    <div class="col-md-4">
+                      <li><button id="form-submit-button" class="form-control" type="submit">Submit</button>
+                      </li>
+                    </div>
+                  </div>
+                </ul>
+                <ul class="d-none">
+                  <li><input type='hidden' id='Source' name='Source' value='Hospitals in India' /></li>
+                  <li><input type='hidden' id='mx_Hospital_List' name='mx_Hospital_List' value='' /></li>
+                  <li><input type='hidden' id='mx_Speciality' name='mx_Speciality' value='' /></li>
+                </ul>
+
+                <input type="hidden" name="MXHOrgCode" value="9986">
+                <input type="hidden" name="MXHLandingPageId" value="f997c042-1dca-11e6-b61b-22000aa8e760">
+                <input type="hidden" name="MXHFormBehaviour" value="1">
+                <input type="hidden" name="MXHFormDataTransfer" value="2">
+                <input type="hidden" name="MXHRedirectUrl" value="http://hospitalsindia.intpatient.com/thankyou.html">
+                <input type="hidden" name="MXHAsc" value="5">
+                <input type="hidden" name="MXHPageTitle" value="Hospitals in India">
+                <input type="hidden" name="MXHOutputMessagePosition" value="0">
+                <input type="hidden" name="MXHIsExternallyUsed" value="1">
+              </form>
+              <script type="text/javascript"> var MXLandingPageId = 'f997c042-1dca-11e6-b61b-22000aa8e760'; </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- popup form ends -->
+  <script src="js/jquery-slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EGPK7ZS1P8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EGPK7ZS1P8');
+</script>
+</body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PV25C27" height="0" width="0"
+    style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+</html>

@@ -1,0 +1,1071 @@
+@font-face { font-family: Helvetica; font-display: swap; }
+
+
+body{
+    touch-action: manipulation;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: inline-grid; 
+    height: 100vh !important;
+    
+}
+.navbar {
+  padding: -0.5rem 1rem;
+}
+h1, .h1 {
+  font-size: 1.5rem;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0rem;
+}
+.top_bar {
+  background: #047C9E;
+  padding: 13px;
+  display: flex;
+  padding-right: 100px;
+  padding-left: 129px;
+  height: 72px;
+  font-size: 13px;
+  padding-top: 30px;
+}
+    .mobile_col{
+      max-width: 50%;
+    }
+    .logo {
+        vertical-align: middle;
+        border-style: none;
+        width: 129px;
+        height: 73px;
+    }
+    #navbarSupportedContent{
+        font-size: 18px;
+        width: 164px;
+    }
+    .side-msg {
+        display: flex;
+        font-size: 22px;
+    }
+    .bg-light {
+        background-color: #f8f9fa!important;
+        padding-left: 92px;
+        padding-right: 121px;
+        height: auto;
+    }
+    .carousel-inner {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        max-height: 730px;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link {
+      padding-right: 1.5rem;
+      padding-left: 3.0rem;
+  }
+
+    .heading {
+      font-size: 32px;
+      color: #047C9E;
+      text-align: center;
+      padding-bottom: 67px;
+      font-weight: 500;
+    }
+
+    .heading2 {
+        font-size: 32px;
+        color: #047C9E;
+        text-align: center;
+        padding-bottom: 89px;
+        font-weight: 500;
+    }
+   
+    .card-body {
+      background-color: #ffffff;
+      text-align: center;
+      border-radius: 0px 0px 12px 12px;
+      color: black;
+      
+  }
+    
+  .tab-head2 {
+    color: #007fa2;
+    font-size: 18px;
+    padding-block: 32px;
+    margin-top: -35px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+
+  @media screen and (max-width: 800px){
+    .tab {
+      overflow: hidden;
+      margin-top: 11px !important;
+      text-align: center;
+     
+    }}
+
+
+    .tab {
+        overflow: hidden;
+        margin-top: -71px;
+        text-align: center;
+       
+      }
+     
+     
+      /* Style the buttons inside the tab */
+      .tab button {
+        color: #696464;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 17px;
+        font-weight: 600;
+        margin: 26px;
+        padding: 18px;
+        border-radius: 52px;
+    }
+    
+      
+      /* Change background color of buttons on hover */
+      .tab button:hover {
+        background-color: #248dab;
+        color: white;
+    }
+      /* Create an active/current tablink class */
+      .tab button.active {
+        background-color: #047C9E;
+        color: white;
+        box-shadow: 0px 0px 12px 1px #736f6fab;
+        transition: none;
+    }
+      /* Style the tab content */
+      .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border-top: none;
+        margin-top: 1px;
+      }
+    
+      #btn-new{
+        background-color: #047C9E;
+        color: white;
+      }
+      .btn-primary {
+        color: #fff;
+        border: none;
+        
+    }
+    .card-img-top-m-res{
+      display: none;
+    }
+    
+    .font-hos{
+      padding-left: 115px;
+      padding-right: 115px;
+      margin-top: -58px;
+    }
+      .card-title{
+        color: #015e79;
+        font-size: 17px;
+      }
+      .card-text1{
+        color: #625e5e;
+        font-style: oblique;
+        padding-bottom: 10px;
+      }
+      .card-text{
+        color: #dddddd;
+        font-size: 17px;
+        font-style: oblique;
+      }
+      #footer_ap
+      {
+        background-color: black;
+        padding-block: 42px;
+        margin: -15px;
+        
+      }
+      #block_II {
+        padding-top: 56px;
+        background-image: url(19366.webp);
+        background-size: 110% 128%;
+    }
+    #block_I {
+      margin-block: 32px;
+      margin-top: 31px;
+  }
+  .d-block {
+    background-image: url(Apollo_Banglore.webp);
+    background-size: 100% 100%;
+    height: 100%;
+    width: 100%;
+}
+.carousel-item.active, .carousel-item-next, .carousel-item-prev {
+  display: block;
+  height: 730px;
+}
+
+#contant_box {
+  position: relative;
+  top: -502px;
+  width: 100%;
+  height: 311px;
+  padding-left: 284px;
+}
+    #block_IV {
+      margin-block: 151px;
+      position: relative;
+      height: 0;
+      top: -299px;
+  }
+    .card-deck {
+      margin: 0 -15px;
+      justify-content: space-between;
+    }
+    
+    .card-deck .card {
+      margin: 0 0 1rem;
+    }
+    
+    
+
+
+
+
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      .card-deck .card {
+        -ms-flex: 0 0 48.7%;
+        flex: 0 0 48.7%;
+      }
+    }
+    
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      .card-deck .card {
+        -ms-flex: 0 0 32%;
+        flex: 0 0 32%;
+      }
+    }
+    
+    @media (min-width: 992px)
+    {
+      .card-deck .card {
+        -ms-flex: 0 0 24%;
+        flex: 0 0 24%;
+      }
+    }
+   .all_contact{
+      text-align: left;
+      
+  }
+  .card-img-top-m {
+    height: 256px !important;
+    width: 276px !important;
+    border-radius: 9px 10px 1px 1px;
+   
+    
+}
+    .card-img-top-x{
+    height: 100px;
+    width: 100px;
+    margin-left: 77px;
+    margin-block: 48px;
+    
+    }
+ 
+      
+    
+
+    #i-con_ajx{
+      background-color: none;
+    }
+
+    div.gallery {
+      margin: 0px;
+      float: left;
+      width: 623px;
+  }
+    
+   
+    div.gallery img {
+      width: 100%;
+      
+    }
+    
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
+   #block_V {
+      
+      text-align: center;
+
+      
+  }
+  .text_dec {
+    font-family: sans-serif;
+    margin: auto;
+    text-align: center;
+    color: rgb(27, 27, 27);
+    font-size: 27px;
+    max-width: 292px;
+    position: relative;
+    margin-block: 5px;
+
+}
+  .text_dec:before {
+    content: "";
+    display: block;
+    width: 130px;
+    height: 3px;
+    background: #248CAA;
+    left: -3px;
+    top: 50%;
+    position: absolute;
+  }
+  .text_dec:after {
+    content: "";
+    display: block;
+    width: 130px;
+    height: 3px;
+    background: #248CAA;
+    right: -3px;
+    top: 50%;
+    position: absolute;
+  }
+  .card-img-top-xa{
+    height: 100px;
+    width: 100px;
+    margin-left: 131px;
+    margin-block: 48px;
+    }
+    .cardnew {
+      
+      transition: 0.3s;
+      width: 30%;
+      margin: 19px;
+    }
+    .cardnew2 {
+      
+      transition: 0.3s;
+      width: 30%;
+      margin: 19px;
+    }
+    .cardnew3 {
+      
+      transition: 0.3s;
+      width: 30%;
+      margin: 19px;
+    }
+    .card-titlex {
+      margin-top: -28px;
+      font-size: 16px;
+  }
+  .card-title-new{
+    color: #047C9E;
+    margin-block: 20px;
+    font-size: 23px;
+}
+.text-muted {
+  color: #0f6d9f !important;
+}
+.card-blog {
+  width: 30%;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(0 0 0);
+}
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+#Paris{
+  display: block;
+}
+.btn-dr {
+  color: #fff;
+  height: 45px;
+  text-transform: capitalize;
+  width: 113%;
+  margin-block: 3px;
+  font-size: 16px;
+  background: #007FA2;
+  border: none;
+  border-radius: 7px;
+  margin-left: -14px;
+  position: relative;
+  top: 10px;
+}
+.btn-dr:hover {
+  
+  background: #4298b1;
+}
+
+.card-kidney {
+  position: relative;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid #408EA4;
+  margin: 1px 10px 23px;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 258px;
+}
+.con1-{
+  color: #047C9E;
+   line-height: 42px;
+}
+.con-2{
+  color: #047C9E;
+  font-size: 21px;
+  line-height: 39px;
+}
+.con-3{
+  color: #047C9E;
+  font-size: 18px; 
+  line-height: 33px;
+}
+.font-dec {
+  font-size: 20px;
+}
+
+#font-conn{
+  font-size: 19px;
+  color: #dadada;
+  margin-left: -120px;
+  line-height: 32px;
+  margin-top: -16px;
+}
+.text_color {
+  font-size: 54px;
+  font-weight: bold;
+}
+#slider-btn{
+  margin-top: 47px;
+  background:  #015E79;
+}
+#slider-btn2 {
+  margin-top: 47px;
+  background: #015E79;
+  width: 305px;
+  height: 87px;
+  font-size: 24px;
+}
+.heading-top{
+  color:#4c4747;
+  line-height: 29px;
+  font-size: 17px;
+}
+.c-card{
+    
+  display: flex;
+  
+}
+.card-deck1{
+  justify-content: space-around !important;
+  display: inline-flex;
+}
+.font_apollo{
+  color: #047C9E;
+  font-size: 18px;
+  font-style: italic;
+}
+.Patient_Services{
+  font-size: 27px;
+  color:#4D4D4D;
+}
+
+#lst_lg_box{
+  display: flex;
+  margin-block: 72px;
+  background: #248caa1f;
+}
+
+.box {
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+  background-color: #ffffff91;
+  margin-left: 12px;
+  box-shadow: 0px 1px 7px 0px #047c9e73;
+}
+
+
+
+/* Our Grid Code */
+.app-layout {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  grid-template-rows: 37vh;
+}
+
+#block_III{
+  top: -186px;
+    margin-block: 76px;
+  position: relative;
+}
+
+
+.carousel {
+  position: relative;
+  top: 0px;
+ 
+  
+}
+.add{
+  padding-block: 1px;
+    margin-top: 11px;
+}
+.list-unstyled{
+  margin-top: 20px;
+}
+#slider-end-text {
+  position: relative;
+  background: #00000073;
+  padding-block: 27px;
+  top: -427px;
+}
+#live_chat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: 506px;
+  width: 47%;
+} 
+
+
+@media screen and (max-width: 800px) {
+  .card-kidney {
+ 
+    width: auto;
+  }
+  
+ }
+
+@media screen and (max-width: 800px) {
+ .top_bar{
+   background: #047C9E;
+  padding: 13px;
+  display: inline-flex;
+  height: 63px;
+  font-size: 10px;
+          }
+}
+
+@media screen and (max-width: 800px) {
+  .navbar-toggler:not(:disabled):not(.disabled) {
+  cursor: pointer;
+  margin-left: 151px;
+  top: -46px;
+}
+}
+@media screen and (max-width: 800px) {
+  .bg-light {
+      padding-left: 0px;
+  padding-right: 0px;
+}
+
+
+}
+@media screen and (max-width: 800px) {
+  #live_chat {
+  width: 100%;
+  display: inline-block;
+}
+
+}
+
+@media screen and (max-width: 800px) {
+  #navbarSupportedContent{
+  background-color: #2F6297;
+}
+
+}
+@media screen and (max-width: 800px){
+    .navbar-light .navbar-nav .nav-link {
+      
+      border: 2.1pt solid #183b5d59 !important;
+      font-size: 55px !important;
+      padding-block: 57px;
+      color: white;
+  }}
+
+
+@media screen and (max-width: 800px) {
+  .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: #c4cacb;
+  
+ 
+ 
+}
+
+}
+.navbar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+  
+
+  
+
+/*For mobile  */
+/* try to resize the screen */
+@media screen and (max-width: 800px){
+.navbar-toggler:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    position: relative;
+    left: 548px;
+}}
+
+@media screen and (max-width: 800px){
+.mob-hdr-code {
+    height: 231px;
+    z-index: 999;
+}}
+  @media screen and (max-width: 800px){
+    .card-img-top {
+      width: 882px !important;
+      height: 665px !important;
+  }
+    }
+
+    @media screen and (max-width: 800px){
+      .img.card-img-top-m {
+        width: 414px !important;
+        height: 384px !important;
+      }}
+      
+      
+      @media screen and (max-width: 800px){
+        #mob-org-slider{
+          display: block !important;
+        }}
+      @media screen and (max-width: 800px){
+        .mehide {
+          display: none;
+         
+      }}
+      
+      #mob-org-slider{
+        display: none;
+      }
+      
+    @media screen and (max-width: 800px){
+      .carousel-item.active, .carousel-item-next, .carousel-item-prev {
+        display: block;
+        height: 559px;
+    }}
+
+   
+  @media screen and (max-width: 800px){
+    .heading {
+      font-size: 59px;
+  }}
+
+ 
+  
+@media screen and (max-width: 800px){
+  .heading-top {
+    line-height: 109px;
+    font-size: 45px;
+}}
+  
+
+
+@media screen and (max-width: 800px){
+  .logo {
+    width: 130px;
+    height: 74px;
+  }}
+  .navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 4.25rem;
+    }
+
+    @media screen and (max-width: 800px){
+      .app-layout {
+        display: flow-root;
+        grid-template-columns: 2fr 2fr 2fr 2fr;
+        grid-template-rows: 37vh;
+        width: 100%;
+        font-size: 51px;
+    }}
+
+    @media screen and (max-width: 800px){
+      .card-title-new {
+        font-size: 59px;
+        margin-block: 69px;
+    }}
+
+    
+    @media screen and (max-width: 800px){
+      .card-blog {
+        width: 96%;
+        text-align: center;
+        padding-block: 34px;
+        margin-bottom: 127px;
+    }}
+    @media screen and (max-width: 800px){
+      .card-text {
+        font-size: 46px;
+        
+    }}
+
+    @media screen and (max-width: 800px){
+      .card-body {
+       text-align: center !important;
+        
+    }}
+    @media screen and (max-width: 800px){
+      .card-title {
+        font-size: 51px;
+        padding-block: 34px;
+    }}
+
+    @media screen and (max-width: 800px){
+      .font-hos {
+        margin-top: 22px;
+        text-align: justify;
+    }}
+
+    @media screen and (max-width: 800px){
+      .font_apollo {
+      font-size: 38px;
+      text-align: justify;
+    }}
+
+    @media screen and (max-width: 800px){
+    .c-card {
+        display: block;
+        width: 70%;
+        text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 800px){
+  .card-img-top-x {
+      width: 24%;
+      height: 0%;
+      margin-left: 352px;
+      margin-block: 63px;
+  }}
+  @media screen and (max-width: 800px){
+.card-deck .card {
+    margin: 1px 103px 2rem;
+}}
+
+@media screen and (max-width: 800px){
+  .card-titlex {
+    margin-top: -28px;
+    font-size: 46px;
+}}
+@media screen and (max-width: 800px){
+#lst_lg_box {
+    display: block;
+    padding-block: 4px;
+}}
+
+@media screen and (max-width: 800px){
+  .text_dec {
+  font-size: 79px;
+  max-width: 292px;
+}}
+
+@media screen and (max-width: 800px){
+  .text_dec:before {
+    width: 376px;
+    height: 6px;
+    left: -287px;
+    }}
+@media screen and (max-width: 800px){
+  .text_dec:after {
+    width: 376px;
+    height: 6px;
+    right: -287px;
+    
+  }}
+  @media screen and (max-width: 800px){
+    .Patient_Services {
+      font-size: 53px;
+  }
+  }
+
+@media screen and (max-width: 800px){
+#lst_lg_box {
+    display: block;
+    padding-block: 4px;
+}
+}
+@media screen and (max-width: 800px){
+.cardnew, .cardnew2, .cardnew3 {
+    width: 100%;
+    margin-block: 104px;
+}
+}
+@media screen and (max-width: 800px){
+.font-lst-box {
+    font-size: 54px;
+}}
+@media screen and (max-width: 800px){
+.font-lst-box-s {
+    font-size: 43px;
+    padding-block: 41px;
+}}
+    
+@media screen and (max-width: 800px){
+.card-blog {
+    width: 100%;
+    padding: 27px;
+}}
+@media screen and (max-width: 800px){
+.text-muted {
+    font-size: 42px;
+    text-align: center !important;
+}}
+
+@media screen and (max-width: 800px){
+  .font-mobx{
+    font-size: 41px !important;
+     
+  }}
+  @media screen and (max-width: 800px){
+    .font-mobx2 {
+      font-size: 60px !important;
+      padding-top: 44px;
+  }}
+    @media screen and (max-width: 800px){
+      .font-mobx3 {
+        font-size: 42px !important;
+        line-height: 75px !important;
+        padding-block: 41px;
+        padding-bottom: 77px;
+    }}
+      @media screen and (max-width: 800px){
+      .mob-nav {
+          position: fixed !important;
+          width: 100%;
+          z-index: 999;
+          top: 0px;
+      }}
+      @media screen and (max-width: 800px){
+.logo {
+    width: 290px;
+    height: 146px;
+}}
+@media screen and (max-width: 800px){
+  #contant_box {
+    top: -394px;
+    padding-left: 162px;
+}}
+@media screen and (max-width: 800px){
+  .text_color {
+    font-size: 66px;
+}}
+@media screen and (max-width: 800px){
+  
+.font-dec {
+  font-size: 41px;
+}
+}
+@media screen and (max-width: 800px){
+  #slider-btn {
+    margin-top: 47px;
+    background: #015E79;
+    font-size: 38px;
+}
+  }
+  @media screen and (max-width: 800px){
+    #slider-end-text {
+      display: none;
+  }
+    }
+   
+    @media screen and (max-width: 800px){
+      .navbar{
+        padding: 0.5rem -1rem;
+    }
+      }
+   
+    
+        @media screen and (max-width: 800px){
+         .btn-dr {
+         height: 113px;
+         font-size: 45px;
+}
+ }  
+ @media screen and (max-width: 800px){
+  .card-img-top-m {
+  display: none !important;
+}
+}  
+@media screen and (max-width: 800px){
+  .card-img-top-m-res{
+  display: block !important;
+  height: 628px !important;
+  width: 801px;
+  
+}
+}  
+@media screen and (max-width: 800px){
+  .logo{
+  display: none !important;
+  
+}
+}  
+@media screen and (max-width: 800px){
+  .logo-mob-res{
+  display: block !important;
+  width: 295px !important;
+  height: 160px !important;  
+ 
+}
+}
+.logo-mob-res{
+  display: none;
+}
+
+@media screen and (max-width: 800px){
+  .tab button {
+    font-size: 39px!important;
+    padding-block: 26px;
+    padding-inline: 29px;
+    color: #141414;
+}
+} 
+@media screen and (max-width: 800px){
+  .d-block-mob {
+    background-image: url(Apollo_Banglore.webp);
+    background-size: cover;
+    height: 100%;
+    display: block !important;
+}
+}
+.d-block-mob{
+  display: none;
+}
+
+@media screen and (max-width: 800px){
+  .card-logo {
+    display: none;
+ }
+} 
+@media screen and (max-width: 800px){
+  .card-logo-res-mob{
+    display: block !important;
+    text-align: center;
+    width: 281px;
+    height: 288px;
+    margin-left: 408px;
+  }
+} 
+.card-logo-res-mob{
+  display: none;
+  width:281px !important;
+  height: 288px !important;
+}
+
+
+@media screen and (max-width: 800px){
+  .card-img-top{
+display: none !important;
+  }}
+  @media screen and (max-width: 800px){
+    .card-img-top-stories{
+  display: none ;
+  
+    }}
+
+.card-img-top-stories-ress-mob{
+  display: none;
+}
+
+@media screen and (max-width: 800px){
+  .card-img-top-res-mob{
+    display: block !important;
+    margin-left: 137px;
+
+   
+  }}
+  @media screen and (max-width: 800px){
+  .card-img-top-m-res {
+      display: block !important;
+      height: auto !important;
+      width: 801px;
+  }
+  }
+  @media screen and (max-width: 800px){
+    .card-img-top-stories-ress-mob{
+      display: block !important;
+      
+      width: 882px;
+      height: 665px;
+      margin-left: 137px !important;
+    }}
+  .card-img-top-res-mob{
+    display: none;
+  }
+  .post-new {
+    max-width: 27%;
+    padding-block: 12px;
+}
+  #patient_stories{
+    text-align: center;
+  }
+
+@media screen and (max-width: 800px){
+  .post-new {
+    max-width: 100%;
+    
+}}
+@media screen and (max-width: 800px){
+  .all-post {
+    width: 100% !important;
+    margin-left: 0px !important;
+
+}}
+.all-post {
+  width: 100%;
+  margin-left: 138px;
+}
+@media screen and (max-width: 800px){
+  .text-uppercase {
+    font-size: 43px !important;
+}} 
+@media screen and (max-width: 800px){
+  .add {
+    font-size: 41px;
+}} 
+@media screen and (max-width: 800px){
+  #ftr-x {
+    text-align: left;
+    top: -29px !important;
+    left: -7px;
+}} 
+
+@media screen and (max-width: 800px){
+  #block_II {
+  background-size: 203% 55%;
+  height: 356vh;
+  }} 

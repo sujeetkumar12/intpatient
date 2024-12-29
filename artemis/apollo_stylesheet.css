@@ -1,0 +1,1316 @@
+body {
+    overflow-x: hidden;
+}
+
+.xmx {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+}
+#swipeArea {
+    width: 138px;
+    height: 100%;
+    background-color: #d3d3d300;
+    position: fixed;
+    z-index: 1;
+}
+#sidebar {
+    width: 0;
+    position: fixed;
+    height: 100%;
+    background-color: #047C9E;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: white;
+    right: 0px;
+    top: 0px;
+    z-index: 99;
+    box-shadow: 0px 0px 0px 2px #fff;    
+}
+
+#sidebar a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+    position: relative;
+    z-index: 8 !important;
+}
+.topbar-text {
+    font-size: 17px;
+    /* padding: 3px; */
+}
+#sidebar a:hover {
+    color: #f1f1f1;
+}
+
+#main-content {
+    transition: margin-left .5s;
+    padding: 16px;
+
+
+}
+.topbar {
+    z-index: 99;
+    background-color: #237d9e;
+    color: white;
+    font-size: 16px;
+    position: fixed;
+    height: 63px;
+}
+.main{
+    display: inline;
+}
+
+.fa {
+    font-size: 29px !important;
+    margin-block: 5px;
+}
+
+.vl {
+    border-right: 2px solid rgb(239 239 239);
+ 
+
+}
+
+.tb_text {
+    font-size: 15px;
+    color: white;
+    margin-left: 9px;
+    position: absolute;
+    top: 4px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-size: 14px;
+    color: #4e4949;
+    font-weight: 600;
+}
+
+.navbar {
+    padding-inline: 126px;
+    margin-top: 54px;
+}
+
+.slider {
+    background-image: url(../img/apollo_bang.webp);
+    height: 438px;
+    background-size: 100% 121%;
+}
+
+/* cardio dr */
+.card-img-top1 {
+    background-image: url(../assets/Cardiology/Dr.\ Abhijit\ Vilas\ Kulkarni.png);
+    height: 207.53px;
+        background-size: 100% 100%;
+        border-radius: 13px;
+        margin-inline: 11px;
+        margin-top: 11px;
+        border-radius: 6px 6px 0px 0px;
+
+
+}
+
+.card-img-top2 {
+    background-image: url(../assets/Cardiology/Dr.\ Arul\ D\ Furtado.png);
+    height: 207.53px;
+    background-size: cover;
+    border-radius: 6px 6px 0px 0px;
+    margin-inline: 11px;
+    margin-top: 11px;
+
+}
+
+.card-img-top3 {
+    background-image: url(../assets/Cardiology/Dr.\ C\ M\ Nagesh.png);
+    height: 207.53px;
+    background-size: 100% 100%;
+    border-radius: 6px 6px 0px 0px;
+    margin-inline: 11px;
+    margin-top: 11px;
+
+}
+
+.card-img-top4 {
+    background-image: url(../assets/Cardiology/Dr.\ Girish\ B\ Navasundi.png);
+    height: 207.53px;
+    background-size: 100% 100%;
+    border-radius: 6px 6px 0px 0px;
+    margin-inline: 11px;
+    margin-top: 11px;
+
+}
+
+
+
+/* end cardio dr */
+/*neuro*/
+.card-img-top8 {
+    background-image: url(../assets/Neurology/Dr.\ Abhilash\ Bansal.png);
+    height: 207.53px;
+    background-size: 100% 100%;
+    border-radius: 6px 6px 0px 0px;
+    margin-inline: 11px;
+    margin-top: 11px;
+}
+
+.card-img-top9 {
+    background-image: url(../assets/Neurology/Dr.\ Arun\ L\ Naik.png);
+    height: 207.53px;
+    background-size: 100% 100%;
+    border-radius: 6px 6px 0px 0px;
+    margin-inline: 11px;
+    margin-top: 11px;
+}
+
+.card-img-top10 {
+    background-image: url(../assets/Neurology/Dr.\ K\ Kartik\ Revanappa.png);
+    height: 207.53px;
+    background-size: 100% 100%;
+    border-radius: 6px 6px 0px 0px;
+    margin-inline: 11px;
+    margin-top: 11px;
+}
+
+.card-img-top11 {
+    background-image: url(../assets/Neurology/Dr.\ Satishchandra\ P.png);
+    height: 207.53px;
+    background-size: 100% 100%;
+    border-radius: 6px 6px 0px 0px;
+    margin-inline: 11px;
+    margin-top: 11px;
+}
+
+
+
+/*neuro*/
+/*Orthopedic*/
+.card-img-top13 {
+    background-image: url(../assets/ORTHOPAEDIC/Dr.\ Ajith\ Prabhu.png);
+    height: 207.53px;
+    background-size: 100% 100%;
+    border-radius: 6px 6px 0px 0px;
+    margin-inline: 11px;
+    margin-top: 11px;
+}
+
+.card-img-top14 {
+    background-image: url(../assets/ORTHOPAEDIC/Dr.\ Manish\ Samson.png);
+    height: 207.53px;
+    background-size: 100% 100%;
+    border-radius: 6px 6px 0px 0px;
+    margin-inline: 11px;
+    margin-top: 11px;
+}
+
+.card-img-top15 {
+    background-image: url(../assets/ORTHOPAEDIC/Dr.\ Pradeep\ Kocheeppan.png);
+    height: 207.53px;
+    background-size: 100% 100%;
+    border-radius: 6px 6px 0px 0px;
+    margin-inline: 11px;
+    margin-top: 11px;
+}
+
+.card-img-top16 {
+    background-image: url(../assets/ORTHOPAEDIC/Dr.\ Vidya\ Sagar\ M.png);
+    height: 207.53px;
+    background-size: 100% 100%;
+    border-radius: 6px 6px 0px 0px;
+    margin-inline: 11px;
+    margin-top: 11px;
+}
+
+
+
+
+
+
+
+/*end ortho */
+.card-img-top23 {
+    background-image: url(../assets/ONCOLOGY/Dr.\ Anil\ Kamath.png);
+    height: 207.53px;
+    background-size: 100% 100%;
+    border-radius: 6px 6px 0px 0px;
+    margin-inline: 11px;
+    margin-top: 11px;
+}
+
+.card-img-top24 {
+    background-image: url(../assets/ONCOLOGY/Dr.\ N.\ Aditya\ Murali.png);
+    height: 207.53px;
+    background-size: 100% 100%;
+    border-radius: 6px 6px 0px 0px;
+    margin-inline: 11px;
+    margin-top: 11px;
+}
+
+.card-img-top25 {
+    background-image: url(../assets/ONCOLOGY/Dr.\ Prof.\ Narasimhaiah\ Srinivasaiah.png);
+    height: 207.53px;
+    background-size: 100% 100%;
+    border-radius: 6px 6px 0px 0px;
+    margin-inline: 11px;
+    margin-top: 11px;
+}
+
+.card-img-top26 {
+    background-image: url(../assets/ONCOLOGY/Dr.\ Rani\ Bhat.png);
+    height: 207.53px;
+    background-size: 100% 100%;
+    border-radius: 6px 6px 0px 0px;
+    margin-inline: 11px;
+    margin-top: 11px;
+}
+.card-img-top27 {
+    background-image: url(../assets/ONCOLOGY/Dr.\ Vijay\ Agarwal.png);
+    height: 207.53px;
+    background-size: 100% 100%;
+    border-radius: 6px 6px 0px 0px;
+    margin-inline: 11px;
+    margin-top: 11px;
+}
+.card-img-top28 {
+    background-image: url(../assets/ONCOLOGY/Dr.\ Vijay\ Bhaskar\ L.png);
+    height: 207.53px;
+    background-size: 100% 100%;
+    border-radius: 6px 6px 0px 0px;
+    margin-inline: 11px;
+    margin-top: 11px;
+}
+
+
+
+
+
+.card-img-top39 {
+    background-image: url(../assets/Kidney/Dr.\ Jayanth\ Reddy.png);
+    height: 207.53px;
+    background-size: 100% 100%;
+    border-radius: 6px 6px 0px 0px;
+    margin-inline: 11px;
+    margin-top: 11px;
+}
+
+
+
+.card-img-top40 {
+    background-image: url(../assets/Kidney/Dr.\ Ravishankar\ Bhat\ B.png);
+    height: 207.53px;
+    background-size: 100% 100%;
+    border-radius: 6px 6px 0px 0px;
+    margin-inline: 11px;
+    margin-top: 11px;
+}
+
+
+.card-img-top41 {
+    background-image: url(../assets/Kidney/Dr.\ Sandeep\ Satsangi.png);
+    height: 207.53px;
+    background-size: 100% 100%;
+    border-radius: 6px 6px 0px 0px;
+    margin-inline: 11px;
+    margin-top: 11px;
+}
+
+
+
+.card-img-topn1 {
+    background-image: url(../assets/logo/news1.png);
+    height: 207.53px;
+    background-size: 100% 100%;
+    border-radius: 13px;
+
+    
+}
+
+.card-img-topn2 {
+    background-image: url(../assets/logo/news2.png);
+    height: 207.53px;
+    background-size: 100% 100%;
+    border-radius: 13px;
+
+}
+
+.card-img-topn3 {
+    background-image: url(../assets/logo/news3.png);
+    height: 207.53px;
+    background-size: 100% 131%;
+    border-radius: 13px;
+
+}
+
+.card-img-topn4 {
+    background-image: url(../assets/logo/t1.png);
+    height: 207.53px;
+    background-size: 114% 120%;
+    border-radius: 13px;
+
+}
+
+.card-img-topn5 {
+    background-image: url(../assets/logo/t2.png);
+    height: 207.53px;
+    background-size: 101% 107%;
+    border-radius: 13px;
+
+}
+
+.card-img-topn6 {
+    background-image: url(../assets/logo/t3.png);
+    height: 207.53px;
+    background-size: 100% 100%;
+    border-radius: 13px;
+
+}
+
+.hotel-img {
+    background-image: url(../assets/Hotels/h1.jpeg);
+    height: 207.53px;
+    background-size: 100% 100%;
+}
+
+.hotel-img2 {
+    background-image: url(../assets/Hotels/h2.jpg);
+    height: 207.53px;
+    background-size: 100% 100%;
+}
+
+.hotel-img3 {
+    background-image: url(../assets/Hotels/h3.jpg);
+    height: 207.53px;
+    background-size: 100% 100%;
+}
+
+.hotel-img4 {
+    background-image: url(../assets/Hotels/h4.jpg);
+    height: 207.53px;
+    background-size: 100% 100%;
+}
+
+.hotel-img5 {
+    background-image: url(../assets/Hotels/h5.jpg);
+    height: 207.53px;
+    background-size: 100% 100%;
+}
+.hotel_tc {
+    font-size: 9px;
+    margin-top: 35px;
+    margin-left: 13px;
+}
+
+.hotel-row {
+    border: 1px solid #b8b5b5;
+    height: 198px;
+    overflow: hidden;
+    box-shadow: 0px 0px 3px 1px #d3d3d3ba inset;
+    border-radius: 9px;
+    margin-inline: 30px;
+}
+
+.text-bnnr {
+    color: white;
+    padding-top: 137px;
+}
+
+.text-bnnr-dis {
+    color: white;
+    position: relative;
+    top: -23px;
+    font-size: 21px;
+}
+
+.bg-slider {
+    background: black;
+}
+
+.scrol-gif {
+    background-image: url(../img/Animation\ -\ 1704273953226.gif);
+    background-size: 100% 100%;
+    height: 114px;
+    width: 94px;
+    position: relative;
+}
+
+
+
+.dr_btn {
+    height: 43px;
+    border-radius: 10px;
+    background: #237d9e;
+    border: none;
+    color: white;
+    padding: 8px 26px 8px 26px;
+    margin-top: 4px;
+    width: 100%;
+    font-size: 14px;
+cursor: pointer;
+}
+.banner-bn {
+    background: #2582A1;
+    height: 163px;
+    color: white;
+    font-size: 25px;
+    border: none;
+}
+.btn-bnnr {
+    border-radius: 15px;
+    background: #FDB931;
+    color: #ffffff;
+    padding: 12px 24px 12px 24px;
+    cursor: pointer;
+    border: none;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+.dr_btn2 {
+    cursor: pointer;
+    height: 43px;
+    border-radius: 10px;
+    background: #0C6434;
+    border: none;
+    color: white;
+    padding: 8px 26px 8px 26px;
+    margin-top: 4px;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: -11px;
+}
+.card-title {
+    margin-bottom: 0.75rem;
+    font-size: 16px;
+    color: #1d1d1d;
+    font-weight: 600 !important;
+}
+.card-text:last-child {
+    margin-bottom: 0;
+    font-weight: 400 !important;
+}
+.card-text {
+    color: #224855;
+    font-weight: 400 !important; 
+       margin-top: -7px;
+    font-size: 13px;
+}
+
+.card {
+    border: 1px solid rgb(137 136 136 / 26%);
+    padding: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 6px 1px #bfbfbf82;
+    z-index: 0;
+    margin: 24px;
+    border-radius: 15px;
+}
+
+ul {
+    list-style-type: none;
+    text-align: left;
+}
+
+.btn-primary2 {
+    color: #fff !important;
+    background-color: #237d9e !important;
+    border-color: #6994c3 !important;
+    font-size: 14px;
+    height: 55px;
+    margin-bottom: 10px;
+    padding: 0px 61px 0px 61px;
+    border-radius: 7px;
+}
+.sidebar_top_font {
+    margin-top: -17px;
+}
+.btn-primary {
+    color: #fff !important;
+    background-color: #237d9e !important;
+    border-color: #6994c3 !important;
+    font-size: 9px;
+    height: 51px;
+    margin-bottom: 10px;
+    width: 153px;
+    margin: 2px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #195E76;
+    left: 0px;
+    position: relative;
+    height: 89px;
+    top: 408px;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-size: 8px;
+    width: 26px;
+    border-radius: 0px;
+    border: 1px solid white;
+    padding-left: 4px;
+    font-weight: 700;
+}
+
+.Patient_Services {
+    font-size: 27px;
+    color: rgb(77, 77, 77);
+    margin-bottom: 2px;
+    margin-top: 27px;
+}
+.Patient_Services2 {
+    font-size: 27px;
+    color: rgb(77, 77, 77);
+    margin-bottom: -7px;
+    margin-top: 11px;
+}
+  #myBtn {
+    position: fixed;
+    bottom: 0px;
+    left: 30px;
+    z-index: 99;
+    font-size: 19px;
+    border: none;
+    outline: none;
+    background-color: #237d9e;
+    color: white;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 4px;
+    text-align: left;
+}
+
+
+#myBtn:hover {
+    background-color: #555;
+}
+.heading {
+    font-size: 32px;
+    color: #047C9E;
+    text-align: center;
+    padding-bottom: 18px;
+    font-weight: 500;
+    margin-top: 0px;
+}
+
+.heading-top {
+    color: #4f4f4f;
+    font-size: 17px;
+    padding-top: 7px;
+}
+.footer_links{
+    text-align: left !important;
+}
+.footer_logo {
+    margin-top: -15px;
+    width: 150px;
+    height: 65px;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    background-color: #000000;
+    padding: 50px 0px 41px;
+    margin-top: 0px;
+    color: white;
+}
+.checked {
+    color: orange;
+    font-size: 17px !important;
+
+  }
+  .all_star{
+    color: rgb(23, 22, 22);
+    font-size: 11px !important;
+}
+.footer-column {
+    text-align: center;
+}
+
+.hotel-name {
+    font-size: 22px;
+    color: #3e3e3e;
+}
+
+.hotel-star {
+    font-size: 13px;
+    color: #615900;
+    font-weight: 700;
+}
+
+.hotel-add {
+    font-size: 12px;
+    color: #3f3a3a;
+    font-weight: 400;
+}
+
+table {
+    color: #727171;
+}
+.add-bar {
+    border-right: 1px solid #e2e2e2;
+}
+.no-padding-container {
+    padding-left: 0px;
+    padding-right: 0px;
+    cursor: pointer;
+}
+.km-dis {
+    position: relative;
+    top: 113px;
+    font-size: 17px;
+    left: -41px;
+    font-weight: 500;
+}
+
+.map {
+    border-right: 1px solid #e2e2e2;
+}
+.btn-hotel {
+    position: relative;
+    top: 28px;
+    left: 10px;
+    height: 34px;
+    width: 191px;
+    font-size: 9px;
+    border-radius: 4px;
+    border: none;
+    background: #237d9e;
+    color: white;
+    text-align: left;
+    padding-left: 23px;
+    z-index: 0;
+    cursor: pointer;
+}
+.eqlbox{
+    height: 345px;
+}
+.eqlbox2{
+    height: 168px;
+}
+.price {
+    position: relative;
+    top: 40px;
+    left: 31px;
+    color: #237d9e;
+    font-size: 31px;
+}
+.center-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .fa-style {
+    font-size: 60px !important;
+    color: orange;
+    margin-top: 51px;
+    margin-left: 33px;
+}
+.sticky-element {
+    position: sticky;
+    top: 61px;
+    background-color: #ffffff;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    padding-inline: 75px;
+}
+.about-us-cont {
+    font-size: 16px;
+    margin-top: 15px;
+    text-align: justify;
+    padding-inline: 44px;
+}
+.sidebar-top {
+    background-color: #047C9E;
+    padding: 8px;
+    position: relative;
+    top: -60px;
+    height: 200px;
+}
+.sidebar-middle {
+    margin-top: -26px;
+    background-color: #fff;
+    padding: 23px;
+}
+.sidebar_end_span {
+    color: #047c9e;
+
+}
+.footer-width {
+    width: 1098px !important;
+}
+
+.new_mr{
+    margin-left: 12px;
+    margin-right: 16px;
+
+
+}
+.sidebar-h1 {
+    font-size: 52px;
+    margin-top: 16px;
+    color: #047c9e;
+}
+.footer-links2
+{
+    line-height: 30px;
+}
+.footer-ph {
+    margin-top: -8px;
+}
+.table-con {
+    padding-inline: 44px;
+}
+.table-responsive {
+    border-left: 1px solid #d4d1d1;
+    border-bottom: 1px solid #d4d1d1;
+    border-right: 1px solid #d4d1d1;
+}
+
+.sidebar-button {
+    border-radius: 50px;
+    background: #FDB931;
+    width: 72%;
+    height: 64px;
+    margin-top: 19px;
+    font-size: 34px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: #237d9e;
+}
+.footer-links{
+    line-height: 30px;
+}
+.sidebar-span {
+    font-size: 23px;
+    font-weight: 600;
+    color: #047c9e;
+}
+#lst_lg_box {
+    display: flex;
+    margin-block: -3px;
+    background: #248caa1f;
+    overflow: none;
+    padding-block: 27px;
+}
+.cardnew {
+      
+    transition: 0.3s;
+    width: 30%;
+    margin: 19px;
+    text-align: center;
+  }
+  .service-bottom {
+ 
+}
+.background-div {
+    background-image: url(../img/sidebar_logo.png);
+    background-position: center center;
+    height: 151px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    margin-top: -25px;
+}
+.style_box {
+    margin-top: 17px;
+}
+.font-lst-box-s {
+    font-size: 13px;
+    text-align: justify;
+}
+.font-lst-box {
+    font-size: 21px;
+}
+  .cardnew2 {
+    text-align: center;
+
+    transition: 0.3s;
+    width: 30%;
+    margin: 19px;
+  }
+  .bnnr-row {
+    margin-inline: 12px;
+    align-items: center;
+    margin-top: 37px;
+}
+  .marz{
+
+    margin-inline: -15px;
+
+  }
+  .cardnew3 {
+ text-align: center;
+    transition: 0.3s;
+    width: 30%;
+    margin: 19px;
+  }
+  .card-titlex {
+    margin-top: -28px;
+    font-size: 16px;
+}
+
+.card-whatsapp{
+    position: relative;
+    top: -9px;
+}
+.card-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 10px;
+}
+.card-title-new{
+  color: #047C9E;
+  margin-block: 20px;
+  font-size: 23px;
+}
+.text-muted {
+color: #0f6d9f !important;
+}
+.card-blog {
+width: 30%;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #237d9e;
+}
+
+
+@media screen and (max-width: 800px) {
+    .footer_col2_font{
+        display: none;
+    }
+    .bnnr-mobi {
+        font-size: 20px;
+        padding: 0px !important;
+        position: relative;
+        text-align: center;
+        display: contents;
+    }
+    .about-us-cont {
+        font-size: 16px;
+        margin-top: 18px;
+        text-align: justify;
+        padding-inline: 20px !important;
+        font-weight: 400;
+        margin-bottom: -21px;
+    }
+    .bnnr-row {
+        margin-inline: 0px !important;
+
+    }
+    .card-img-top24 {
+
+        background-size: 114% 100% !important;
+
+    }
+    .hotel_tc {
+        font-size: 9px;
+        margin-top: 22px !important;
+        margin-left: 13px;
+    }
+    .eqlboxmobi {
+        height: 375px !important;
+    }
+    .btn-bnnr {
+        padding: 13px 7px 13px 7px !important;
+        border: none;
+        font-weight: 500;
+        font-size: 14px;
+        height: 48px;
+        width: 198px;
+        margin-left: 40%;
+        margin-top: 0px;
+    }
+    .chat_col {
+        text-align: center !important;
+        position: relative;
+ 
+    }
+    .topbar {
+        padding-top: 9px;
+        height: 70px !important;
+    }
+
+
+
+    .cardnew {
+        width: 100%;
+margin: 0px !important;    
+}
+    .cardnew2 {
+        width: 100%;
+        margin: 0px !important;    
+    }
+    #sidebar{
+        box-shadow: 0px 0px 0px 2px #ffffff57 !important;
+    }
+    .cardnew3 {
+        width: 100%;
+        margin: 0px !important;    
+    }
+    #lst_lg_box {
+        display: block;
+
+    }
+    .font-lst-box {
+        font-size: 14px;
+    }
+    .table-con {
+        padding-inline: 26px !important;
+    }
+    .sidebar-button {
+        border-radius: 7px;
+        width: 100%;
+        height: 36px;
+        margin-top: 19px;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 14px;
+        color: white;
+        border: none;
+    }
+    .sidebar-middle {
+
+        line-height: 9px;
+    }
+    .sidebar_end_span {
+        font-size: 7px;
+    }
+    .no-padding-container {
+
+        cursor: pointer;
+        height: 216px;
+        width: 100% !important;
+    }
+    .sidebar-h1 {
+        font-size: 32px;
+        margin-top: 16px;
+    }
+    .sidebar-span {
+        font-size: 10px;
+        font-weight: 600;
+    }
+    .sidebar_top_font {
+        font-size: 8px;
+        margin-top: -40px;
+    }
+    .mobi-head2{
+        text-align: center !important;
+        margin-left: 0px !important;
+        margin-block: 18px;
+    }
+    .bar{
+        display: none;
+    }
+    .footer-links2 {
+        margin-left: 163px;
+        margin-top: -136px;
+        font-size: 16px;
+    }
+    .footer-links {
+        text-align: left !important;
+        font-size: 16px;
+        margin-left: 0px;
+    }
+    .footer-width {
+       width: 100% !important; 
+    }
+    .navbar-toggler-icon {
+        display: inline-block;
+        width: 16px;
+        height: 20px;
+        vertical-align: middle;
+        content: "";
+        background: no-repeat center center;
+        background-size: 100% 100%;
+    }
+    #sidebar{
+        box-shadow: 0px 0px 0px 2px #ffffff57;
+    }
+
+    .background-div {
+        height: 108px;
+        margin-top: 7px;
+        margin-bottom: 46px;
+    }
+    .navbar-toggler {
+        padding: 0.25rem 0.75rem;
+        font-size: 1.25rem;
+        line-height: 1;
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+        position: relative;
+        top: -12px;
+    }
+    .logo-x{
+        height: 61px;
+        position: relative;
+        top: -13px;
+        width: 64px;
+    }
+    .sidebar-logo {
+        margin-top: -36px;
+        text-align: center;
+        margin-bottom: -18px;
+        margin-left: -33px;
+    }
+    .btn-primary2 {
+        color: #fff !important;
+        background-color: #237d9e !important;
+        border-color: #6994c3 !important;
+        font-size: 16px;
+        height: 48px !important;
+        margin-bottom: 10px;
+        padding: 1px 26px 1px 41px !important;
+    }
+
+    .btn-primary {
+        color: #fff !important;
+        background-color: #237d9e !important;
+        border-color: #6994c3 !important;
+        font-size: 9px;
+        height: 34px;
+        margin-bottom: 10px;
+        width: 92px;
+        margin: 2px;
+        font-weight: 600;
+    }
+
+    .text-bnnr {
+        color: white;
+        padding-top: 83px;
+        font-size: 31px;
+    }
+
+
+
+    .btn-info {
+        height: 102px;
+        width: 34px;
+        left: -16px;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        font-size: 9px;
+        font-weight: 600;
+        top: 12px;
+        z-index: 999;
+    }
+
+    .btn:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    }
+    .liv{
+        display: none;
+    }
+.Patient_Services2 {
+    margin-top: 11px !important;
+    font-weight: 400;
+}
+.btn-block{
+font-size: 13px;
+}
+}
+@media screen and (max-width: 800px){
+    .Patient_Services {
+        font-size: 22px !important;
+        margin-inline: 9px;
+        padding-block: 10px;
+
+    }
+
+    .center-container {
+        display: block !important;
+
+      }
+
+ 
+
+
+      .xmx {
+        position: fixed;
+        right: -15px;
+        top: 192px;
+        z-index: 9;
+    }
+
+    .sticky-element {
+        padding: 0px;
+        padding-top: 44px !important;
+        padding-bottom: 6px;
+        top: 31px;
+        width: 100%;
+    }
+    .fa-style {
+        font-size: 60px !important;
+        margin-top: 8px !important;
+        margin-left: 62px !important;
+        margin-bottom: 64px !important;
+    }
+
+    .price {
+        top: 17px;
+        font-size: 34px;
+        left: 108px;
+    }
+
+    .km-dis {
+        position: relative;
+        top: 68px;
+        font-size: 18px;
+    }
+    .btn-hotel {
+        top: 7px;
+        left: 36px;
+        height: 50px;
+        width: 76%;
+        font-size: 13px;
+        border-radius: 13px;
+        text-align: center;
+        z-index: -0;
+    }
+
+    .map {
+        border-bottom: 1px solid #a4a4a4;
+
+    }
+
+    .add-bar {
+        border-bottom: 1px solid #a4a4a4;
+    }
+
+    .hotel-row {
+        border: 1px solid #b0afaf;
+        height: 726px;
+        margin: -7px;
+        margin-block: 12px;
+        position: relative;
+    }
+
+    .card-title {
+        margin-bottom: 0.75rem;
+        font-size: 19px;
+        color: #666666;
+        
+    }
+
+    .heading {
+        font-size: 24px;
+        padding-bottom: 6px !important;
+        margin-top: 24px !important;
+
+
+    }
+
+    .mobi_icon {
+        margin-left: -59px;
+        margin-top: -1px;
+    }
+
+    .commn_id {
+        height: 261px !important;
+    }
+    .mob-footercol1{
+        text-align: center;
+    }
+    .card {
+        margin-top: 20px;
+        padding: 11px;
+        width: 94%;
+        margin-inline: 32px;
+        box-shadow: 0px 0px 2px 1px #d9d1d1bd;
+        margin-left: 13px;
+    }
+
+    .card-img-top1 {
+        background-size: 100% 130% !important;
+    }
+    .topbar-text {
+        margin-left: 47px;
+        text-align: center;
+        margin-top: 20px !important;
+    }
+    .vl {
+display: none;
+    }
+    .topbar_i-cons {
+        margin-left: 29px;
+        position: relative;
+        top: -26px;
+    }
+
+    .tb_text {
+        font-size: 13px;
+        color: white;
+        top: 4px;
+        display: none;
+    }
+
+    .slider {
+        height: 389px;
+        background-size: 120% 100% !important;
+        margin-top: 42px;
+        z-index: 0;
+    }
+
+    .navbar {
+        padding-inline: 27px !important;
+        height: 49px;
+        top: 19px !important;
+    }
+
+    .navbar-nav {
+        position: relative;
+        left: 3px;
+    }
+
+    .navbar-light .navbar-nav .active>.nav-link,
+    .navbar-light .navbar-nav .nav-link.active,
+    .navbar-light .navbar-nav .nav-link.show,
+    .navbar-light .navbar-nav .show>.nav-link {
+        color: rgb(255 255 255 / 90%);
+        background: #21b2e7;
+        width: 100% !important;
+    }
+
+    .scrol-gif {
+        top: 9px !important;
+    }
+
+    .collapse.show {
+        display: block;
+        background: #f3f3f3;
+        position: absolute;
+        width: 99%;
+        left: 0px;
+        top: 67px;
+        z-index: 9;
+    }
+
+    #myBtn {
+
+        padding: 7px !important;
+        border-radius: 4px;
+        bottom: 21px;
+        
+    }
+}
