@@ -491,7 +491,6 @@ div.desc {
   margin: 1px 10px 23px;
   border-radius: 8px;
   overflow: hidden;
-  min-width: 30%;
 }
 
 .con1- {
@@ -547,9 +546,7 @@ div.desc {
 }
 
 .c-card {
-
   display: flex;
-  flex-wrap: wrap;
 }
 
 .card-deck1 {
