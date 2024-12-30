@@ -59,11 +59,11 @@ p {
 
 #navbarSupportedContent {
   font-size: 16px;
-  text-align: center;
+  /* text-align: center; */
   /* width: 164px; */
-  justify-content: center;
-  display: grid !important;
-  gap: 8px;
+  /* justify-content: center;
+                                                            display: grid;
+                                                            gap: 8px; */
 }
 
 .side-msg {
@@ -296,7 +296,7 @@ p {
 
 .card-img-top-m {
   height: 256px !important;
-  width: 276px !important;
+  width: 100% !important;
   border-radius: 9px 10px 1px 1px;
 
 
@@ -437,9 +437,9 @@ div.desc {
 
 .btn-dr {
   color: #fff;
-  height: 45px;
+  height: 50px;
   text-transform: capitalize;
-  width: 113%;
+  width: 110%;
   margin-block: 3px;
   font-size: 16px;
   background: #007FA2;
@@ -450,9 +450,30 @@ div.desc {
   top: 10px;
 }
 
-.btn-dr:hover {
+.btn-dr-wa {
+  color: #fff;
+  height: 50px;
+  text-transform: capitalize;
+  width: 110%;
+  margin-block: 3px;
+  font-size: 16px;
+  background: #00A91B;
+  border: none;
+  border-radius: 7px;
+  margin-left: -14px;
+  position: relative;
+  top: 10px;
+}
 
+.btn-dr-wa a {
+  color: #fff;
+}
+.btn-dr:hover {
   background: #4298b1;
+}
+
+.btn-dr-wa:hover {
+  background: #25D388;
 }
 
 .card-kidney {
@@ -470,7 +491,7 @@ div.desc {
   margin: 1px 10px 23px;
   border-radius: 8px;
   overflow: hidden;
-  width: 258px;
+  min-width: 30%;
 }
 
 .con1- {
@@ -528,7 +549,7 @@ div.desc {
 .c-card {
 
   display: flex;
-
+  flex-wrap: wrap;
 }
 
 .card-deck1 {
@@ -648,6 +669,7 @@ div.desc {
 @media screen and (max-width: 800px) {
   #navbarSupportedContent {
     background-color: #2F6297;
+    /* display: table-column !important; */
   }
 
 }
