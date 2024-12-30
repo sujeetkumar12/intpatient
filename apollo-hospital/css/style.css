@@ -11,6 +11,15 @@ h2 {
   font-size: 25px;
 }
 
+#dropdownloc {
+  padding: 12px 18px 12px 18px;
+  border-radius: 8px;
+}
+
+#dropdownspec {
+  padding: 12px 18px 12px 18px;
+  border-radius: 8px;
+}
 .live-chat {
   display: none !important;
 }
@@ -229,6 +238,7 @@ form ul li label {
 
 .button-w {
   width: 250px;
+  margin-bottom: 12px;
 }
 
 .fa-phone {
