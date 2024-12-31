@@ -883,7 +883,9 @@
   <button class="btn btn-primary scroll-top" data-scroll="up" type="button">
     <i class="fa fa-chevron-up"></i>
   </button>
+  <!-- JS Active tabs -->
 
+ 
   <!-- bootstrap js -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -915,6 +917,31 @@
       }).click();
     });
   </script>
+
+
+  <script>
+    const tabs = document.querySelectorAll('.nav-link');
+    const tabContents = document.querySelectorAll('.vrt-tab-content');
+    console.log('kjsdhfshdf', tabs, tabContents)
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Remove active class from all tabs and contents
+        tabs.forEach(t => t.classList.remove('active'));
+        tabs.forEach(t => t.classList.remove('show'));
+        tabContents.forEach(content => content.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('show'));
+
+        // Add active class to the clicked tab and the corresponding content
+        tab.classList.add('active');
+        tab.classList.add('show');
+        const targetContent = document.querySelector('.vrt-tab-content');
+        targetContent.classList.add('active');
+        targetContent.classList.add('show');
+      });
+    });
+  </script>
+
+  
   <script>
     // Vertical tab script
     function activeVrt(e, menuName) {
