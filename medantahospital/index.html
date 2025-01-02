@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Medanta Hospital</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+  <!-- custom css -->
+  <link rel="stylesheet" type="text/css" href="css/style-1.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <style>
+    #main,
+    .err {
+      display: none;
+    }
+
+    .err i {
+      font-style: normal;
+      font-size: 200px;
+    }
+
+    #loader {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      width: 100vw;
+      height: 100vh;
+      background-image: url("image/logo.png");
+      background-color: #fff;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .midcontainer {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -250px 0 0 -250px;
+      height: 500px;
+      text-align: center;
+      width: 500px;
+    }
+  </style>
+  <script>
+    function ipLookUp() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          var response = JSON.parse(xhttp.response);
+          console.log("location responce ", response, response.country);
+          window.ttLocation = response.country;
+          if (response.country === 'IN') {
+            // console.log("please redirect my page is https://devtest.intpatient.com/ip.html");
+            //window.location.href = "https://www.treatmenttraveller.com/";
+            document.title = "Page not found";
+            setVisible('.err', true);
+            setVisible('#loader', false);
+          }
+          else {
+            setVisible('#main', true);
+            setVisible('#loader', false);
+            initChat();
+          }
+        }
+      };
+      xhttp.open("GET", "https://asia-east2-handy-amplifier-259811.cloudfunctions.net/geolocation", true);
+      xhttp.send();
+    }
+    ipLookUp();
+    function onReady(callback) {
+      var intervalId = window.setInterval(function () {
+        if (document.getElementsByTagName('body')[0] !== undefined) {
+          window.clearInterval(intervalId);
+          callback.call(this);
+        }
+      }, 1000);
+    }
+
+    function setVisible(selector, visible) {
+      document.querySelector(selector).style.display = visible ? 'block' : 'none';
+    }
+
+    function initChat() {
+      if (window.ttLocation !== "IN") {
+        console.log("starting the chat ", window.ttLocation);
+        window.__lc = window.__lc || {}; window.__lc.license = 7595311; (function () { var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true; lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s); })();
+      }
+      window.addEventListener('load', function () {
+        console.log("Page loaded ", window.ttLocation);
+        if (window.ttLocation !== "IN") {
+          LC_API.on_chat_started = function () {
+            gtag('event', 'conversion', { 'send_to': 'AW-922729084/D0RuCNTO4IoBEPz0_rcD' });
+          };
+        }
+      });
+    }
+
+  </script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PV25C27');</script>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body>
+
+  <div id="loader"></div>
+  <div class="err">
+    <div class="midcontainer">
+      <h1>Not found <span>:(</span></h1>
+      <p>Sorry, but the page you were trying to view does not exist.</p>
+
+      <i>404</i>
+    </div>
+  </div>
+  <div id="main">
+    <main>
+      <header class="top-header">
+
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <ul class="text-center text-white">
+                <li>Get Doctor’s opinion & cost estimate</li>
+                <li> <a href="tel:919899187773"><i class="fa fa-phone"></i></a><a
+                    href="https://api.whatsapp.com/send?phone=919899187773&text=&source=&data=" target="_blank"><i
+                      class="fa fa-whatsapp"></i></a> + 91 9899187773</li>
+              </ul>
+            </div>
+
+          </div>
+      </header>
+      <!-- navbar start -->
+
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <h2><img src="image/logo.png"></h2>
+          </a>
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-dark">&#9776;</span>
+          </button>
+          <div class="collapse navbar-collapse bg-white" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#specialities">Specialities</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="toggleDoctor">Doctors</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">Patient Services</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- /navbar end -->
+
+      <!-- top section -->
+      <div class="jumbotron-fluid" id="hero">
+        <img class="w-100 img-fluid" src="image/medanta.jpg">
+      </div>
+
+
+      <!-- <section class="top-section-bg">
+ 	<div class="container">
+ 		<div class="row justify-content-end">
+ 			<div class="col-md-6 col-12 top-text-col">
+ 				<h1>Trusted By</h1>
+ 				<span class="">International Patients</span>
+ 			</div>
+ 		</div>
+ 	</div>
+ </section> -->
+      <!-- top section end -->
+
+      <!-- icon section start -->
+      <section class="icon-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="text-white text-center pt-1 pb-3 display-4">Medanta - The Medicity</h1>
+              <h1 class="text-white text-center pt-1 pb-3">Speciality</h1>
+
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="bx-1">
+              <div id="1" class="icon-bx mx-auto active menulinks2" onclick="activeVrt(event, 'Cardiology')">
+                <h2 class="text-center"><img src="image/cardio.png"></h2>
+              </div>
+              <h5 class="text-white w-500 text-center pt-1">
+
+                Cardiology</h5>
+            </div>
+            <div class="bx-1">
+              <div id="2" class="icon-bx mx-auto menulinks2" onclick="activeVrt(event, 'Orthopedics');">
+                <h2 class="text-center"><img src="image/ortho.png"></h2>
+              </div>
+              <h5 class="text-white w-500 text-center pt-1">Orthopaedics</h5>
+            </div>
+            <div class="bx-1">
+              <div id="3" class="icon-bx mx-auto menulinks2" onclick="activeVrt(event, 'Neuro');">
+                <h2 class="text-center"><img src="image/neuro.png"></h2>
+              </div>
+              <h5 class="text-white w-500 text-center pt-1">Neuro & Spine</h5>
+            </div>
+            <div class="bx-1">
+              <div id="4" class="icon-bx mx-auto menulinks2" onclick="activeVrt(event, 'Oncology');">
+                <h2 class="text-center"><img src="image/onco.png"></h2>
+              </div>
+              <h5 class="text-white w-500 text-center pt-1">Oncology</h5>
+            </div>
+            <div class="bx-1">
+              <div id="5" class="icon-bx mx-auto menulinks2" onclick="activeVrt(event, 'Transplant');">
+                <h2 class="text-center"><img src="image/transplant.png"></h2>
+              </div>
+              <h5 class="text-white w-500 text-center pt-1">Organ Transplant</h5>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- icons section end -->
+
+      <!-- text-section -->
+      <section class="text-section" id="specialities">
+
+        <div id="Cardiology" class="vrt-tab-content active">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="inner-container hcg-content">
+                  <h1 class="text-center">Cardiology</h1>
+                  <p class="text-justify">At Medanta Heart Institute (Division of Cardiology) we have an integrated
+                    healthcare centre with a dedicated team of Cardiac surgeons and cardiologists who work in tandem to
+                    provide comprehensive, multidisciplinary care to patients suffering from heart ailments. Our team of
+                    doctors, nurses, technicians and other heart experts are there to ensure unparalleled excellence in
+                    patient care, education and research.</p>
+
+                  <p class="text-justify">The Division of Cardiology at Medanta Heart Institute is determined to provide
+                    compassionate, state of the art, proficient care to heart patients at an affordable cost. Our highly
+                    qualified team of cardiologists along with the latest technology ensures best possible care for a
+                    wide spectrum of heart diseases. </p>
+
+      
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div id="Orthopedics" class="vrt-tab-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="inner-container hcg-content">
+                  <h1 class="text-center">Orthopaedics & Joint Replacement</h1>
+                  <p class="text-justify">Medanta Bone and Joint Institute is a super-specialty Institute which aims to
+                    provide world-class, evidence-based treatment for various orthopedic disorders and sports injuries.
+                    At Medanta-The Medicity we combine our expertise in the areas of patient-care, clinical research,
+                    and academics in order to provide the highest level of specialized services to our patients.</p>
+                  <p class="text-justify">Our team of highly skilled and dedicated orthopedic surgeons have trained
+                    extensively in their respective fields.</p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div id="Neuro" class="vrt-tab-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="inner-container hcg-content">
+                  <h1 class="text-center">Neurosurgery & Spine Surgery</h1>
+                  <p class="text-justify">Medanta Institute of Neurosciences is an integrated institute with a dedicated
+                    team of doctors with the latest technology which provides a comprehensive and multi-disciplinary
+                    care for disorders of brain and spine. Led by team of highly qualified neurologists, neurosurgeons,
+                    intervention neuro-radiologist and other disciplines provide the best possible care for patients.
+                  </p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div id="Oncology" class="vrt-tab-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="inner-container hcg-content">
+                  <h1 class="text-center">Oncology</h1>
+                  <h3>Raditional Oncology</h3>
+                  <p class="text-justify">Radiation Oncology is an advanced branch of modern cancer treatment, which is
+                    painless, incision less and preventive. The branch deals with the painless cancer treatment by using
+                    the high-dose radioactive rays, also known as X-rays. Radiation Oncology, often abbreviated as RT,
+                    RTx or XRT, involves the medical use of ionizing radiation to control or kill malignant cells
+                    without inflicting a cut in the body. Different types of cancers including Breast, Rectal, Lung and
+                    many more are treated under Radiation Oncology.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div id="Transplant" class="vrt-tab-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="inner-container hcg-content">
+                  <h1 class="text-center">Transplant</h1>
+                  <p class="text-justify">The Medanta Institute of Liver Transplantation and Regenerative Medicine is
+                    Asia's first of its kind, dedicated Institute offering liver transplantation [LT] and all other
+                    levels of treatment for liver and biliary diseases including cancer, both in adults and children.
+                  </p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <section class=" doc-container" id="pilltab">
+        <div class="container-fluid">
+          <h1 class="text-center">Our Doctors</h1>
+          <div class="row">
+            <div class="col-md-12 mb-3 navvdox">
+              <ul class="nav nav-pills nav-justified" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a href="#cardio-pill" class="nav-link active text-center" id="cardio-tabx" data-toggle="pill"
+                    aria-controls="cardio-pill" aria-selected="true">Cardiologist</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#ortho-pill" class="nav-link text-center" id="ortho-tabx" data-toggle="pill"
+                    aria-controls="ortho-pill" aria-selected="false">Orthopaedic Surgeons</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#neuro-pill" class="nav-link text-center" id="neuro-tab" data-toggle="pill"
+                    aria-controls="neuro-pill" aria-selected="false">Neurosurgeons</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#onco-pill" class="nav-link text-center" id="onco-tab" data-toggle="pill"
+                    aria-controls="onco-pill" aria-selected="false">Oncologists</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#transplant-pill" class="nav-link text-center" id="transplant-tab" data-toggle="pill"
+                    aria-controls="transplant-pill" aria-selected="false">Transplant Surgeons</a>
+                </li>
+              </ul>
+            </div>
+            <!-- /.col-md-4 -->
+            <div class="col-md-12 nopad">
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="cardio-pill" role="tabpanel" aria-labelledby="cardio-tabx">
+                  <div class="doc-containerx">
+                    <h1 class="text-center teamh2" id="portfolio1">Team of Cardiologists</h1>
+                    <div class="row">
+                      <div class="col-md-6 col-sm-12">
+                        <div class="docinfo">
+                          <div class="col-md-12">
+                            <img class="img-fluid rounded-circle mx-auto d-block" src="image/drNaresh.jpg" />
+                            <a href="#" data-toggle="modal" data-target="#exampleModalCenter"><span
+                                class="opinion d-inline-block btn btn-info d-block   mt-2 mx-auto">Get Doctor’s
+                                opinion</span> </a>
+                            <a onclick=" LC_API.open_chat_window(); return false;" href="#Live Chat" class=chat><span
+                                class="opinion d-inline-block btn btn-success d-block mt-2 mb-2   mx-auto">Live
+                                Chat</span></a>
+                          </div>
+                          <div class="col-md-12">
+                            <h3 class="text-center">Dr. Naresh Trehan</h3>
+                            <h6 class="text-center">Chairman, Medanta - The Medicity, Gurgaon</h6>
+                            <h6 class="text-center">30+ Years Of Experience</h6>
+                            <br>
+                          
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                      <div class="docinfo">
+                        <div class="col-md-12">
+                          <img class="img-fluid rounded-circle d-block mx-auto" src="image/drkasliwal.jpg"
+                            alt="Dr. R.R. Kasliwal Cardiologist, Medanta Hospital" />
+                          <a href="#" data-toggle="modal" data-target="#exampleModalCenter"><span
+                              class="opinion d-inline-block btn btn-info d-block   mt-2 mx-auto">Get Doctor’s
+                              opinion</span> </a>
+                          <a onclick=" LC_API.open_chat_window(); return false;" href="#Live Chat" class=chat><span
+                              class="opinion d-inline-block btn btn-success d-block mt-2 mb-2   mx-auto">Live
+                              Chat</span></a>
+                        </div>
+                        <div class="col-md-12">
+                          <h3 class="text-center">Dr. R.R. Kasliwal</h3>
+                          <h6 class="text-center">Chairman, Division of Clinical & Preventive Cardiology</h6>
+                          <h6 class="text-center">30+ Years Of Experience</h6>
+                        
+                          <div class="clearfix"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                      <div class="docinfo">
+                        <div class="col-md-12" style="margin-top:5px;">
+                          <img class="img-fluid rounded-circle d-block mx-auto" src="image/drKalra.jpg"
+                            alt="Dr. Balbir Singh, Medanta Hospital" />
+                          <a href="#" data-toggle="modal" data-target="#exampleModalCenter"><span
+                              class="opinion d-inline-block btn btn-info d-block   mt-2 mx-auto">Get Doctor’s
+                              opinion</span> </a>
+                          <a onclick=" LC_API.open_chat_window(); return false;" href="#Live Chat" class=chat><span
+                              class="opinion d-inline-block btn btn-success d-block mt-2 mb-2   mx-auto">Live
+                              Chat</span></a>
+                        </div>
+                        <div class="col-md-12">
+                          <h3 class="text-center">Dr. Balbir Singh</h3>
+                          <h6 class="text-center">Division of Electrophysiology</h6>
+                          <h6 class="text-center">25+ Years Of Experience</h6>
+                        
+
+                        </div>
+
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                      <div class="docinfo">
+                        <div class="col-md-12" style="margin-top:5px;">
+                          <img class="img-fluid rounded-circle d-block mx-auto" src="image/drPraveen.jpg"
+                            alt="Dr. Praveen Chandra Cardiologist Medanta Hospital" />
+                          <a href="#" data-toggle="modal" data-target="#exampleModalCenter"><span
+                              class="opinion d-inline-block btn btn-info d-block   mt-2 mx-auto">Get Doctor’s
+                              opinion</span> </a>
+                          <a onclick=" LC_API.open_chat_window(); return false;" href="#Live Chat" class=chat><span
+                              class="opinion d-inline-block btn btn-success d-block mt-2 mb-2   mx-auto">Live
+                              Chat</span></a>
+                        </div>
+                        <div class="col-md-12">
+                          <h3 class="text-center">Dr. Praveen Chandra</h3>
+                          <h6 class="text-center">Chairman, Division of Interventional Cardiology</h6>
+                          <h6 class="text-center">25+ Years Of Experience</h6>
+
+                          <div class="clearfix"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="ortho-pill" role="tabpanel" aria-labelledby="ortho-tabx">
+                <div class="doc-containerx">
+                  <h1 class="text-center teamh2" id="portfolio2">Team of Orthopaedic Surgeons</h1>
+                  <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                      <div class="docinfo">
+                        <div class="col-md-12">
+                          <img class="img-fluid rounded-circle d-block mx-auto" src="image/drMarya.jpg"
+                            alt="Dr. SKS Marya Orthopedic Surgeon Medanta Hospital" />
+                          <a href="#" data-toggle="modal" data-target="#exampleModalCenter"><span
+                              class="opinion d-inline-block btn btn-info d-block   mt-2 mx-auto">Get Doctor’s
+                              opinion</span> </a>
+                          <a onclick=" LC_API.open_chat_window(); return false;" href="#Live Chat" class=chat><span
+                              class="opinion d-inline-block btn btn-success d-block mt-2 mb-2   mx-auto">Live
+                              Chat</span></a>
+                        </div>
+                        <div class="col-md-12">
+                          <h3 class="text-center">Dr. SKS Marya</h3>
+                          <h6 class="text-center">Chairman, Medanta Bone & Joint Institute</h6>
+                          <h6 class="text-center">30+ Years Of Experience</h6>
+                         
+                          <div class="clearfix"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                      <div class="docinfo">
+                        <div class="col-md-12">
+                          <img class="img-fluid rounded-circle d-block mx-auto" src="image/drAttique.jpg" />
+                          <a href="#" data-toggle="modal" data-target="#exampleModalCenter"><span
+                              class="opinion d-inline-block btn btn-info d-block   mt-2  mx-auto">Get Doctor’s
+                              opinion</span> </a>
+                          <a onclick=" LC_API.open_chat_window(); return false;" href="#Live Chat" class=chat><span
+                              class="opinion d-inline-block btn btn-success d-block mt-2 mb-2   mx-auto">Live
+                              Chat</span></a>
+                        </div>
+                        <div class="col-md-12">
+                          <h3 class="text-center">Dr. Attique Vasdev</h3>
+                          <h6 class="text-center">Bone & Joint Institute</h6>
+                          <h6 class="text-center">20+ Years Of Experience</h6>
+                         
+                          <div class="clearfix"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="neuro-pill" role="tabpanel" aria-labelledby="neuro-tab">
+
+                <div class="doc-containerx">
+                  <h1 class="text-center teamh2" id="portfolio3">Team of Neurosurgeons</h1>
+                  <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                      <div class="docinfo">
+                        <div class="col-md-12">
+                          <img class="img-fluid rounded-circle d-block mx-auto" src="image/drAjaya.jpg"
+                            alt="Dr. Ajaya Nand Jha Cardiologist Medanta Hospital" />
+                          <a href="#" data-toggle="modal" data-target="#exampleModalCenter"><span
+                              class="opinion d-inline-block btn btn-info d-block   mt-2 mx-auto">Get Doctor’s
+                              opinion</span> </a>
+                          <a onclick=" LC_API.open_chat_window(); return false;" href="#Live Chat" class=chat><span
+                              class="opinion d-inline-block btn btn-success d-block mt-2 mb-2   mx-auto">Live
+                              Chat</span></a>
+                        </div>
+                        <div class="col-md-12">
+                          <h3 class="text-center">Dr. Ajaya Nand Jha</h3>
+                          <h6 class="text-center">Chairman, Institute of Neurosciences</h6>
+                          <h6 class="text-center">30+ Years Of Experience</h6>
+                          
+                          <div class="clearfix"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                      <div class="docinfo">
+                        <div class="col-md-12">
+                          <img class="img-fluid rounded-circle d-block mx-auto" src="image/drKaranjit.jpg"
+                            alt="Dr. Rana Patir Cardiologist Medanta Hospital" />
+                          <a href="#" data-toggle="modal" data-target="#exampleModalCenter"><span
+                              class="opinion d-inline-block btn btn-info d-block   mt-2 mx-auto">Get Doctor’s
+                              opinion</span> </a>
+                          <a onclick=" LC_API.open_chat_window(); return false;" href="#Live Chat" class=chat><span
+                              class="opinion d-inline-block btn btn-success d-block mt-2 mb-2   mx-auto">Live
+                              Chat</span></a>
+                        </div>
+                        <div class="col-md-12">
+                          <h3 class="text-center">Dr. Karanjit Singh Narang</h3>
+                          <h6 class="text-center">Department of Neurosurgery</h6>
+                          <h6 class="text-center">15+ Years Of Experience</h6>
+                          <br>
+                          
+
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="onco-pill" role="tabpanel" aria-labelledby="onco-tab">
+                <div class="doc-containerx">
+                  <h1 class="text-center teamh2" id="portfolio4">Team of Oncologists</h1>
+                  <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                      <div class="docinfo">
+                        <div class="col-md-12">
+                          <img class="img-fluid rounded-circle d-block mx-auto" src="image/drAshok.jpg"
+                            alt="Dr. Ashok Vaid Oncologist" />
+                          <a href="#" data-toggle="modal" data-target="#exampleModalCenter"><span
+                              class="opinion d-inline-block btn btn-info d-block   mt-2 mx-auto">Get Doctor’s
+                              opinion</span> </a>
+                          <a onclick=" LC_API.open_chat_window(); return false;" href="#Live Chat" class=chat><span
+                              class="opinion d-inline-block btn btn-success d-block mt-2 mb-2   mx-auto">Live
+                              Chat</span></a>
+                        </div>
+                        <div class="col-md-12">
+                          <h3 class="text-center">Dr. Ashok Vaid</h3>
+                          <h6 class="text-center">Chairman-Division of Medical Oncology & Haematol,Medanta
+                            Hospital,Gurgaon</h6>
+                          <h6 class="text-center">25+ Years Of Experience</h6>
+                          <br>
+                          
+                        </div>
+
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                      <div class="docinfo">
+                        <div class="col-md-12">
+                          <img class="img-fluid rounded-circle d-block mx-auto" src="image/drTejinder.jpg"
+                            alt="Dr. Tejinder Kataria Oncologist" />
+                          <a href="#" data-toggle="modal" data-target="#exampleModalCenter"><span
+                              class="opinion d-inline-block btn btn-info d-block   mt-2 mx-auto">Get Doctor’s
+                              opinion</span> </a>
+                          <a onclick=" LC_API.open_chat_window(); return false;" href="#Live Chat" class=chat><span
+                              class="opinion d-inline-block btn btn-success d-block mt-2 mb-2   mx-auto">Live
+                              Chat</span></a>
+                        </div>
+                        <div class="col-md-12">
+                          <h3 class="text-center">Dr. Tejinder Kataria</h3>
+                          <h6 class="text-center">Chairperson, Division of Radiation Oncology, Medanta Hospital, Gurgaon
+                          </h6>
+                          <h6 class="text-center">20+ Years Of Experience</h6>
+                          <br>
+                         
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="transplant-pill" role="tabpanel" aria-labelledby="transplant-tab">
+
+                <div class="doc-containerx">
+                  <h1 class="text-center teamh2" id="portfolio5">
+                    Team of Transplant Surgeons</h1>
+                  <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                      <div class="docinfo">
+                        <div class="col-md-12">
+                          <img class="img-fluid rounded-circle d-block mx-auto" src="image/drSoin.jpg" />
+                          <a href="#" data-toggle="modal" data-target="#exampleModalCenter"><span
+                              class="opinion d-inline-block btn btn-info d-block   mt-2 mx-auto">Get Doctor’s
+                              opinion</span> </a>
+                          <a onclick=" LC_API.open_chat_window(); return false;" href="#Live Chat" class=chat><span
+                              class="opinion d-inline-block btn btn-success d-block mt-2 mb-2   mx-auto">Live
+                              Chat</span></a>
+                        </div>
+                        <div class="col-md-12">
+                          <h3 class="text-center">Dr. A.S. Soin</h3>
+                          <h6 class="text-center">Director, Fortis Hospital, Noida</h6>
+                         
+                        </div>
+
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                      <div class="docinfo">
+                        <div class="col-md-12">
+                          <img class="img-fluid rounded-circle d-block mx-auto" src="image/drVijay.jpg" />
+                          <a href="#" data-toggle="modal" data-target="#exampleModalCenter"><span
+                              class="opinion d-inline-block btn btn-info d-block   mt-2 mx-auto">Get Doctor’s
+                              opinion</span> </a>
+                          <a onclick=" LC_API.open_chat_window(); return false;" href="#Live Chat" class=chat><span
+                              class="opinion d-inline-block btn btn-success d-block mt-2 mb-2   mx-auto">Live
+                              Chat</span></a>
+                        </div>
+                        <div class="col-md-12">
+                          <h3 class="text-center">Dr. Vijay Vohra</h3>
+                          <h6 class="text-center">35 years experience</h6>
+                         
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.col-md-8 -->
+        </div>
+
+  </div>
+  </section>
+  <section class="patient-service" id="patients">
+
+    <div class="container py-5 text-white">
+      <div class="why" id="whyus">
+        <div class="row">
+          <div class="col-sm-12">
+            <h1 class="section-title text-center">Why Treatment Traveller?</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <ul class="justifiedlist">
+              <li>5000+ satisfied patients</li>
+              <li>Highest Success rate</li>
+              <li>Eminent specialists on panel</li>
+              <li>NABH & ISO Certification</li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <ul class="justifiedlist">
+              <li>Video/Photo call with specialists</li>
+              <li>Customised treatment plan</li>
+              <li>A dedicated patient care manager (a doctor) handles all details </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="patient-service-detail " id="services">
+    <div class="container pb-5">
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <h1 class="section-title" style="font-weight: 200;">Patient Services at Medanta Hospital</h1>
+          <h3>by</h3>
+          <h6 class="text-center"><img src="image/ttlogoblack.png" alt="" /></h6>
+        </div>
+      </div>
+      <div class="row pt-row">
+        <div class=col-md-4>
+          <h5 class="text-center"><img src="image/assistant-icon.jpg" alt="" /></h5>
+          <h4 class="text-center">Personalised Assistance</h4>
+          <p class="text-justify">Our teams comprise of travel professionals & doctors. Each provides a personalized
+            care to our patients. This ensures the highest quality of care is given at a pace the patient is comfortable
+            with & improves overall healthcare experience.</p>
+        </div>
+        <div class=col-md-4>
+          <h5 class="text-center"><img src="image/save-time-icon.jpg" alt="" /></h5>
+          <h4 class="text-center">Save Time & Money</h4>
+          <p class="text-justify">We understand the criticality of time in healthcare. Our protocols & teams are well
+            designed to handle emergencies & planned treatments. We save our patient’s precious time & money at all
+            steps of travel & treatment.</p>
+        </div>
+        <div class=col-md-4>
+          <h5 class="text-center"><img src="image/comprehensive-care-icon.jpg" alt="" /></h5>
+          <h4 class="text-center">Comprehensive Care</h4>
+          <p class="text-justify">End-to-End care from initial Opinion & Cost Estimates form best 5 hospitals,
+            visa-related, flights, airport pick-up, guest house, food, kitchen, local transport, SIM card, wi-fi,
+            doctors meetings, hospital admission, discharge, follow up, drop back to airport.</p>
+        </div>
+        <div class="col-md-4 col-6 pt-4">
+          <a href="#specialities">
+            <h5 class="text-center"><i class="fa fa-medkit" aria-hidden="true"
+                style="font-size: 3rem; color: #33414e;"></i>
+            </h5>
+            <h4 class="text-center">Speciality</h4>
+          </a>
+        </div>
+        <div class="col-md-4 col-6 pt-4">
+          <a onclick=" LC_API.open_chat_window(); return false;" href="#Live Chat" class=chat>
+            <h5 class="text-center"><i class="fa fa-comments" aria-hidden="true"
+                style="font-size: 3rem; color: #33414e;"></i>
+
+            </h5>
+            <h4 class="text-center">Online Consultation</h4>
+          </a>
+        </div>
+        <div class="col-md-4 col-12 pt-4">
+          <a href="#" data-toggle="modal" data-target="#exampleModalCenter">
+            <h5 class="text-center"><i class="fa fa-book" aria-hidden="true"
+                style="font-size: 3rem; color: #33414e;"></i>
+
+            </h5>
+            <h4 class="text-center">Visa Facilitation</h4>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- form starts -->
+  <div class="contact-form d-none d-sm-none d-md-block fixed-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10">
+          <div class="row">
+            <div class="col-md-12">
+              <form method="post" enctype="multipart/form-data" action="https://web.mxradon.com/t/FormTracker.aspx">
+                <h3 class="text-white text-center">Get free opinion and treatment plan from Medanta Hosptial in India
+                </h3>
+                <ul>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <li class="form-group"><input type='text' class="form-control" id='FirstName' name='FirstName'
+                          maxlength='100' onfocusout=" return validateName(this)" autocomplete="off" required="required"
+                          placeholder="Your Name" /></li>
+                    </div>
+                    <div class="col-md-4">
+                      <li class="form-group"><input type='text' class="form-control" id='EmailAddress'
+                          name='EmailAddress' maxlength='100' onblur=" return validateEmail(this)" autocomplete="off"
+                          required="required" placeholder="Email ID" /></li>
+                    </div>
+                    <div class="col-md-4">
+                      <li class="form-group"><label for="exclude_FileUpload_1" class="d-block w-100">Attach Your
+                          Report<small class="d-block">(Upload Files)</small> </label><input type='file'
+                          class="form-control" id='exclude_FileUpload_1' name='exclude_FileUpload_1'
+                          autocomplete='off' /></li>
+                    </div>
+                    <div class="col-md-4">
+                      <li class="form-group"><input class="form-control" type='hidden' id='exclude_FileUpload_1_label'
+                          name='exclude_FileUpload_1_label' value='Attach Reports' /></li>
+                      <!-- </ul>
+                  <ul style="line-height: 1.4;"> -->
+
+
+                      <li><input class="form-control" align="left" style="float: left;" class="contactno" type='text'
+                          id='Phone' name='Phone' maxlength='20' onkeypress="return fncInputNumericValuesOnly();"
+                          onfocusout=" return validatePhoneLen(this)" autocomplete="off" required="required"
+                          placeholder="Contact Number" /></li>
+                    </div>
+                    <div class="col-md-4">
+                      <li><textarea id='Notes' name='Notes' class="form-control" autocomplete="off" required="required"
+                          placeholder="Please describe your medical condition to the Doctor"></textarea></li>
+                    </div>
+                    <div class="col-md-4">
+                      <li><button id="form-submit-button" class="form-control" type="submit">Submit</button>
+                      </li>
+                    </div>
+                  </div>
+                </ul>
+
+                <ul class="d-none">
+                  <input type="hidden" id="Source" name="Source" value="Medanta Hospitals">
+                  <input type="hidden" id="mx_Hospital_List" name="mx_Hospital_List" value="Medanta Hospital">
+                  <input type="hidden" id="mx_Speciality" name="mx_Speciality" value="Medanta">
+                </ul>
+                <input type="hidden" name="MXHOrgCode" value="9986">
+                <input type="hidden" name="MXHLandingPageId" value="f997c042-1dca-11e6-b61b-22000aa8e760">
+                <input type="hidden" name="MXHFormBehaviour" value="1">
+                <input type="hidden" name="MXHFormDataTransfer" value="2">
+                <input type="hidden" name="MXHRedirectUrl" value="http://hospitalsindia.intpatient.com/thankyou.html">
+                <input type="hidden" name="MXHAsc" value="5">
+                <input type="hidden" name="MXHPageTitle" value="Hospitals in India">
+                <input type="hidden" name="MXHOutputMessagePosition" value="0">
+                <input type="hidden" name="MXHIsExternallyUsed" value="1">
+              </form>
+              <script type="text/javascript"> var MXLandingPageId = 'f997c042-1dca-11e6-b61b-22000aa8e760'; </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- form ends -->
+  <!-- popup form starts -->
+  <div id="myButton"></div>
+  <div class="contact-form">
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" style="max-width: 720px;" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Get free opinion and treatment plan from Top Oncology Hosptials in India</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form method="post" enctype="multipart/form-data" action="https://web.mxradon.com/t/FormTracker.aspx">
+              <ul>
+                <div class="row">
+                  <div class="col-md-4">
+                    <li class="form-group"><input type='text' class="form-control" id='FirstName' name='FirstName'
+                        maxlength='100' onfocusout=" return validateName(this)" autocomplete="off" required="required"
+                        placeholder="Your Name" /></li>
+                  </div>
+                  <div class="col-md-4">
+                    <li class="form-group"><input type='text' class="form-control" id='EmailAddress' name='EmailAddress'
+                        maxlength='100' onblur=" return validateEmail(this)" autocomplete="off" required="required"
+                        placeholder="Email ID" /></li>
+                  </div>
+                  <div class="col-md-4">
+                    <li class="form-group"><label for="exclude_FileUpload_1">Attach Your Report (Upload
+                        Files)</label><input type='file' class="form-control" id='exclude_FileUpload_1'
+                        name='exclude_FileUpload_1' autocomplete='off' /></li>
+                  </div>
+                  <div class="col-md-4">
+                    <li class="form-group"><input class="form-control" type='hidden' id='exclude_FileUpload_1_label'
+                        name='exclude_FileUpload_1_label' value='Attach Reports' /></li>
+                    <!-- </ul>
+                  <ul style="line-height: 1.4;"> -->
+
+
+                    <li><input class="form-control" align="left" style="float: left;" class="contactno" type='text'
+                        id='Phone' name='Phone' maxlength='20' onkeypress="return fncInputNumericValuesOnly();"
+                        onfocusout=" return validatePhoneLen(this)" autocomplete="off" required="required"
+                        placeholder="Contact Number" /></li>
+                  </div>
+                  <div class="col-md-4">
+                    <li><textarea id='Notes' name='Notes' class="form-control" autocomplete="off" required="required"
+                        placeholder="Please describe your medical condition to the Doctor"></textarea></li>
+                  </div>
+                  <div class="col-md-4">
+                    <li><button id="form-submit-button" class="form-control" type="submit">Submit</button>
+                    </li>
+                  </div>
+                </div>
+              </ul>
+              <ul class="d-none">
+                <li><input type='hidden' id='Source' name='Source' value='Hospitals in India' /></li>
+                <li><input type='hidden' id='mx_Hospital_List' name='mx_Hospital_List' value='' /></li>
+                <li><input type='hidden' id='mx_Speciality' name='mx_Speciality' value='' /></li>
+              </ul>
+
+              <input type="hidden" name="MXHOrgCode" value="9986">
+              <input type="hidden" name="MXHLandingPageId" value="f997c042-1dca-11e6-b61b-22000aa8e760">
+              <input type="hidden" name="MXHFormBehaviour" value="1">
+              <input type="hidden" name="MXHFormDataTransfer" value="2">
+              <input type="hidden" name="MXHRedirectUrl" value="http://hospitalsindia.intpatient.com/thankyou.html">
+              <input type="hidden" name="MXHAsc" value="5">
+              <input type="hidden" name="MXHPageTitle" value="Hospitals in India">
+              <input type="hidden" name="MXHOutputMessagePosition" value="0">
+              <input type="hidden" name="MXHIsExternallyUsed" value="1">
+            </form>
+            <script type="text/javascript"> var MXLandingPageId = 'f997c042-1dca-11e6-b61b-22000aa8e760'; </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- popup form ends -->
+  </main>
+  </div>
+
+
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="bootstrap/dist/js/jquery-slim.min.js"></script>
+  <script type="text/javascript" src="bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#toggleDoctor").click(function () {
+        var activetab = $('.icon-section .active').attr("id");
+        var activedoc = "portfolio" + activetab;
+        var elmnt = document.getElementById(activedoc);
+        elmnt.scrollIntoView();
+      });
+      $("#1").click(function (e) {
+      }).click();
+    });
+  </script>
+  <script>
+    // Vertical tab script
+    function activeVrt(e, menuName) {
+      var i, tabcontent, menulinks;
+      tabcontent = document.getElementsByClassName("vrt-tab-content");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      menulinks = document.getElementsByClassName("menulinks2");
+      for (i = 0; i < menulinks.length; i++) {
+        menulinks[i].className = menulinks[i].className.replace(" active", "");
+      }
+      document.getElementById(menuName).style.display = "block";
+      e.currentTarget.className += " active";
+    }
+  </script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EGPK7ZS1P8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EGPK7ZS1P8');
+</script>
+</body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PV25C27"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+</html>
