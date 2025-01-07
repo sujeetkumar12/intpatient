@@ -147,20 +147,20 @@
       document.querySelector(selector).style.display = visible ? 'block' : 'none';
     }
 
-    function initChat() {
-      if (window.ttLocation !== "IN") {
-        console.log("starting the chat ", window.ttLocation);
-        window.__lc = window.__lc || {}; window.__lc.license = 7595311; (function () { var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true; lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s); })();
-      }
-      window.addEventListener('load', function () {
-        console.log("Page loaded ", window.ttLocation);
-        if (window.ttLocation !== "IN") {
-          LC_API.on_chat_started = function () {
-            gtag('event', 'conversion', { 'send_to': 'AW-922729084/D0RuCNTO4IoBEPz0_rcD' });
-          };
-        }
-      });
-    }
+      // function initChat() {
+      //   if (window.ttLocation !== "IN") {
+      //     console.log("starting the chat ", window.ttLocation);
+      //     window.__lc = window.__lc || {}; window.__lc.license = 7595311; (function () { var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true; lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s); })();
+      //   }
+      //   window.addEventListener('load', function () {
+      //     console.log("Page loaded ", window.ttLocation);
+      //     if (window.ttLocation !== "IN") {
+      //       LC_API.on_chat_started = function () {
+      //         gtag('event', 'conversion', { 'send_to': 'AW-922729084/D0RuCNTO4IoBEPz0_rcD' });
+      //       };
+      //     }
+      //   });
+      // }
   </script>
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
@@ -230,6 +230,29 @@
       </nav>
       <!-- /navbar end -->
 
+      <button id="openBtn">International Patient Care</button>
+      
+      <!-- Drawer -->
+      
+      <div id="drawer" class="drawer">
+        <div id="imasCircle">IMAS</div>
+        <div class="drawer-content">
+          <button id="closeBtn" type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      
+          <div class="drawer-banner">
+            <h2>International Patient Care</h2>
+            <p>International Support On Whatsapp</p>
+          </div>
+          <div class="drawer-items">
+            <h2>International Support On Whatsapp</h2>
+            <button class="btn"><i class="fa fa-whatsapp fa-btn" style="font-size:20px;"></i>
+              Connect on Whatsapp</button>
+          </div>
+        </div>
+      </div>
+
       <!-- top section -->
       <div class="jumbotron-fluid" id="hero">
         <div class="overlay">
@@ -273,7 +296,6 @@
                 <h2 class="text-center"><img src="image/cardio.png"></h2>
               </div>
               <h5 class="text-white w-500 text-center pt-1">
-
                 Cardiology</h5>
             </div>
             <div class="bx-1">
@@ -439,23 +461,39 @@
               <ul class="nav nav-pills flex-column" id="myTab" role="tablist">
                 <li class="nav-item">
                   <a href="#cardio-pill" class="nav-link active text-center" id="cardio-tabx" data-toggle="pill"
-                    aria-controls="cardio-pill" aria-selected="true">Cardiologist</a>
+                    aria-controls="cardio-pill" aria-selected="true">
+                    <div class="d-flex-align"><img class="tabIcons" src="image/TabsLogo/cardio.webp"
+                        alt="/assets/TabsLogo/ology.webp" width="20" height="20" />&nbsp;Cardiologist</div>
+                  </a>
+
                 </li>
                 <li class="nav-item">
                   <a href="#ortho-pill" class="nav-link text-center" id="ortho-tabx" data-toggle="pill"
-                    aria-controls="ortho-pill" aria-selected="false">Orthopaedic Surgeons</a>
+                    aria-controls="ortho-pill" aria-selected="false">
+                    <div class="d-flex-align"><img class="tabIcons" src="image/TabsLogo/orthopaedic.webp"
+                        alt="/assets/TabsLogo/ology.webp" width="20" height="20" />&nbsp;Orthopaedic Surgeons</div>
+                  </a>
                 </li>
                 <li class="nav-item">
                   <a href="#neuro-pill" class="nav-link text-center" id="neuro-tab" data-toggle="pill"
-                    aria-controls="neuro-pill" aria-selected="false">Neurosurgeons</a>
+                    aria-controls="neuro-pill" aria-selected="false">
+                    <div class="d-flex-align"><img class="tabIcons" src="image/TabsLogo/neurology.webp"
+                        alt="/assets/TabsLogo/ology.webp" width="20" height="20" />&nbsp;Neurosurgeons</div>
+                  </a>
                 </li>
                 <li class="nav-item">
                   <a href="#onco-pill" class="nav-link text-center" id="onco-tab" data-toggle="pill"
-                    aria-controls="onco-pill" aria-selected="false">Oncologists</a>
+                    aria-controls="onco-pill" aria-selected="false">
+                    <div class="d-flex-align"><img class="tabIcons" src="image/TabsLogo/ology.webp"
+                        alt="/assets/TabsLogo/ology.webp" width="20" height="20" />&nbsp;Oncologists</div>
+                  </a>
                 </li>
                 <li class="nav-item">
                   <a href="#transplant-pill" class="nav-link text-center" id="transplant-tab" data-toggle="pill"
-                    aria-controls="transplant-pill" aria-selected="false">Transplant Surgeons</a>
+                    aria-controls="transplant-pill" aria-selected="false">
+                    <div class="d-flex-align"><img class="tabIcons" src="image/TabsLogo/transplant.webp"
+                        alt="/assets/TabsLogo/ology.webp" width="20" height="20" />&nbsp;Transplant Surgeons</div>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -886,7 +924,86 @@
   </button>
   <!-- JS Active tabs -->
 
- 
+
+  <script>
+
+    document.getElementById('openBtn').addEventListener('click', function () {
+      document.getElementById('drawer').style.bottom = '0';
+    });
+
+    document.getElementById('closeBtn').addEventListener('click', function () {
+      document.getElementById('drawer').style.bottom = '-100%';
+    });
+  </script>
+  <script>
+
+    function openNav() {
+      document.getElementById("sidebar").style.width = "40%";
+
+    }
+
+    function closeNav() {
+      document.getElementById("sidebar").style.width = "0";
+    }
+
+
+    function openDrawer() {
+      setTimeout(function () {
+        // Get the element by its ID
+        const element = document.getElementById("drawer");
+
+        // Check if the element exists
+        if (element) {
+          document.getElementById('drawer').style.bottom = '0'; // Change to 'block' or any other desired display type
+        }
+      }, 5000);
+    }
+    function callevent() {
+      setTimeout(openNav, 10000);
+
+    }
+    callevent();
+    openDrawer()
+
+
+    let clickCount = 0;
+
+    // Function to be executed on the first click
+    function onFirstClick() {
+      setTimeout(openNav, 15000); // Execute openNav after 10 seconds
+    }
+
+    // Function to be executed on the second click
+    function onSecondClick() {
+      setTimeout(openNav, 30000); // Execute openNav after 150 seconds (2.5 minutes)
+    }
+
+    // Function to be executed on the third click
+    function onThirdClick() {
+      setTimeout(openNav, 60000); // Execute openNav after 150 seconds (2.5 minutes)
+
+    }
+
+    // Function to handle button clicks
+    function handleButtonClick() {
+      clickCount++;
+
+      if (clickCount === 1) {
+        onFirstClick();
+      } else if (clickCount === 2) {
+        onSecondClick();
+      } else if (clickCount === 3) {
+        onThirdClick();
+        // Reset the click count after the third click
+        clickCount = 0;
+      }
+    }
+
+    // Attach the click event listener to the button
+    document.getElementById('sidebar').addEventListener('click', handleButtonClick);
+
+  </script>
+
   <!-- bootstrap js -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -942,7 +1059,7 @@
     });
   </script>
 
-  
+
   <script>
     // Vertical tab script
     function activeVrt(e, menuName) {

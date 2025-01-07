@@ -1,0 +1,1276 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
+
+/*scroll bar styles*/
+::selection {
+    background: rgb(58, 63, 65);
+    color: #fff;
+}
+
+::-moz-selection {
+    background: rgb(58, 63, 65);
+    color: #fff;
+}
+
+::-o-selection {
+    background: rgb(58, 63, 65);
+    color: #fff;
+}
+
+::-ms-selection {
+    background: rgb(58, 63, 65);
+    color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: #4a4b4b;
+    height: 8px
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(19, 197, 151, 1);
+    border-radius: 50px;
+}
+
+/*scroll bar styles ends*/
+
+header,
+section,
+footer,
+aside,
+nav,
+main,
+article,
+figure {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media(max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .collapse li {
+        font-size: 16px;
+    }
+}
+
+a {
+    color: #000 !important;
+}
+
+a:hover {
+    color: #5e5e5e !important;
+}
+
+.btn-success {
+    background: #03926e;
+}
+
+.btn-success:hover {
+    background: #057d5f;
+}
+
+.btn-success:active {
+    background: #057d5f !important;
+}
+
+#openBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #03926e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 0.83px;
+    font-weight: 600;
+    z-index: 1000;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#drawer {
+    position: fixed;
+    bottom: -100%;
+    right: 0;
+    height: 75%;
+    width: 35%;
+    background: linear-gradient(#03926e, #35a88b);
+    color: #fff;
+    /* Text color for contrast */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    transition: bottom 0.3s ease-in-out;
+    z-index: 1000;
+    border-top-left-radius: 20px;
+    /* Rounded top-left corner */
+    border-top-right-radius: 20px;
+}
+
+.drawer-content {
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.drawer-items {
+    color: #000;
+    margin-top: 20px;
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    gap: 5px;
+}
+
+.drawer-items>h2 {
+    color: #FFF;
+    font-weight: 600;
+}
+
+.drawer-items button {
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 2.5rem;
+    border-radius: 2px;
+    color: #25D366;
+}
+
+.drawer-items button:hover {
+    color: #00870b;
+}
+
+.drawer-items button:active {
+    transform: scale(0.99);
+}
+
+.drawer-banner {
+    margin-top: 100px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 15px 2px 2px;
+    color: #000;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.drawer-banner h2 {
+    letter-spacing: 0.83px;
+    font-weight: 600;
+}
+
+#closeBtn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 2px 5px 7px;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+#imasCircle {
+    display: none;
+}
+
+.drawer-items {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.brand {
+    background: #FFF;
+}
+
+/*font-color starts*/
+.white {
+    color: rgba(255, 255, 255, 1);
+}
+
+.light-gray {
+    color: rgba(224, 226, 228, 1);
+}
+
+.green {
+    color: rgba(19, 197, 151, 1);
+}
+
+/*font-color ends*/
+
+/*font-weight starts*/
+.light {
+    font-weight: 300;
+}
+
+.regular {
+    font-weight: 400;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.extra-bold {
+    font-weight: 900;
+}
+
+/*font-weight ends*/
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: #eeeeee;
+
+}
+
+.img-fluid {
+    border-radius: 8px;
+    height: 15rem;
+}
+
+.text-white {
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+}
+
+.button-w {
+    width: 200px !important;
+}
+
+/*top header starts*/
+.top-header {
+    background-color: #363636;
+    padding: 0px 0 10px;
+}
+
+.top-header ul li {
+    display: inline;
+    margin: 0 5px;
+    font-size: 16px;
+}
+
+.top-header ul li .fa {
+    line-height: 25px;
+}
+
+.top-header ul li .fa-phone {
+    background: #00a1f0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin: 0 12px;
+}
+
+.top-header ul li .fa-whatsapp {
+    background: #3dbc29;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.top-header ul li:last-child:before {
+    background: #ffffff;
+    width: 1px;
+    height: 27px;
+    content: '';
+    display: inline-block;
+    position: relative;
+    top: 8px;
+    margin-right: 10px;
+}
+
+/*top header ends*/
+.carousel-inner .collapse ul {
+    list-style: disc inside none;
+}
+
+/*jumbotron starts*/
+#carouselExample img {
+    margin: auto;
+}
+
+.tabspan>div>div>div>h1 {
+    padding-top: 20px !important;
+}
+
+.tabspan>div>div {
+    box-shadow: #3d805d 0px 7px 29px 0px;
+}
+
+.tabspan>div>div h2 {
+    font-weight: 600;
+    letter-spacing: 0.08rem;
+}
+
+#location h1 {
+    font-weight: 700;
+}
+
+.tabspan .nav {
+    border-bottom: 1px solid #4a4b4b;
+}
+
+.tabspan a.nav-link {
+    color: #000;
+}
+
+.tabspan .tab-content {
+    background: #4a4b4b;
+    padding: 55px 110px;
+}
+
+.tabspan .carousel-control-prev,
+.tabspan .carousel-control-next {
+    width: 60%;
+    color: #717674 !important;
+    font-size: 56px;
+    top: 230px !important;
+    bottom: initial;
+}
+
+.tabspan .carousel-inner ul li p {
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.tabspan .tab-content h2.title {
+    font-size: 28px;
+}
+
+.tabspan .summary {
+    background: #343333;
+    border-radius: 15px;
+    padding: 55px 80px 30px;
+}
+
+.tabspan .summary h5 {
+    font-size: 19px;
+    font-weight: 700;
+    color: rgba(19, 197, 151, 1);
+    margin-bottom: 15px;
+}
+
+.tabspan .summary p {
+    font-size: 16px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 8px;
+}
+
+.tabspan .summary p a {
+    background-color: rgba(19, 197, 151, 1);
+    color: #fff;
+    border-radius: 4px;
+    padding: 5px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.doctor-detail {
+    text-align: left;
+    margin-top: 40px;
+}
+
+.doctor-detail img {
+    width: 200px;
+    height: 12rem;
+}
+
+.doctor-detail h6.experience {
+    float: right;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.doctor-detail h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 0
+}
+
+.doctor-detail h6 {
+    font-size: 15px;
+}
+
+.doctor-detail p a {
+    background-color: rgba(19, 197, 151, 1);
+    color: #fff;
+    border-radius: 4px;
+    padding: 5px 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+hr.hrline {
+    background: #898989;
+    height: 1px;
+}
+
+.patient-service {
+    margin-bottom: 0rem;
+    background: url('../img/patient-service-bg.jpg')no-repeat transparent;
+    background-size: cover;
+    padding: 30px;
+    min-height: 1130px;
+}
+
+.patient-service-detail {
+    background: white;
+    padding: 50px 60px;
+    position: relative;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.patient-service-detail h2 {
+    color: #4a4b4b;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.patient-service-detail h3 {
+    color: #03926e;
+    font-size: 22px;
+    font-weight: bold
+}
+
+.patient-service-detail h3:before {
+    background: #44ace1;
+    width: 30%;
+    height: 1px;
+    content: '';
+    position: relative;
+    display: inline-block;
+    bottom: 6px;
+    margin-right: 30px;
+}
+
+.patient-service-detail h3:after {
+    background: #03926e;
+    width: 30%;
+    height: 1px;
+    content: '';
+    position: relative;
+    display: inline-block;
+    bottom: 6px;
+    margin-left: 30px;
+}
+
+.patient-service-detail h5,
+.patient-service-detail p {
+    text-align: center;
+}
+
+.patient-service-detail h4 {
+    font-size: 19px;
+    font-weight: 700;
+    color: #03926e;
+}
+
+.patient-service-detail p {
+    font-size: 14px;
+    color: #363c3c;
+}
+
+.patient-service-detail hr {
+    background: #03926e;
+    margin: 40px 0;
+}
+
+.about-hospital {
+    background: white;
+    padding: 50px 60px;
+    position: relative;
+    margin-bottom: 0px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.about-hospital h2 {
+    font-size: 22px;
+    color: #03926e;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+
+#testimonials .container {
+    background: #4a4b4b;
+    color: #fff;
+}
+
+#location {
+    background: url('../img/patient-service-bg.jpg')no-repeat transparent;
+    background-size: cover;
+}
+
+#location .container {
+    background-color: #fff;
+}
+
+/*responsive style goes here*/
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767px) {
+    .top-header {
+        padding: 0px 0 5px;
+    }
+
+    .top-header ul li {
+        font-size: 13px;
+    }
+
+    .top-header ul li .fa-phone {
+        width: 22px;
+        height: 22px;
+    }
+
+    .top-header ul li .fa-whatsapp {
+        width: 22px;
+        height: 22px;
+    }
+
+    .top-header ul li:last-child:before {
+        height: 20px;
+        top: 5px;
+        margin-right: 8px;
+    }
+
+    .top-header ul li .fa {
+        line-height: 23px;
+    }
+
+    .brand {
+        padding: 2px 0;
+    }
+
+    .brand h6>img {
+        max-width: 150px;
+    }
+
+    .jumbotron {
+        height: 55vh;
+    }
+
+    .jumbotron h1 {
+        font-size: 30px;
+        margin: 40px 0 0px;
+    }
+
+    .jumbotron h3 {
+        font-size: 22px;
+    }
+
+    .tabspan .nav-pills .nav-link {
+        font-size: 14px;
+    }
+
+    .tabspan .tab-content {
+        padding: 20px 50px;
+    }
+
+    .tabspan .carousel-control-prev,
+    .tabspan .carousel-control-next {
+        width: 45%;
+        font-size: 40px;
+        top: 175px !important;
+    }
+
+    .tabspan .carousel-inner ul li p {
+        margin-bottom: 20px;
+    }
+
+    .tabspan p {
+        font-size: 14px;
+    }
+
+    .tabspan .tab-content h2.title {
+        font-size: 28px;
+        margin: 30px 0 20px;
+    }
+
+    .tabspan .tab-content h2.title:before {
+        width: 0%;
+    }
+
+    .tabspan .tab-content h2.title:after {
+        width: 0%;
+    }
+
+    .tabspan .summary {
+        padding: 30px 40px 30px;
+    }
+
+    .tabspan .summary h5 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .tabspan .summary p {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .tabspan .summary p a {
+        font-size: 14px;
+    }
+
+    .doctor-detail {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .doctor-detail img {
+        max-width: 120px;
+    }
+
+    .doctor-detail h6.experience {
+        float: none;
+        font-size: 14px;
+    }
+
+    .doctor-detail h2 {
+        font-size: 16px;
+    }
+
+    .patient-service-detail {
+        padding: 25px 35px;
+        top: -160px;
+        margin-bottom: 15px;
+    }
+
+    .patient-service-detail h2 {
+        font-size: 24px;
+    }
+
+    .patient-service-detail h3 {
+        font-size: 19px;
+    }
+
+    .patient-service-detail h3:before {
+        width: 25%;
+    }
+
+    .patient-service-detail h3:after {
+        width: 25%;
+    }
+
+    .patient-service-detail h6>img {
+        max-width: 150px;
+    }
+
+    .patient-service-detail h4 {
+        font-size: 16px;
+    }
+
+    .patient-service-detail p {
+        font-size: 13px;
+    }
+
+    .patient-service-detail hr {
+        background: #03926e;
+        margin: 20px 0;
+    }
+
+    .about-hospital {
+        padding: 25px 30px;
+        bottom: 150px;
+    }
+
+    .about-hospital h2 {
+        font-size: 19px;
+        margin-bottom: 15px;
+    }
+
+    .about-hospital p {
+        font-size: 14px;
+    }
+
+    .patient-service {
+        margin-bottom: 0;
+        background-size: cover;
+        padding: 30px 30px 0px;
+        height: auto;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .top-header {
+        padding: 0px 0 5px;
+    }
+
+    .top-header ul li {
+        font-size: 14px;
+    }
+
+    .top-header ul li .fa-phone {
+        width: 23px;
+        height: 23px;
+    }
+
+    .top-header ul li .fa-whatsapp {
+        width: 23px;
+        height: 23px;
+    }
+
+    .top-header ul li:last-child:before {
+        height: 20px;
+        top: 5px;
+        margin-right: 8px;
+    }
+
+    .top-header ul li .fa {
+        line-height: 24px;
+    }
+
+    .brand {
+        padding: 5px 0;
+    }
+
+    .brand h6>img {
+        max-width: 155px;
+    }
+
+    .jumbotron {
+        height: 55vh;
+    }
+
+    .jumbotron h1 {
+        font-size: 32px;
+        margin: 40px 0 0px;
+    }
+
+    .jumbotron h3 {
+        font-size: 24px;
+    }
+
+    .tabspan .nav-pills .nav-link {
+        font-size: 15px;
+    }
+
+    .tabspan .tab-content {
+        padding: 25px 60px;
+    }
+
+    .tabspan .carousel-control-prev,
+    .tabspan .carousel-control-next {
+        width: 50%;
+        font-size: 40px;
+        top: 210px !important;
+    }
+
+    .tabspan .carousel-inner ul li p {
+        margin-bottom: 20px;
+    }
+
+    .tabspan p {
+        font-size: 15px;
+    }
+
+    .tabspan .tab-content h2.title {
+        font-size: 28px;
+        margin: 30px 0 20px;
+    }
+
+    .tabspan .tab-content h2.title:before {
+        width: 15%;
+    }
+
+    .tabspan .tab-content h2.title:after {
+        width: 15%;
+    }
+
+    .tabspan .summary {
+        padding: 30px;
+    }
+
+    .tabspan .summary h5 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .tabspan .summary p {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .tabspan .summary p a {
+        font-size: 14px;
+    }
+
+    .doctor-detail {
+        margin-top: 30px;
+    }
+
+    .doctor-detail img {
+        max-width: 110px;
+    }
+
+    .doctor-detail h6.experience {
+        float: right;
+        font-size: 14px;
+    }
+
+    .doctor-detail h2 {
+        font-size: 18px;
+    }
+
+    .patient-service-detail {
+        padding: 20px 35px;
+        margin-bottom: 10px;
+    }
+
+    .patient-service-detail h2 {
+        font-size: 26px;
+    }
+
+    .patient-service-detail h3 {
+        font-size: 19px;
+    }
+
+    .patient-service-detail h3:before {
+        width: 30%;
+    }
+
+    .patient-service-detail h3:after {
+        width: 30%;
+    }
+
+    .patient-service-detail h6>img {
+        max-width: 160px;
+    }
+
+    .patient-service-detail h4 {
+        font-size: 16px;
+        min-height: 30px;
+    }
+
+    .patient-service-detail p {
+        font-size: 14px;
+    }
+
+    .patient-service-detail hr {
+        margin: 20px 0;
+    }
+
+    .about-hospital {
+        padding: 25px 30px;
+        bottom: 150px;
+    }
+
+    .about-hospital h2 {
+        font-size: 19px;
+        margin-bottom: 15px;
+    }
+
+    .about-hospital p {
+        font-size: 14px;
+    }
+
+    .patient-service {
+        margin-bottom: 0;
+        padding: 30px 30px 0px;
+        height: auto;
+    }
+}
+
+
+/*============ mobile view ===============*/
+
+@media(max-width: 768px) {
+    .brand img {
+        height: 50px;
+    }
+
+    .tabspan .tab-content {
+        background: #4a4b4b;
+        padding: 25px 20px;
+    }
+
+    .patient-service-detail {
+        background: white;
+        padding: 30px 20px;
+        position: relative;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .patient-service {
+        margin-bottom: 0rem;
+        background: url(../img/patient-service-bg.jpg)no-repeat transparent;
+        background-size: cover;
+        padding: 20px 0px;
+        min-height: 1330px;
+    }
+
+    .about-hospital {
+        background: white;
+        padding: 10px;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 0.5rem 0.3rem !important;
+    }
+
+    .tabspan .carousel-control-prev,
+    .tabspan .carousel-control-next {
+        width: 27%;
+        color: #717674;
+        font-size: 38px;
+        top: 210px !important;
+        bottom: initial;
+    }
+
+    .doctor-detail .col-md-3 {
+        text-align: center;
+    }
+
+    .doctor-detail .col-sm-3 {
+        text-align: center;
+    }
+
+    .doctor-detail h6.experience {
+        float: none;
+        font-size: 15px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .doctor-detail h2 {
+        font-size: 18px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    /*.tabspan .tab-content h2.title:before {
+    background: #898989;
+    width: 9%;
+    height: 2px;
+    content: '';
+    position: relative;
+    display: inline-block;
+    bottom: 6px;
+    left: -20px;
+    margin-right: 3px;
+}
+.tabspan .tab-content h2.title:after {
+    background: #898989;
+    width: 10%;
+    height: 2px;
+    content: '';
+    position: relative;
+    display: inline-block;
+    bottom: 6px;
+    right: -20px;
+    margin-left: 3px;
+}*/
+    .tabspan .tab-content h2.title {
+        font-size: 28px;
+        margin: 80px 0 0px;
+    }
+}
+
+.carousel-indicators {
+    position: initial;
+    background-color: #343a40 !important;
+    top: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+
+    padding: 10px;
+}
+
+.top-header li a {
+    color: #fff !important;
+}
+
+.carousel-indicators li {
+    margin-right: auto;
+    margin-left: auto;
+    position: inherit !important;
+    text-align: center;
+    text-indent: 0;
+    width: 150px;
+    height: 40px;
+    color: #fff;
+    padding-top: 5px;
+    background: #4a4b4b;
+}
+
+.carousel-indicators li.active {
+    color: #fff !important;
+    background-color: #03926e !important;
+}
+
+#secondaryNav {
+    padding-bottom: 40px;
+}
+
+.button-w {
+    width: 180px;
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+}
+
+.contact-form .col-md-10 {
+    background: #03926e !important;
+    padding-top: 5px;
+    border-radius: 25px;
+}
+
+.contact-form ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-form h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+form ul li>input[type="file"] {
+    border: none;
+    cursor: pointer;
+    width: 180px;
+    height: 34px;
+    overflow: hidden;
+    display: none;
+}
+
+form ul li label {
+    display: inline-block;
+    text-align: right;
+    padding: 5px 15px;
+    background: #8ed2c1;
+    color: #000;
+    border-radius: 20px;
+    text-align: center;
+}
+
+@media(min-width: 768px) {
+    .about-hospital {
+        padding: 50px 60px;
+        position: relative;
+    }
+
+    #testimonials .container {
+        margin-top: -100px;
+    }
+
+    #testimonials {
+        margin-bottom: 100px;
+    }
+
+    #location {
+        padding-bottom: 150px;
+    }
+
+    #location .container {
+        position: relative;
+        top: -25px;
+    }
+
+    .tabspan .tab-content h2.title:before {
+        background: #898989;
+        width: 20%;
+        height: 2px;
+        content: '';
+        position: relative;
+        display: inline-block;
+        bottom: 6px;
+        margin-right: 10px;
+    }
+
+    .tabspan .tab-content h2.title:after {
+        background: #898989;
+        width: 20%;
+        height: 2px;
+        content: '';
+        position: relative;
+        display: inline-block;
+        bottom: 6px;
+        margin-left: 10px;
+    }
+
+    .tabspan {
+        position: relative;
+        z-index: 990;
+        bottom: 150px;
+    }
+
+    /*.patient-service-detail{
+    top:-100px;
+}*/
+    .why {
+        margin-top: -100px;
+        background-color: #fff;
+        padding: 15px;
+    }
+}
+
+.pt-row .col-md-3 i {
+    font-size: 3rem;
+    color: #2d3740;
+}
+
+.justifiedlist {
+    list-style: disc inside;
+}
+
+#myTabContent {
+    background: #4a4b4b;
+    padding: 20px;
+}
+
+#doctors {
+    color: #fff
+}
+
+#doctors>div>h1 {
+    padding-top: 35px;
+    padding-bottom: 25px;
+    font-weight: 600;
+}
+
+.docx {
+    background-color: #4a4b4b;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 25px;
+}
+
+#doctors .nav-pills .nav-link {
+    color: #fff !important;
+    background: #03926e;
+    margin: 6px;
+}
+
+#doctors .nav-pills .nav-link.active {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.justifiedlist {
+    list-style: disc inside;
+}
+
+.navvdox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+@media (max-width: 768px) {
+    .nav-justified .nav-item {
+        -ms-flex-preferred-size: 0;
+        flex-basis: auto;
+        width: 100%;
+    }
+
+
+}
+
+@media (min-width: 768px) {
+    .docx {
+        margin-top: -100px;
+        margin-bottom: 100px;
+    }
+}
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    #openBtn {
+        bottom: 10px;
+        left: 10px;
+        font-size: 14px;
+    }
+
+    #closeBtn {
+        font-size: 14px;
+        background-color: red;
+        color: white;
+        top: 50px;
+        right: 45px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 23px;
+        padding: 7px 10px 10px 10px;
+    }
+
+    #drawer {
+        height: 45%;
+        width: 100%;
+        border-top-left-radius: 160px;
+        /* Rounded top-left corner */
+        border-top-right-radius: 160px;
+        border: 5px solid #8fbfd1;
+    }
+
+    #imasCircle {
+        display: block;
+        position: absolute;
+        height: 70px;
+        width: 70px;
+        border-radius: 38px;
+        top: -35px;
+        left: 41%;
+        background-color: #0f0f0f;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+        border: 1px solid #fff;
+        text-align: center;
+        padding: 21px 14px;
+        border: 2px solid #e924cb;
+    }
+
+    .drawer-items {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .drawer-items h2 {
+        font-size: 18px;
+    }
+
+    .drawer-banner {
+        margin-top: 80px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+        padding: 15px 2px 2px;
+        color: #000;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .drawer-banner h2 {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .drawer-banner p {
+        font-size: 14px;
+    }
+}

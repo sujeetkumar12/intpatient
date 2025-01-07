@@ -152,19 +152,105 @@
 
 
         <div class="tab ">
-            <button class="tablinks" id="cvb" onclick="openCity(event, 'Cardiology')"><a
-                    name="cardio"></a>Cardiology</button>
-            <button class="tablinks" onclick="openCity(event, 'Neurology')"><a name="neuro"></a>Neurology</button>
-            <button class="tablinks" onclick="openCity(event, 'Liver')"> <a name="liver"></a>Liver Transplant</button>
-            <button class="tablinks" onclick="openCity(event, 'Orthopedics')"><a name="ortho"></a>Orthopedics</button>
-            <button class="tablinks" onclick="openCity(event, 'Oncology')"><a name="onco"></a>Oncology</button>
-            <button class="tablinks" onclick="openCity(event, 'Urology')"><a name="uro"></a>Urology</button>
+            <button class="tablinks" id="cvb" onclick="openCity(event, 'Cardiology')"><a name="cardio"></a><img class="tabIcons"
+                    src="images/TabsLogo/cardio.webp" alt="/assets/TabsLogo/ology.webp" width="14"
+                    height="18" />&nbsp;Cardiology</button>
+            <button class="tablinks" onclick="openCity(event, 'Neurology')"><a name="neuro"></a><img class="tabIcons"
+                    src="images/TabsLogo/neurology.webp" alt="/assets/TabsLogo/ology.webp" width="14"
+                    height="18" />&nbsp;Neurology</button>
+            <button class="tablinks" onclick="openCity(event, 'Liver')"> <a name="liver"></a><img class="tabIcons"
+                    src="images/TabsLogo/transplant.webp" alt="/assets/TabsLogo/ology.webp" width="14" height="18" />&nbsp;Liver
+                Transplant</button>
+            <button class="tablinks" onclick="openCity(event, 'Orthopedics')"><a name="ortho"></a><img class="tabIcons"
+                    src="images/TabsLogo/orthopaedic.webp" alt="/assets/TabsLogo/ology.webp" width="14"
+                    height="18" />&nbsp;Orthopedics</button>
+            <button class="tablinks" onclick="openCity(event, 'Oncology')"><a name="onco"></a><img class="tabIcons"
+                    src="images/TabsLogo/ology.webp" alt="/assets/TabsLogo/ology.webp" width="14"
+                    height="18" />&nbsp;Oncology</button>
+            <button class="tablinks" onclick="openCity(event, 'Urology')"><a name="uro"></a><img class="tabIcons"
+                    src="images/TabsLogo/kidney.webp" alt="/assets/TabsLogo/ology.webp" width="14"
+                    height="18" />&nbsp;Urology</button>
 
 
+        </div>
+        <button id="openBtn">International Patient Care</button>
+        
+        <!-- Drawer -->
+        
+        <div id="drawer" class="drawer">
+            <div id="imasCircle">IMAS</div>
+            <div class="drawer-content">
+                <button id="closeBtn" type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+        
+                <div class="drawer-banner">
+                    <h2>International Patient Care</h2>
+                    <p>International Support On Whatsapp</p>
+                </div>
+                <div class="drawer-items">
+                    <h2>International Support On Whatsapp</h2>
+                    <button class="btn"><i class="fa fa-whatsapp fa-btn" style="font-size:20px;"></i>
+                        Connect on Whatsapp</button>
+                </div>
+            </div>
         </div>
 
         <div id="Cardiology" class="tabcontent">
             <div class="row mt-4 g-3">
+<div class="row mt-4 g-3">
+                <div class="col-sm-12 col-lg-4">
+                    <div class="text-center">
+                        <img src="images/cardio/Dr. Naresh Trehan.webp" alt="..." style="border-radius:50%;" width="120px" height="120px"
+                            loading="lazy">
+                    </div>
+                    <div class="card-body  "
+                        style=" background: #fff; margin-top:-3em; padding:4em 1em 2em 1em;box-shadow: 0px 0px 11.170538902282715px 0px rgba(0, 0, 0, 0.10);">
+                        <h1 class="card-title-h1">Dr. Naresh Trehan</h1>
+                        <hr style="border-top: 2.234px solid #973911;">
+                        <div class="text-center">
+                            <a href="#" class="btn btn-primary appointment" onclick="LC_API.open_chat_window() ; return false"
+                                onclick="LC_API.open_chat_window() ; return false">Book an Appointment</a>
+                            <a href="#" class="btn btn-primary opinion" onclick="LC_API.open_chat_window() ; return false"
+                                onclick="LC_API.open_chat_window() ; return false">Get Free Opinion</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-4">
+                    <div class="text-center">
+                        <img src="images/cardio/Dr. Praveen Chandra.webp" alt="..." style="border-radius:50%;" width="120px"
+                            height="120px" loading="lazy">
+                    </div>
+                    <div class="card-body  "
+                        style=" background: #fff; margin-top:-3em; padding:4em 1em 2em 1em;box-shadow: 0px 0px 11.170538902282715px 0px rgba(0, 0, 0, 0.10);">
+                        <h1 class="card-title-h1">Dr. Praveen Chandra</h1>
+                        <hr style="border-top: 2.234px solid #973911;">
+                        <div class="text-center">
+                            <a href="#" class="btn btn-primary appointment" onclick="LC_API.open_chat_window() ; return false"
+                                onclick="LC_API.open_chat_window() ; return false">Book an Appointment</a>
+                            <a href="#" class="btn btn-primary opinion" onclick="LC_API.open_chat_window() ; return false"
+                                onclick="LC_API.open_chat_window() ; return false">Get Free Opinion</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-4">
+                    <div class="text-center">
+                        <img src="images/cardio/Dr. R. R. Kasliwal.webp" alt="..." style="border-radius:50%;" width="120px" height="120px"
+                            loading="lazy">
+                    </div>
+                    <div class="card-body  "
+                        style=" background: #fff; margin-top:-3em; padding:4em 1em 2em 1em;box-shadow: 0px 0px 11.170538902282715px 0px rgba(0, 0, 0, 0.10);">
+                        <h1 class="card-title-h1">Dr. R. R. Kasliwal</h1>
+                        <hr style="border-top: 2.234px solid #973911;">
+                        <div class="text-center">
+                            <a href="#" class="btn btn-primary appointment" onclick="LC_API.open_chat_window() ; return false"
+                                onclick="LC_API.open_chat_window() ; return false">Book an Appointment</a>
+                            <a href="#" class="btn btn-primary opinion" onclick="LC_API.open_chat_window() ; return false"
+                                onclick="LC_API.open_chat_window() ; return false">Get Free Opinion</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
                 <div class="col-sm-12 col-lg-4">
                     <div class="text-center">
                         <img src="images/cardio/Dr. Amit Chandra.webp" alt="..." style="border-radius:50%;"
@@ -186,8 +272,8 @@
                 </div>
                 <div class="col-sm-12 col-lg-4">
                     <div class="text-center">
-                        <img src="images/cardio/Dr. Amit Misri.webp" alt="..." style="border-radius:50%;" width="120px"
-                            height="120px" loading="lazy">
+                        <img src="images/cardio/Dr. Amit Misri.webp" alt="..." style="border-radius:50%;" width="120px" height="120px"
+                            loading="lazy">
                     </div>
                     <div class="card-body  "
                         style=" background: #fff; margin-top:-3em; padding:4em 1em 2em 1em;box-shadow: 0px 0px 11.170538902282715px 0px rgba(0, 0, 0, 0.10);">
@@ -286,65 +372,7 @@
                 </div>
             </div>
 
-            <div class="row mt-4 g-3">
-                <div class="col-sm-12 col-lg-4">
-                    <div class="text-center">
-                        <img src="images/cardio/Dr. Naresh Trehan.webp" alt="..." style="border-radius:50%;"
-                            width="120px" height="120px" loading="lazy">
-                    </div>
-                    <div class="card-body  "
-                        style=" background: #fff; margin-top:-3em; padding:4em 1em 2em 1em;box-shadow: 0px 0px 11.170538902282715px 0px rgba(0, 0, 0, 0.10);">
-                        <h1 class="card-title-h1">Dr. Naresh Trehan</h1>
-                        <hr style="border-top: 2.234px solid #973911;">
-                        <div class="text-center">
-                            <a href="#" class="btn btn-primary appointment"
-                                onclick="LC_API.open_chat_window() ; return false"
-                                onclick="LC_API.open_chat_window() ; return false">Book an Appointment</a>
-                            <a href="#" class="btn btn-primary opinion"
-                                onclick="LC_API.open_chat_window() ; return false"
-                                onclick="LC_API.open_chat_window() ; return false">Get Free Opinion</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-lg-4">
-                    <div class="text-center">
-                        <img src="images/cardio/Dr. Praveen Chandra.webp" alt="..." style="border-radius:50%;"
-                            width="120px" height="120px" loading="lazy">
-                    </div>
-                    <div class="card-body  "
-                        style=" background: #fff; margin-top:-3em; padding:4em 1em 2em 1em;box-shadow: 0px 0px 11.170538902282715px 0px rgba(0, 0, 0, 0.10);">
-                        <h1 class="card-title-h1">Dr. Praveen Chandra</h1>
-                        <hr style="border-top: 2.234px solid #973911;">
-                        <div class="text-center">
-                            <a href="#" class="btn btn-primary appointment"
-                                onclick="LC_API.open_chat_window() ; return false"
-                                onclick="LC_API.open_chat_window() ; return false">Book an Appointment</a>
-                            <a href="#" class="btn btn-primary opinion"
-                                onclick="LC_API.open_chat_window() ; return false"
-                                onclick="LC_API.open_chat_window() ; return false">Get Free Opinion</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-lg-4">
-                    <div class="text-center">
-                        <img src="images/cardio/Dr. R. R. Kasliwal.webp" alt="..." style="border-radius:50%;"
-                            width="120px" height="120px" loading="lazy">
-                    </div>
-                    <div class="card-body  "
-                        style=" background: #fff; margin-top:-3em; padding:4em 1em 2em 1em;box-shadow: 0px 0px 11.170538902282715px 0px rgba(0, 0, 0, 0.10);">
-                        <h1 class="card-title-h1">Dr. R. R. Kasliwal</h1>
-                        <hr style="border-top: 2.234px solid #973911;">
-                        <div class="text-center">
-                            <a href="#" class="btn btn-primary appointment"
-                                onclick="LC_API.open_chat_window() ; return false"
-                                onclick="LC_API.open_chat_window() ; return false">Book an Appointment</a>
-                            <a href="#" class="btn btn-primary opinion"
-                                onclick="LC_API.open_chat_window() ; return false"
-                                onclick="LC_API.open_chat_window() ; return false">Get Free Opinion</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        
 
 
             <div class="row mt-4 g-3">
@@ -1015,10 +1043,44 @@
         </div>
         <div id="Urology" class="tabcontent">
             <div class="row mt-4 g-3">
+            <div class="col-sm-12 col-lg-4">
+                <div class="text-center">
+                    <img src="images/urology/Sanjay-Ahlawat.webp" alt="..." style="border-radius:50%;" width="120px" height="120px"
+                        loading="lazy">
+                    </div>
+                    <div class="card-body  "
+                        style=" background: #fff; margin-top:-3em; padding:4em 1em 2em 1em;box-shadow: 0px 0px 11.170538902282715px 0px rgba(0, 0, 0, 0.10);">
+                    <h1 class="card-title-h1">Dr. Sanjay Gogoi</h1>
+                    <hr style="border-top: 2.234px solid #973911;">
+                    <div class="text-center">
+                        <a href="#" class="btn btn-primary appointment" onclick="LC_API.open_chat_window() ; return false">Book an
+                            Appointment</a>
+                        <a href="#" class="btn btn-primary opinion" onclick="LC_API.open_chat_window() ; return false">Get Free
+                            Opinion</a>
+                        </div>
+                        </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-4">
+                            <div class="text-center">
+                    <img src="images/urology/dr-gagan-gautam.png" alt="..." style="border-radius:50%;" width="120px" height="120px"
+                        loading="lazy">
+                    </div>
+                    <div class="card-body  "
+                        style=" background: #fff; margin-top:-3em; padding:4em 1em 2em 1em;box-shadow: 0px 0px 11.170538902282715px 0px rgba(0, 0, 0, 0.10);">
+                    <h1 class="card-title-h1">Dr. Gagan Gautam</h1>
+                    <hr style="border-top: 2.234px solid #973911;">
+                    <div class="text-center">
+                        <a href="#" class="btn btn-primary appointment" onclick="LC_API.open_chat_window() ; return false">Book an
+                            Appointment</a>
+                        <a href="#" class="btn btn-primary opinion" onclick="LC_API.open_chat_window() ; return false">Get Free
+                            Opinion</a>
+                        </div>
+                        </div>
+                        </div>
                 <div class="col-sm-12 col-lg-4">
                     <div class="text-center">
-                        <img src="images/urology/Deepak Kumar.webp" alt="..." style="border-radius:50%;" width="120px"
-                            height="120px" loading="lazy">
+                        <img src="images/urology/Deepak Kumar.webp" alt="..." style="border-radius:50%;" width="120px" height="120px"
+                            loading="lazy">
                     </div>
                     <div class="card-body  "
                         style=" background: #fff; margin-top:-3em; padding:4em 1em 2em 1em;box-shadow: 0px 0px 11.170538902282715px 0px rgba(0, 0, 0, 0.10);">
@@ -1034,8 +1096,8 @@
                 </div>
                 <div class="col-sm-12 col-lg-4">
                     <div class="text-center">
-                        <img src="images/urology/Dr. Dinesh Kumar Yadav.webp" alt="..." style="border-radius:50%;"
-                            width="120px" height="120px" loading="lazy">
+                        <img src="images/urology/Dr. Dinesh Kumar Yadav.webp" alt="..." style="border-radius:50%;" width="120px" height="120px"
+                            loading="lazy">
                     </div>
                     <div class="card-body  "
                         style=" background: #fff; margin-top:-3em; padding:4em 1em 2em 1em;box-shadow: 0px 0px 11.170538902282715px 0px rgba(0, 0, 0, 0.10);">
@@ -1051,8 +1113,8 @@
                 </div>
                 <div class="col-sm-12 col-lg-4">
                     <div class="text-center">
-                        <img src="images/urology/Dr. Sidharth Kumar Sethi.webp" alt="..." style="border-radius:50%;"
-                            width="120px" height="120px" loading="lazy">
+                        <img src="images/urology/Dr. Sidharth Kumar Sethi.webp" alt="..." style="border-radius:50%;" width="120px"
+                            height="120px" loading="lazy">
                     </div>
                     <div class="card-body  "
                         style=" background: #fff; margin-top:-3em; padding:4em 1em 2em 1em;box-shadow: 0px 0px 11.170538902282715px 0px rgba(0, 0, 0, 0.10);">
@@ -1067,44 +1129,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-            <div class="row mt-4 g-3">
-                <div class="col-sm-12 col-lg-4">
-                    <div class="text-center">
-                        <img src="images/urology/NARMADA.webp" alt="..." style="border-radius:50%;" width="120px"
-                            height="120px" loading="lazy">
-                    </div>
-                    <div class="card-body  "
-                        style=" background: #fff; margin-top:-3em; padding:4em 1em 2em 1em;box-shadow: 0px 0px 11.170538902282715px 0px rgba(0, 0, 0, 0.10);">
-                        <h1 class="card-title-h1">Dr. NARMADA</h1>
-                        <hr style="border-top: 2.234px solid #973911;">
-                        <div class="text-center">
-                            <a href="#" class="btn btn-primary appointment"
-                                onclick="LC_API.open_chat_window() ; return false">Book an Appointment</a>
-                            <a href="#" class="btn btn-primary opinion"
-                                onclick="LC_API.open_chat_window() ; return false">Get Free Opinion</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-lg-4">
-                    <div class="text-center">
-                        <img src="images/urology/Rajesh-Ahlawat.webp" alt="..." style="border-radius:50%;" width="120px"
-                            height="120px" loading="lazy">
-                    </div>
-                    <div class="card-body  "
-                        style=" background: #fff; margin-top:-3em; padding:4em 1em 2em 1em;box-shadow: 0px 0px 11.170538902282715px 0px rgba(0, 0, 0, 0.10);">
-                        <h1 class="card-title-h1">Dr. Rajesh Ahlawat</h1>
-                        <hr style="border-top: 2.234px solid #973911;">
-                        <div class="text-center">
-                            <a href="#" class="btn btn-primary appointment"
-                                onclick="LC_API.open_chat_window() ; return false">Book an Appointment</a>
-                            <a href="#" class="btn btn-primary opinion"
-                                onclick="LC_API.open_chat_window() ; return false">Get Free Opinion</a>
-                        </div>
-                    </div>
-                </div>
 
 
             </div>
@@ -3534,7 +3558,84 @@
     <!--footer section end-->
 
 
+    <script>
 
+        document.getElementById('openBtn').addEventListener('click', function () {
+            document.getElementById('drawer').style.bottom = '0';
+        });
+
+        document.getElementById('closeBtn').addEventListener('click', function () {
+            document.getElementById('drawer').style.bottom = '-100%';
+        });
+    </script>
+    <script>
+
+        function openNav() {
+            document.getElementById("sidebar").style.width = "40%";
+
+        }
+
+        function closeNav() {
+            document.getElementById("sidebar").style.width = "0";
+        }
+
+
+        function openDrawer() {
+            setTimeout(function () {
+                // Get the element by its ID
+                const element = document.getElementById("drawer");
+
+                // Check if the element exists
+                if (element) {
+                    document.getElementById('drawer').style.bottom = '0'; // Change to 'block' or any other desired display type
+                }
+            }, 5000);
+        }
+        function callevent() {
+            setTimeout(openNav, 10000);
+
+        }
+        callevent();
+        openDrawer()
+
+
+        let clickCount = 0;
+
+        // Function to be executed on the first click
+        function onFirstClick() {
+            setTimeout(openNav, 15000); // Execute openNav after 10 seconds
+        }
+
+        // Function to be executed on the second click
+        function onSecondClick() {
+            setTimeout(openNav, 30000); // Execute openNav after 150 seconds (2.5 minutes)
+        }
+
+        // Function to be executed on the third click
+        function onThirdClick() {
+            setTimeout(openNav, 60000); // Execute openNav after 150 seconds (2.5 minutes)
+
+        }
+
+        // Function to handle button clicks
+        function handleButtonClick() {
+            clickCount++;
+
+            if (clickCount === 1) {
+                onFirstClick();
+            } else if (clickCount === 2) {
+                onSecondClick();
+            } else if (clickCount === 3) {
+                onThirdClick();
+                // Reset the click count after the third click
+                clickCount = 0;
+            }
+        }
+
+        // Attach the click event listener to the button
+        document.getElementById('sidebar').addEventListener('click', handleButtonClick);
+
+</script>
 
 
 

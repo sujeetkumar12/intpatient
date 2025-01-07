@@ -29,10 +29,6 @@
   <meta name="description" content="Fortis Gurgaon ">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preload" href="img/Frame 768.webp" as="image">
-  <link rel="stylesheet" href="css/fortis_stylesheet.css">
-
-
-
 </head>
 
 <body>
@@ -80,12 +76,12 @@
           <li class="nav-item">
             <a class="nav-link" onclick="LC_API.open_chat_window() ; return false" href="#"><i style="color: #0CA854;"
                 class="fa fa-whatsapp" aria-hidden="true"></i>
-              Live Chat with Doctor</a>
+              Connect On WhatsApp</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href=" https://wa.me/8800844596"><i style="color: #0CA854;" class="fa fa-comments"
                 aria-hidden="true"></i>
-              Whatsapp: (+91) 8800844596</a>
+              Phone: (+91) 8800844596</a>
           </li>
         </ul>
       </div>
@@ -134,16 +130,46 @@
   <!--End etra elemnt slider-->
   <!--slider End-->
 
+  <button id="openBtn">International Patient Care</button>
+  
+  <!-- Drawer -->
+  
+  <div id="drawer" class="drawer">
+    <div id="imasCircle">IMAS</div>
+    <div class="drawer-content">
+      <button id="closeBtn" type="button" class="close" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+  
+      <div class="drawer-banner">
+        <h2>International Patient Care</h2>
+        <p>International Support On Whatsapp</p>
+      </div>
+      <div class="drawer-items">
+        <h2>International Support On Whatsapp</h2>
+        <button class="btn"><i class="fa fa-whatsapp fa-btn" style="font-size:20px;"></i>
+          Connect on Whatsapp</button>
+      </div>
+    </div>
+  </div>
+
   <!--DR.card-->
   <div id="Doctors" class="container text-center">
     <span class=" header-all">Our Team</span>
     <h1>Our Dedicated Doctors</h1>
     <div class="tab container-flud">
-      <button class="tablinks" id="cvb" onclick="openCity(event, 'Cardiology')">Cardiology</button>
-      <button class="tablinks" onclick="openCity(event, 'London')"> Orthopaedic</button>
-      <button class="tablinks" onclick="openCity(event, 'Paris')"> Oncology</button>
-      <button class="tablinks" onclick="openCity(event, 'Tokyo')">Neurology</button>
-      <button class="tablinks" onclick="openCity(event, 'Liver')">Liver Transplant</button>
+      <button class="tablinks" id="cvb" onclick="openCity(event, 'Cardiology')"><img class="tabIcons"
+          src="assets/TabsLogo/cardio.webp" alt="/assets/TabsLogo/cardiowebp" width="14"
+          height="18" />&emsp;Cardiology</button>
+      <button class="tablinks" onclick="openCity(event, 'London')"><img class="tabIcons"
+          src="assets/TabsLogo/orthopaedic.webp" alt="/assets/TabsLogo/ology.webp" width="14"
+          height="18" />&emsp;Orthopaedic</button>
+      <button class="tablinks" onclick="openCity(event, 'Paris')"><img class="tabIcons" src="assets/TabsLogo/ology.webp"
+          alt="/assets/TabsLogo/ology.webp" width="14" height="18" />&emsp;Oncology</button>
+      <button class="tablinks" onclick="openCity(event, 'Tokyo')"><img class="tabIcons" src="assets/TabsLogo/ology.webp"
+          alt="/assets/TabsLogo/neurology.webp" width="14" height="18" />&emsp;Neurology</button>
+      <button class="tablinks" onclick="openCity(event, 'Liver')"><img class="tabIcons" src="assets/TabsLogo/transplant.webp"
+          alt="/assets/TabsLogo/neurology.webp" width="14" height="18" />&emsp;Liver Transplant</button>
 
 
 
@@ -177,13 +203,13 @@
           </div>
           <div class="col-sm-6 col-md-3">
             <div class="card">
-              <img src="assets\Cardio\webp\Dr. Govini Balasubramani.webp" class="card-img-top img-dektop" alt="Image 1"
+              <img src="assets\Cardio\webp\dr-vinayak-agarwal.webp" class="card-img-top img-dektop" alt="Image 1"
                 height="201px" width="254px" loading="lazy">
-              <img src="assets-mobile\Cardio\webp\Dr. Govini Balasubramani.webp" class="img-mobile " alt="Image 1"
-                height="" width="" loading="lazy">
+              <img src="assets-mobile\Cardio\webp\dr-vinayak-agarwal.webp" class="img-mobile " alt="Image 1" height="" width=""
+                loading="lazy">
 
               <div class="card-body">
-                <h1 class="card-title">Dr. Govini </h1>
+                <h1 class="card-title">Dr. Vinayak Agarwal</h1>
 
                 <button type="button" onclick="LC_API.open_chat_window() ; return false" class="btn btn-dr">Get Free
                   Opinion</button><bR>
@@ -212,13 +238,13 @@
           </div>
           <div class="col-sm-6 col-md-3">
             <div class="card">
-              <img src="assets\Cardio\webp\DrTarlochan Singh Kler(T S KLER).webp" class="card-img-top img-dektop"
-                alt="Image 1" height="201px" width="254px" loading="lazy">
-              <img src="assets-mobile\Cardio\webp\Dr Tarlochan Singh Kler.webp" class="img-mobile " alt="Image 1"
+              <img src="assets\Cardio\webp\dr-(col)-manjinder-sandhu.webp" class="card-img-top img-dektop" alt="Image 1"
+                height="201px" width="254px" loading="lazy">
+              <img src="assets-mobile\Cardio\webp\dr-(col)-manjinder-sandhu.webp" class="img-mobile " alt="Image 1"
                 height="" width="" loading="lazy">
 
               <div class="card-body">
-                <h1 class="card-title">Dr Tarlochan Singh </h1>
+                <h1 class="card-title">Dr Manjinder Sandhu </h1>
 
                 <button type="button" onclick="LC_API.open_chat_window() ; return false" class="btn btn-dr">Get Free
                   Opinion</button><bR>
@@ -298,13 +324,12 @@
           </div>
           <div class="col-sm-6 col-md-3">
             <div class="card">
-              <img src="assets\ortho\webp\Dr. S Dilip Chand Raja.webp" class="card-img-top img-dektop " alt="Image 1"
+              <img src="assets\ortho\webp\dr-monu-singh.webp" class="card-img-top img-dektop " alt="Image 1"
                 height="201px" width="254px">
-              <img src="assets-mobile\ortho\webp\Dr. S Dilip Chand Raja.webp" class="img-mobile " alt="Image 1"
-                height="" width="">
+              <img src="assets-mobile\ortho\webp\dr-monu-singh.webp" class="img-mobile " alt="Image 1" height="" width="">
 
               <div class="card-body">
-                <h1 class="card-title">Dr. S Dilip Chand Raja</h1>
+                <h1 class="card-title">Dr Monu Singh</h1>
 
                 <button type="button" onclick="LC_API.open_chat_window() ; return false" class="btn btn-dr">Get Free
                   Opinion</button><bR>
@@ -399,13 +424,13 @@
           </div>
           <div class="col-sm-6 col-md-3">
             <div class="card">
-              <img src="assets\onco\webp\Dr. MukeshPatekar.webp" class="card-img-top img-dektop " alt="Image 1"
+              <img src="assets\onco\webp\dr-rahul-bhargava.webp" class="card-img-top img-dektop " alt="Image 1"
                 height="201px" width="254px">
-              <img src="assets-mobile\onco\webp\Dr. MukeshPatekar.webp" class="img-mobile " alt="Image 1" height=""
+              <img src="assets-mobile\onco\webp\dr-rahul-bhargava.webp" class="img-mobile " alt="Image 1" height=""
                 width="">
 
               <div class="card-body">
-                <h1 class="card-title">Dr. Mukesh Patekar</h1>
+                <h1 class="card-title">Dr.Rahul Bhargava</h1>
 
                 <button type="button" onclick="LC_API.open_chat_window() ; return false" class="btn btn-dr">Get Free
                   Opinion</button><bR>
@@ -448,13 +473,12 @@
           </div>
           <div class="col-sm-6 col-md-3">
             <div class="card">
-              <img src="assets\Neuro\webp\Dr Sandeep Vaishya.webp" class="card-img-top img-dektop " alt="Image 1"
+              <img src="assets\Neuro\webp\dr-saurabh-yatish-bansal.webp" class="card-img-top img-dektop " alt="Image 1"
                 height="201px" width="254px">
-              <img src="assets-mobile\Neuro\webp\Dr Sandeep Vaishya.webp" class="img-mobile " alt="Image 1" height=""
-                width="">
+              <img src="assets-mobile\Neuro\webp\dr-saurabh-yatish-bansal.webp" class="img-mobile " alt="Image 1" height="" width="">
 
               <div class="card-body">
-                <h1 class="card-title">Dr Sandeep Vaishya</h1>
+                <h1 class="card-title">Dr Saurabh Yatish Bansal</h1>
 
                 <button type="button" onclick="LC_API.open_chat_window() ; return false" class="btn btn-dr">Get Free
                   Opinion</button><bR>
@@ -465,13 +489,13 @@
           </div>
           <div class="col-sm-6 col-md-3">
             <div class="card">
-              <img src="assets\Neuro\webp\Dr. RANA PATIR.webp" class="card-img-top img-dektop " alt="Image 1"
+              <img src="assets\Neuro\webp\dr-vikas-sharma.webp" class="card-img-top img-dektop " alt="Image 1"
                 height="201px" width="254px">
-              <img src="assets-mobile\Neuro\webp\Dr. RANA PATIR.webp" class="img-mobile " alt="Image 1" height=""
+              <img src="assets-mobile\Neuro\webp\dr-vikas-sharma.webp" class="img-mobile " alt="Image 1" height=""
                 width="">
 
               <div class="card-body">
-                <h1 class="card-title">Dr. RANA PATIR</h1>
+                <h1 class="card-title">Dr. Vikas Sharma</h1>
 
                 <button type="button" onclick="LC_API.open_chat_window() ; return false" class="btn btn-dr">Get Free
                   Opinion</button><bR>
@@ -482,13 +506,13 @@
           </div>
           <div class="col-sm-6 col-md-3">
             <div class="card">
-              <img src="assets\Neuro\webp\Dr. UtkarshBhagat.webp" class="card-img-top img-dektop " alt="Image 1"
+              <img src="assets\Neuro\webp\dr-rama-joshi.webp" class="card-img-top img-dektop " alt="Image 1"
                 height="201px" width="254px">
-              <img src="assets-mobile\Neuro\webp\Dr. UtkarshBhagat.webp" class="img-mobile " alt="Image 1" height=""
+              <img src="assets-mobile\Neuro\webp\dr-rama-joshi.webp" class="img-mobile " alt="Image 1" height=""
                 width="">
 
               <div class="card-body">
-                <h1 class="card-title">Dr. UtkarshBhagat</h1>
+                <h1 class="card-title">Dr. Rama Joshi</h1>
 
                 <button type="button" onclick="LC_API.open_chat_window() ; return false" class="btn btn-dr">Get Free
                   Opinion</button><bR>
@@ -922,7 +946,7 @@
           <img id="Elite-hotel" src="maps-and-flags.webp" alt="Girl in a jacket" width="50" height="50">
 
           <p class="text-color-y"><br>3.1 km from<br>
-            <span class="text-color-x">FORTIS ESCORTS</span>
+            <span class="text-color-x">FORTIS GURGAON</span>
           </p>
         </div>
 
@@ -973,7 +997,7 @@
           <img id="Elite-hotel" src="maps-and-flags.webp" alt="Girl in a jacket" width="50" height="50">
 
           <p class="text-color-y"><br>1.7 km from <br>
-            <span class="text-color-x">FORTIS ESCORTS</span>
+            <span class="text-color-x">FORTIS GURGAON</span>
           </p>
         </div>
 
@@ -1024,7 +1048,7 @@
           <img id="Elite-hotel" src="maps-and-flags.webp" alt="Girl in a jacket" width="50" height="50">
 
           <p class="text-color-y"><br>2.0 km from <br>
-            <span class="text-color-x">FORTIS ESCORTS</span>
+            <span class="text-color-x">FORTIS GURGAON</span>
           </p>
         </div>
 
@@ -1076,7 +1100,7 @@
           <img id="Elite-hotel" src="maps-and-flags.webp" alt="Girl in a jacket" width="50" height="50">
 
           <p class="text-color-y"><br>1.8 km from <br>
-            <span class="text-color-x">FORTIS ESCORTS</span>
+            <span class="text-color-x">FORTIS GURGAON</span>
           </p>
         </div>
 
@@ -1126,7 +1150,7 @@
           <img id="Elite-hotel" src="maps-and-flags.webp" alt="Girl in a jacket" width="50" height="50">
 
           <p class="text-color-y"><br>3.3 km from <br>
-            <span class="text-color-x">FORTIS ESCORTS</span>
+            <span class="text-color-x">FORTIS GURGAON</span>
           </p>
         </div>
 
@@ -2367,7 +2391,7 @@
   <!--Company add-->
   <div class="container-fluid text-center" id="block_V">
     <div class="container " style="margin-block:127px;">
-      <p class="Patient_Services">Patient Services at <span><b>FORTIS HOSPITAL</b></span></p>
+      <p class="Patient_Services">International Patient Services at <span><b>FORTIS HOSPITAL</b></span></p>
       <p class="text_dec">by</p>
 
       <img class="com-logo" src="logo-add.webp" width="176px" height="100%" alt="loding.." loading="lazy">
@@ -2448,6 +2472,64 @@
   </footer>
 
 
+  <script>
+
+    function openNav() {
+      document.getElementById("sidebar").style.width = "40%";
+
+    }
+
+    function closeNav() {
+      document.getElementById("sidebar").style.width = "0";
+    }
+
+    function openDrawer() {
+      setTimeout(function () {
+        // Get the element by its ID
+        const element = document.getElementById("drawer");
+
+        // Check if the element exists
+        if (element) {
+          document.getElementById('drawer').style.bottom = '0'; // Change to 'block' or any other desired display type
+        }
+      }, 5000);
+    }
+    function callevent() {
+      setTimeout(openNav, 10000);
+
+    }
+    callevent();
+    openDrawer();
+
+    let clickCount = 0;
+
+    // Function to be executed on the first click
+    function onFirstClick() {
+      setTimeout(openNav, 15000); // Execute openNav after 10 seconds
+    }
+
+    // Function to be executed on the second click
+    function onSecondClick() {
+      setTimeout(openNav, 30000); // Execute openNav after 150 seconds (2.5 minutes)
+    }
+
+    // Function to be executed on the third click
+    function onThirdClick() {
+      setTimeout(openNav, 60000); // Execute openNav after 150 seconds (2.5 minutes)
+
+    }
+  </script>
+  <script>
+
+    document.getElementById('openBtn').addEventListener('click', function () {
+      document.getElementById('drawer').style.bottom = '0';
+    });
+
+    document.getElementById('closeBtn').addEventListener('click', function () {
+      document.getElementById('drawer').style.bottom = '-100%';
+    });
+
+  </script>
 
 
   <!-- <script defer >

@@ -30,9 +30,9 @@ body {
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
   transition: bottom 0.3s ease-in-out;
   z-index: 15;
-  border-top-left-radius: 50px;
+  border-top-left-radius: 20px;
   /* Rounded top-left corner */
-  border-top-right-radius: 50px;
+  border-top-right-radius: 20px;
 }
 
 .drawer-content {
@@ -620,7 +620,7 @@ body {
 }
 
 .card-img-top39 {
-  background-image: url(../assets/Kidney/Dr.\ S\ N\ Mehta.png);
+  background-image: url(../assets/Kidney/Dr.\ S\ N\ Mehta.webp);
   height: 207.53px;
   background-size: 100% 100%;
   border-radius: 6px 6px 0px 0px;
@@ -901,6 +901,7 @@ ul {
   justify-content: center;
   transition: background-color 0.3s;
   color: #017D9C !important;
+  /* box-shadow: 3px 3px 15px #0000001A; */
   background-color: transparent !important;
   border-color: transparent !important;
   font-size: 14px;
@@ -1150,6 +1151,7 @@ table {
   position: sticky;
   top: 61px;
   background-color: #ECFBFE;
+  box-shadow: 3px 3px 15px #0000001A;
   padding: 0px;
   border-radius: 7px !important;
   width: 93%;
@@ -1760,7 +1762,7 @@ table {
   }
 
   .w-100 {
-   width: fit-content !important;
+    width: fit-content !important;
   }
 
   .topbar-icons {
