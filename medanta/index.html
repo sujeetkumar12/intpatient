@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="preload" fetchpriority="high" as="image" href="/images/bckgrnd-medanta-_1_-1.webp" type="image/webp">
 
-
+    <link rel="preload" href="imgages/medantalogo.png.webp" as="image">
 
 
 </head>
@@ -1045,7 +1045,7 @@
             <div class="row mt-4 g-3">
             <div class="col-sm-12 col-lg-4">
                 <div class="text-center">
-                    <img src="images/urology/Sanjay-Ahlawat.webp" alt="..." style="border-radius:50%;" width="120px" height="120px"
+                    <img src="images/urology/Sauravgogoi.png" alt="..." style="border-radius:50%;" width="120px" height="120px"
                         loading="lazy">
                     </div>
                     <div class="card-body  "
@@ -3559,14 +3559,34 @@
 
 
     <script>
+ const drawer = document.getElementById('drawer');
 
+    const openButton = document.getElementById('openBtn');
+    
         document.getElementById('openBtn').addEventListener('click', function () {
+
+         event.stopPropagation(); 
             document.getElementById('drawer').style.bottom = '0';
         });
 
         document.getElementById('closeBtn').addEventListener('click', function () {
+         event.stopPropagation(); 
             document.getElementById('drawer').style.bottom = '-100%';
         });
+
+
+        
+    document.body.addEventListener('click', (event) => {
+      // Close drawer if the click is outside the drawer or open button
+      if (!drawer.contains(event.target) && !openBtn.contains(event.target)) {
+        document.getElementById('drawer').style.bottom = '-100%';
+      }
+    });
+
+    // Prevent clicks inside the drawer or open button from triggering body click listener
+    drawer.addEventListener('click', (event) => {
+      event.stopPropagation(); // Prevent click inside drawer from closing it
+    });
     </script>
     <script>
 

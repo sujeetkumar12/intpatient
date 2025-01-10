@@ -131,16 +131,16 @@
   <!--slider End-->
 
   <button id="openBtn">International Patient Care</button>
-  
+
   <!-- Drawer -->
-  
+
   <div id="drawer" class="drawer">
     <div id="imasCircle">IMAS</div>
     <div class="drawer-content">
       <button id="closeBtn" type="button" class="close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
-  
+
       <div class="drawer-banner">
         <h2>International Patient Care</h2>
         <p>International Support On Whatsapp</p>
@@ -168,8 +168,9 @@
           alt="/assets/TabsLogo/ology.webp" width="14" height="18" />&emsp;Oncology</button>
       <button class="tablinks" onclick="openCity(event, 'Tokyo')"><img class="tabIcons" src="assets/TabsLogo/ology.webp"
           alt="/assets/TabsLogo/neurology.webp" width="14" height="18" />&emsp;Neurology</button>
-      <button class="tablinks" onclick="openCity(event, 'Liver')"><img class="tabIcons" src="assets/TabsLogo/transplant.webp"
-          alt="/assets/TabsLogo/neurology.webp" width="14" height="18" />&emsp;Liver Transplant</button>
+      <button class="tablinks" onclick="openCity(event, 'Liver')"><img class="tabIcons"
+          src="assets/TabsLogo/transplant.webp" alt="/assets/TabsLogo/neurology.webp" width="14"
+          height="18" />&emsp;Liver Transplant</button>
 
 
 
@@ -205,8 +206,8 @@
             <div class="card">
               <img src="assets\Cardio\webp\dr-vinayak-agarwal.webp" class="card-img-top img-dektop" alt="Image 1"
                 height="201px" width="254px" loading="lazy">
-              <img src="assets-mobile\Cardio\webp\dr-vinayak-agarwal.webp" class="img-mobile " alt="Image 1" height="" width=""
-                loading="lazy">
+              <img src="assets-mobile\Cardio\webp\dr-vinayak-agarwal.webp" class="img-mobile " alt="Image 1" height=""
+                width="" loading="lazy">
 
               <div class="card-body">
                 <h1 class="card-title">Dr. Vinayak Agarwal</h1>
@@ -326,7 +327,8 @@
             <div class="card">
               <img src="assets\ortho\webp\dr-monu-singh.webp" class="card-img-top img-dektop " alt="Image 1"
                 height="201px" width="254px">
-              <img src="assets-mobile\ortho\webp\dr-monu-singh.webp" class="img-mobile " alt="Image 1" height="" width="">
+              <img src="assets-mobile\ortho\webp\dr-monu-singh.webp" class="img-mobile " alt="Image 1" height=""
+                width="">
 
               <div class="card-body">
                 <h1 class="card-title">Dr Monu Singh</h1>
@@ -475,7 +477,8 @@
             <div class="card">
               <img src="assets\Neuro\webp\dr-saurabh-yatish-bansal.webp" class="card-img-top img-dektop " alt="Image 1"
                 height="201px" width="254px">
-              <img src="assets-mobile\Neuro\webp\dr-saurabh-yatish-bansal.webp" class="img-mobile " alt="Image 1" height="" width="">
+              <img src="assets-mobile\Neuro\webp\dr-saurabh-yatish-bansal.webp" class="img-mobile " alt="Image 1"
+                height="" width="">
 
               <div class="card-body">
                 <h1 class="card-title">Dr Saurabh Yatish Bansal</h1>
@@ -2520,13 +2523,31 @@
     }
   </script>
   <script>
+    const drawer = document.getElementById('drawer');
 
+    const openButton = document.getElementById('openBtn');
+    
     document.getElementById('openBtn').addEventListener('click', function () {
+      event.stopPropagation();
       document.getElementById('drawer').style.bottom = '0';
     });
 
     document.getElementById('closeBtn').addEventListener('click', function () {
+      event.stopPropagation();
       document.getElementById('drawer').style.bottom = '-100%';
+    });
+
+
+    document.body.addEventListener('click', (event) => {
+      // Close drawer if the click is outside the drawer or open button
+      if (!drawer.contains(event.target) && !openBtn.contains(event.target)) {
+        document.getElementById('drawer').style.bottom = '-100%';
+      }
+    });
+
+    // Prevent clicks inside the drawer or open button from triggering body click listener
+    drawer.addEventListener('click', (event) => {
+      event.stopPropagation(); // Prevent click inside drawer from closing it
     });
 
   </script>

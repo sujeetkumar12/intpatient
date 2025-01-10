@@ -1605,6 +1605,7 @@ color: #047c9e;
     }
   </script>
   <script>
+
     function openDrawer() {
       setTimeout(function () {
         // Get the element by its ID
@@ -1754,15 +1755,33 @@ color: #047c9e;
     </div>
 
     <script>
+        const drawer = document.getElementById('drawer');
 
-      document.getElementById('openBtn').addEventListener('click', function () {
+        const openButton = document.getElementById('openBtn');
+
+
+        document.getElementById('openBtn').addEventListener('click', function (event) {
+          event.stopPropagation();
         document.getElementById('drawer').style.bottom = '0';
       });
 
       document.getElementById('closeBtn').addEventListener('click', function () {
+        event.stopPropagation();
         document.getElementById('drawer').style.bottom = '-100%';
       });
 
+
+        document.body.addEventListener('click', (event) => {
+          // Close drawer if the click is outside the drawer or open button
+          if (!drawer.contains(event.target) && !openBtn.contains(event.target)) {
+            document.getElementById('drawer').style.bottom = '-100%';
+          }
+        });
+
+        // Prevent clicks inside the drawer or open button from triggering body click listener
+        drawer.addEventListener('click', (event) => {
+          event.stopPropagation(); // Prevent click inside drawer from closing it
+        });
 
       /* Start of LiveChat (www.livechat.com) code */
 

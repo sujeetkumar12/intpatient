@@ -88,9 +88,11 @@ a {
   display: flex;
   align-items: center;
   gap: 5px;
-  height: 2.5rem;
+  height: 2.8rem;
   border-radius: 2px;
-  color: #25D366;
+  color: #2d9f28;
+    font-weight: 600;
+    border-radius: 25px;
 }
 
 .drawer-items button:hover {
@@ -135,6 +137,7 @@ a {
   font-size: 24px;
   margin-bottom: 10px;
 }
+
 @media(max-width: 768px) {
   h1 {
     font-size: 26px;
@@ -178,6 +181,7 @@ d-flex-align {
   margin-bottom: 3px;
   margin-right: 3px;
 }
+
 .btn-info {
   width: 13rem;
 }
@@ -602,6 +606,7 @@ form ul li label {
 .justifiedlist {
   list-style: disc inside;
 }
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
   #openBtn {

@@ -142,9 +142,11 @@ a:hover {
     display: flex;
     align-items: center;
     gap: 5px;
-    height: 2.5rem;
+    height: 2.8rem;
     border-radius: 2px;
-    color: #25D366;
+    color: #2d9f28;
+        font-weight: 600;
+        border-radius: 25px;
 }
 
 .drawer-items button:hover {
